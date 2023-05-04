@@ -45,10 +45,49 @@
   </div>
 </nav>
 <div class="gray-300 mx-4 ">
-	<ul class="list-none flex">
-		<li class="flex-1 border-y-2 transition ease-in-out	delay-150 duration-300 hover:border-t-[#c45472]"><p class="mx-2 my-2">Best Seller</p></li>
-		<li class="flex-1 border-y-2">Trending</li>
-		<li class="flex-1">New</li>
+	<ul class="list-none flex pl-6">
+		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">Best Sellers</p>
+		</li>
+		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">Trending</p>
+		</li>
+		<li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">New</p>
+		</li>
+		<li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">Subjects</p>
+		</li>
+		<li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">colors</p>
+		</li>
+		<li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">rooms</p>
+		</li>
+		<li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">styles</p>
+		</li>
+		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">convas sets</p>
+		</li>
+		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">push pin maps</p>
+		</li>
+		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">Exclusive</p>
+		</li>
+		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">artists</p>
+		</li>
+		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm font-bold">officially licensed</p>
+		</li>
+		<li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm text-[#c45472] font-bold">Personalized gifts</p>
+		</li>
+		<li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+			<p class="mx-1 my-2 uppercase text-sm text-[#c45472] font-bold">hot deals</p>
+		</li>
 
 	</ul>
 </div>
