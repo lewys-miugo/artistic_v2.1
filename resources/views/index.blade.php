@@ -16,7 +16,7 @@
     </div>
 
     <!-- stunning wall art -->
-    <div class="mx-32 mt-20">
+    <div class="mx-32 mt-20 text-[#46555f]">
         
         <h1 class="text-4xl flex justify-center mb-8 ">Stunning Wall Art at an Affordable Price</h1>
         <h5 class="text-lg px-36 flex justify-center text-center">We’ve curated an accessible, extensive selection of wall art. Discover top-trending designs and create your dream interior in the blink of an eye!</h5>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="mx-20 my-8">
-        <ul class="flex flex-row justify-center">
+        <ul class="flex flex-row justify-center text-[#58656E]">
             <li class="uppercase flex flex-row mx-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mx-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
@@ -51,6 +51,78 @@
                 </svg>
 
                 <p class=""> 30 day free returns</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- images -->
+
+    <div class="flex flex-row">
+        <div class="relative px-2">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-canvases.jpg?v=1677492149&width=360" alt="">
+        </div>
+        <div class="relative px-2">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/framed-art.jpg?v=1677492149&width=360" alt="" class="">
+            <div class="absolute bottom-0 left-16 flex flex-row justify-center">
+                <p class="">Colors</p>
+            </div>
+        </div>
+        <div class="relative bg-red-200">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-canvases.jpg?v=1677492149&width=360" alt="">
+            <div class="absolute bottom-0 left-0 ...">
+                <p>Absolute child</p>
+            </div>
+        </div>
+            
+        <!-- component -->
+        <div class="flex  items-center justify-center bg-slate-400">
+            <!-- Border animation Here -->
+            <div class="relative h-32 w-32 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(100%+16px)]  hover:after:h-[calc(100%+16px)] hover:after:w-[calc(100%+16px)]"></div>
+        </div>
+    </div>
+
+    <!-- SHOP BY ROOM -->
+    <div class="mt-12 mb-8 flex justify-center">
+        <p class="text-3xl text-[#46555f]">Shop by Room</p>
+    </div>
+    <!-- IMAGES Shop by room -->
+    <div class="flex flex-row">
+        <ul class="flex flex-row">
+            <li class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+                <div class="flex justify-center">
+                    <p >Living Room</p>
+                </div>
+            </li>
+            <li class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+                <div class="flex justify-center">
+                    <p >Living Room</p>
+                </div>
+            </li>
+            <li class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+                <div class="flex justify-center">
+                    <p >Living Room</p>
+                </div>
+            </li>
+            <li class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+                <div class="flex justify-center">
+                    <p >Living Room</p>
+                </div>
+            </li>
+            <li class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+                <div class="flex justify-center">
+                    <p >Living Room</p>
+                </div>
+            </li>
+            <li class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+                <div class="flex justify-center">
+                    <p >Living Room</p>
+                </div>
             </li>
         </ul>
     </div>
