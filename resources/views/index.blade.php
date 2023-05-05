@@ -1,7 +1,7 @@
 @extends('layouts.nav_footer')
 
 @section('content')
-<div class="mx-4">
+<div class="mx-4 mb-4">
     <!-- 3-images -->
     <div class="flex flex-row mt-2">
         <div class="basis-2/4">
@@ -86,45 +86,109 @@
         <p class="text-3xl text-[#46555f]">Shop by Room</p>
     </div>
     <!-- IMAGES Shop by room -->
-    <div class="flex flex-row">
-        <ul class="flex flex-row">
-            <li class="mx-2">
+    <div class="flex flex-row mb-10">
+        <ul class="flex flex-row text-[#46555f] text-xl">
+            <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
                 <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
                 <div class="flex justify-center">
                     <p >Living Room</p>
                 </div>
             </li>
-            <li class="mx-2">
-                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+            <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/hanging-art.jpg?v=1677492369&width=360" alt="">
                 <div class="flex justify-center">
-                    <p >Living Room</p>
+                    <p >Bedroom</p>
                 </div>
             </li>
-            <li class="mx-2">
-                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+            <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-decor.png?v=1678696177&width=360" alt="">
                 <div class="flex justify-center">
-                    <p >Living Room</p>
+                    <p >Dining Room</p>
                 </div>
             </li>
-            <li class="mx-2">
-                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+            <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-print.png?v=1678696230&width=360" alt="">
                 <div class="flex justify-center">
-                    <p >Living Room</p>
+                    <p >Hallway</p>
                 </div>
             </li>
-            <li class="mx-2">
-                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+            <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/art-wall.png?v=1678696247&width=360" alt="">
                 <div class="flex justify-center">
-                    <p >Living Room</p>
+                    <p >Kitchen</p>
                 </div>
             </li>
-            <li class="mx-2">
-                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
+            <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-near-me.png?v=1678696260&width=360" alt="">
                 <div class="flex justify-center">
-                    <p >Living Room</p>
+                    <p >Office</p>
                 </div>
             </li>
         </ul>
+    </div>
+
+    <!-- Browse different -->
+    <div class="mx-32 mt-20 text-[#46555f]">
+        
+        <h1 class="text-3xl flex justify-center mb-4 ">Browse Different Layouts and Sizes</h1>
+        <h5 class="text-lg px-36 flex justify-center text-center">Filter wall art by shape and arrangement</h5>
+    </div>
+    <div class="my-4">
+        <ul class="flex flex-row justify-center text-xl text-[#46555f]">
+            <li class="px-4 border-b-2 border-b-transparent hover:border-b-[#c45472]">Shop by wall art type</li>
+            <li class="px-4 border-b-2 border-b-transparent hover:border-b-[#c45472]">Shop by shapes</li>
+            <li class="px-4 border-b-2 border-b-transparent hover:border-b-[#c45472]">Shop by pieces</li>
+        </ul>
+        <div class="border-y-2">
+            <ul class="flex flex-row justify-center h-40 bg-gray-100">
+                <li class="mx-8 flex flex-col justify-center">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-canvas.svg?v=1653380738" alt="" class="h-16">
+                    <div class="text-center">
+                        <p class="text-[#46555f] ">Canvas</p>
+                    </div>
+                </li>
+                <li class="mx-8 flex flex-col justify-center">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-canvas-prints.svg?v=1653388177" alt="" class="h-16">
+                    <div class="text-center">
+                        <p class="text-[#46555f]">Multi Panel Canvas</p>
+                    </div>
+                </li>
+                <li class="mx-8 flex flex-col justify-center">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-arts.svg?v=1654069826" alt="" class="h-16">
+                    <div class="text-center">
+                        <p class="text-[#46555f]">Framed Canvas</p>
+                    </div>
+                </li>
+                <li class="mx-8 flex flex-col justify-center">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/buy-wall-art.svg?v=1653388177" alt="" class="h-16">
+                    <div class="text-center">
+                        <p class="text-[#46555f]">Framed Print</p>
+                    </div>
+                </li>
+                <li class="mx-8 flex flex-col justify-center">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/best-canvas-wall-art.svg?v=1653388177" alt="" class="h-16">
+                    <div class="text-center">
+                        <p class="text-[#46555f]">Poster</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shop Our Top-Trending Collections -->
+    <div class="mx-32 mt-20 text-[#46555f]">
+        
+        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Top-Trending Collections</h1>
+    </div>
+    
+    <div class="relative ">
+        <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/canvas-art-wall-decor.jpg?v=1677492776&width=1512" alt="" class="">
+        <div class="absolute top-0 m-20 pl-20 text-[#46555f]">
+            <p class="text-4xl font-bold">Personalized Gifts</p>                
+            <p class="text-base">Create your own piece of custom wall art.</p>
+            <p class="text-base">Choose a personalized  print for the perfect gift.</p>            
+            <p class="uppercase underline underline-offset-2 pt-4">Shop personalized gifts</p>
+        </div>
     </div>
 </div>
 
