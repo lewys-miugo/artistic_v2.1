@@ -94,10 +94,10 @@
 
 @yield('content')
 
-<footer class="p-6 dark:bg-gray-800 dark:text-gray-100">
+<footer class="p-6 bg-[#556E7B] text-white dark:bg-gray-800 dark:text-gray-100">
 	<div class="container grid grid-cols-2 mx-auto gap-x-3 gap-y-12 sm:grid-cols-3 md:grid-cols-6">
 		<div class="flex flex-col space-y-4">
-			<h2 class="font-medium">CUSTOMER SERVICE</h2>
+			<h2 class="font-medium ">CUSTOMER SERVICE</h2>
 			<div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
 				<a rel="noopener noreferrer" href="#">Help Center</a>
 				<a rel="noopener noreferrer" href="#">Shipping & Delivery</a>
