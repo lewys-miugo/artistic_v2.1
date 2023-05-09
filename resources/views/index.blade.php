@@ -5,7 +5,7 @@
     <!-- 3-images -->
     <div class="flex flex-row mt-2">
         <div class="basis-2/4">
-            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-0124.png?v=1679570066&width=720" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-0163.png?v=1683114560&width=720" alt="">
         </div>
         <div class="basis-1/4 mx-2">
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-decor-124.png?v=1679569588&width=360" alt="">
@@ -221,6 +221,284 @@
                 <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP GALLERY WALL ART</p>
             </div>
         </a>
+    </div>
+
+    <!-- Officialy licensed -->
+    <div>
+        <div class="flex flex-row justify-center my-8"> 
+            <p class="text-3xl text-[#485760]"> Officially Licensed </p>
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-hangings-22.png?v=1677058921&width=36" alt="" class="pl-4">
+        </div>
+
+        <div class="flex flex-row h-28 justify-center">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/affordable-wall-art.png?v=1677494422&width=360" alt="" class="mx-2 h-20">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/what-is-wall-art.png?v=1677494462&width=180" alt="" class="mx-2 h-20">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/premium-wall-art.png?v=1677494422&width=180" alt="" class="mx-2 h-20">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-decor-prints.png?v=1677494422&width=180" alt="" class="mx-2 h-20">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/print-wall-art.png?v=1677494422&width=360" alt="" class="ml-2 h-20">
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-print.png?v=1677494663&width=180" alt="" class="mx-2 h-20">
+        </div>
+    </div>
+
+    <!-- Trending -->
+    <div class="flex justify-center">
+        <p class="text-3xl text-[#485760]">Trending</p>
+    </div>
+    <div>
+        <div class="">
+            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right"><p>to all trending</p></a>
+        </div>
+        <div class="mb-8">
+            <div class="flex flex-row">
+                <!-- Trending 1 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/pg3_es_pme_layout_floating_horizontal_majestic-sunset-at-mount-rainer-framed-wall-art.webp?v=1668523885&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <li class="text-xs">Majestic Sunset At Mount Rainer</li>
+                        <li class="ml-8 flex flex-row">
+                            <p class="text-xs">300</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trending 2 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/tsn_art_h23_layout_3_horizontal_pew-pew-3-piece-wall-art.webp?v=1668590422&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <li class="text-xs">Pew Pew</li>
+                        <li class="ml-32 flex flex-row">
+                            <p class="text-xs">240</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+                    <p class="text-xs pl-2 text-[#46555f] italic">Octavian Mielu</p>
+
+                </div>
+
+                <!-- Trending 3 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/fsv_es_sy7_layout_2_horizontal_brave-enough-amanda-gorman-2-piece-wall-art.webp?v=1668625612&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <li class="text-xs">Brave Enough Amanda Gorman</li>
+                        <li class="ml-8 flex flex-row">
+                            <p class="text-xs">156</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+                    <p class="text-xs pl-2 text-[#46555f] italic">Jodi Hatfield</p>
+
+                </div>
+
+                <!-- Trending 4 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/wtv_es_gzk_layout_3_horizontal_funny-bathroom-french-bulldog-3-piece-wall-art.webp?v=1668757199&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2 bg-white">
+                        <li class="text-xs">Funny Bathroom French Dog</li>
+                        <li class="ml-8 flex flex-row">
+                            <p class="text-xs">106</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trending 5 -->
+                <div class="flex flex-col m-2 ">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/s3j_art_rjr_layout_1_vertical_wide_great-sea-turtle-wall-art.webp?v=1668562509&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2 bg-white">
+                        <li class="text-xs">Great Sea Turtle</li>
+                        <li class="ml-24 flex flex-row">
+                            <p class="text-xs">287</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <p class="text-xs pl-2 text-[#46555f] italic">Jodi Hatfield</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending -->
+    <div class="flex justify-center">
+        <p class="text-3xl text-[#485760]">Exclusive</p>
+    </div>
+    <div>
+        <div class="">
+            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+                <p>to all exclusives</p>
+            </a>
+        </div>
+        <div class="mb-8">
+            <div class="flex flex-row">
+                <!-- Trending 1 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/ep1_es_229_layout_5_mess_japanese-mountain-landscape-abstract-5-piece-wall-art.webp?v=1668564076&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <li class="text-xs">Japanese Mountain Landscape</li>
+                        <li class="ml-8 flex flex-row">
+                            <p class="text-xs">674</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
+
+                </div>
+
+                <!-- Trending 2 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/aurora_d8_layout_5_mess_northern-lights-5-piece-wall-art.webp?v=1668641208&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <li class="text-xs">Northern Lights</li>
+                        <li class="ml-24 flex flex-row">
+                            <p class="text-xs">843</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
+
+                </div>
+
+                <!-- Trending 3 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/surf_md7_layout_4_mess_ocean-wave-4-piece-wall-art.webp?v=1668522551&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <li class="text-xs">Ocean Wave</li>
+                        <li class="ml-24 flex flex-row">
+                            <p class="text-xs">977</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
+
+                </div>
+
+                <!-- Trending 4 -->
+                <div class="flex flex-col m-2">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/npp_58_layout_3_horizontal_have-faith-quote-3-piece-wall-art.webp?v=1669192072&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2 bg-white">
+                        <li class="text-xs">Faith Qoute</li>
+                        <li class="ml-24 flex flex-row">
+                            <p class="text-xs">1713</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
+
+                </div>
+
+                <!-- Trending 5 -->
+                <div class="flex flex-col m-2 ">
+                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/xgn_es_yt4_layout_3_horizontal_mandala-on-wood-3-piece-wall-art.webp?v=1668721232&width=360" alt="" class="h-64">
+
+
+                    <ul class="flex flex-row text-[#46555f] text-base pl-2 bg-white">
+                        <li class="text-xs">Mandala On Wood</li>
+                        <li class="ml-24 flex flex-row">
+                            <p class="text-xs">1324</p> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </li>
+                    </ul>
+
+                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hot deals alert -->
+    <div>
+        <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-decor-art.jpg?v=1677495945&width=1512" alt="">
+    </div>
+
+    <!-- REVIEWS -->
+    <div class="flex flex-row mt-4 border-b-2 border-[#707070]">
+        <div>
+            <p class="uppercase text-[#485760]">Company Reviews</p>
+        </div>
+        <div class="grow"></div>
+
+        <div class="flex flex-row">
+            <p class="uppercase mr-2 text-sm">Based on</p>
+            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/reviewsio-logo--coloured.png?v=1627020194&width=180" alt="" class="h-5">
+        </div>
+    </div>
+    <div>
+        <div class="flex flex-row divide-x-2 mt-2 divide-[#707070]">
+            <div class="flex flex-row">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                </svg>
+
+                <p class="px-2 text-[#4e7d91]">4.96</p>
+                <p class="pr-2 text-[#46555f] text-base uppercase">Rating</p>
+            </div>
+
+            <div class="flex flex-row">
+                <p class="px-2 text-[#4e7d91]">10.3k</p>
+                <p class="text-[#46555f] text-base uppercase">Reviews</p>
+            </div>
+        </div>
     </div>
 </div>
 
