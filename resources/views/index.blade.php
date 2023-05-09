@@ -190,6 +190,38 @@
             <p class="uppercase underline underline-offset-2 pt-4">Shop personalized gifts</p>
         </div>
     </div>
+
+    <!-- Images below personalized gifts -->
+    <div class="flex flex-row my-4  ">
+        <a href="#">
+            <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
+            
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/decorative-wall-arts.png?v=1678696287&width=540" alt="" class="h-96">
+                
+                <p class="text-xl ">Push Pin Maps</p>
+                <p class="text-base">Pin the places you've been and the places you want to visit! Each map comes with 100 push pins.</p>
+                <p class="uppercase text-sm underline underline-offset-1 mt-2">Shop Push Pin Maps</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-on-canvas.jpg?v=1677492775&width=540" alt="" class="h-96 ">
+
+                <p class="text-xl ">ArtisticExcursions Exclusive</p>
+                <p class="text-base ">Browse our exclusive pieces of wall art. You won’t find these gorgeous designs anywhere else!</p>
+                <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP ArtisticExcursions EXCLUSIVE</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-decor-prints.jpg?v=1677494315&width=540" alt="" class="h-96">
+
+                <p class="text-xl">Gallery Wall Art</p>
+                <p class="text-base">It’s super easy to create a gallery wall with our curated collection of gallery wall layouts.</p>
+                <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP GALLERY WALL ART</p>
+            </div>
+        </a>
+    </div>
 </div>
 
 
