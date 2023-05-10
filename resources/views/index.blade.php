@@ -696,11 +696,11 @@
     </div>
 
     <!-- Artists -->
-    <div class="flex justify-center">
+    <div class="flex justify-center mt-20">
         <p class="text-3xl text-[#485760]">Meet Our Artists</p>
     </div>
     <div>
-        <div class="">
+        <div class=" mb-4">
             <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
                 <p>to all artists</p>
             </a>
@@ -754,22 +754,22 @@
             </div>
 
             <!-- Artist 3 -->
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-artists.jpg?v=1677495180&width=360" alt="">
-                    <p class="text-center text-[#485760] text-2xl mt-4">Claudia Schoen</p>
-                    <p  class="text-center text-[#485760] text-2xl mb-4">USA</p>
+            <div class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/canvas-wall-art-prints.jpg?v=1677495586&width=360" alt="">
+                    <p class="text-center text-[#485760] text-2xl mt-4">Ahmad Shariff</p>
+                    <p  class="text-center text-[#485760] text-2xl mb-4">UAE</p>
     
                 <ul class="flex flex-row justify-center">
                     <li class="mx-1">
-                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_scenic-drive-california-wall-art.jpg?v=1665055293&width=640" alt="" class="h-20">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_ray-charles-i-wall-art.jpg?v=1660757944&width=640" alt="" class="h-20">
                     </li>
 
                     <li class="mx-1">
-                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_squirrel-collage-wall-art.jpg?v=1676051346&width=640" alt="" class="h-20">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_kobe-newsprint-wall-art.jpg?v=1660920167&width=640" alt="" class="h-20">
                     </li>
 
                     <li class="mx-1">
-                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_feather-arrow-viii-wall-art.jpg?v=1676051454&width=640" alt="" class="h-20">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_guess-what-elvis-presley-wall-art.jpg?v=1660641426&width=640" alt="" class="h-20">
                     </li>                
                 </ul>
                 <p class="uppercase text-center underline underline-offset-2 text-[#485760] mt-4">More from this artist</p>
@@ -777,22 +777,22 @@
             </div>
 
             <!-- Artist 4 -->
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-artists.jpg?v=1677495180&width=360" alt="">
-                    <p class="text-center text-[#485760] text-2xl mt-4">Claudia Schoen</p>
-                    <p  class="text-center text-[#485760] text-2xl mb-4">USA</p>
+            <div class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/elephantstock-wall-art.jpg?v=1677495430&width=360" alt="">
+                    <p class="text-center text-[#485760] text-2xl mt-4">Emily Loius Heard</p>
+                    <p  class="text-center text-[#485760] text-2xl mb-4">UK</p>
     
                 <ul class="flex flex-row justify-center">
                     <li class="mx-1">
-                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_scenic-drive-california-wall-art.jpg?v=1665055293&width=640" alt="" class="h-20">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_the-little-things-wall-art.jpg?v=1664197047&width=640" alt="" class="h-20">
                     </li>
 
                     <li class="mx-1">
-                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_squirrel-collage-wall-art.jpg?v=1676051346&width=640" alt="" class="h-20">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_spirited-wall-art.jpg?v=1664195591&width=640" alt="" class="h-20">
                     </li>
 
                     <li class="mx-1">
-                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_feather-arrow-viii-wall-art.jpg?v=1676051454&width=640" alt="" class="h-20">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_interstella-wall-art.jpg?v=1664195094&width=640" alt="" class="h-20">
                     </li>                
                 </ul>
                 <p class="uppercase text-center underline underline-offset-2 text-[#485760] mt-4">More from this artist</p>
