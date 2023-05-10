@@ -94,7 +94,7 @@
 
 @yield('content')
 
-<footer class="p-6 bg-[#556E7B] text-white dark:bg-gray-800 dark:text-gray-100">
+<footer class="p-6 mt-16 bg-[#556E7B] text-white dark:bg-gray-800 dark:text-gray-100">
 	<div class="container grid grid-cols-2 mx-auto gap-x-3 gap-y-12 sm:grid-cols-3 md:grid-cols-6">
 		<div class="flex flex-col space-y-4">
 			<h2 class="font-medium ">CUSTOMER SERVICE</h2>
