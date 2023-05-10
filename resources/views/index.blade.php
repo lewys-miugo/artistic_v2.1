@@ -340,7 +340,7 @@
         </div>
     </div>
 
-    <!-- Trending -->
+    <!-- Exclusive -->
     <div class="flex justify-center">
         <p class="text-3xl text-[#485760]">Exclusive</p>
     </div>
@@ -497,6 +497,306 @@
             <div class="flex flex-row">
                 <p class="px-2 text-[#4e7d91]">10.3k</p>
                 <p class="text-[#46555f] text-base uppercase">Reviews</p>
+            </div>
+        </div>
+
+        <div class="flex flex-row my-4">
+            <!-- Review 1 -->
+            <div class="border mx-2">
+                <div class="p-2">
+                    <div class="flex flex-row pl-2">
+                        <p class="text-[#58656e] text-lg mr-2">James Maina</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                    
+                    </div>
+                    <div class="flex flex-row pl-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
+                        </svg>
+
+                        <p class="text-[#46555f] font-bold">Verified Buyer</p>
+                    </div>
+                    <div class="">
+                        <p class="pl-2 text-[#6a757e]">"The Canvas is absolutely beautiful I love it but I am going to order another one a bigger size. The colors blend in perfect with my living room"</p>
+                    </div>
+                    <div>
+                        <p class="text-right font-bold text-xs text-[#46555f]">Posted 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="border mx-2">
+                <div class="p-2">
+                    <div class="flex flex-row pl-2">
+                        <p class="text-[#58656e] text-lg mr-2">Muihaki Catherine</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                    
+                    </div>
+                    <div class="flex flex-row pl-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
+                        </svg>
+
+                        <p class="text-[#46555f] font-bold">Verified Buyer</p>
+                    </div>
+                    <div class="">
+                        <p class="pl-2 text-[#6a757e]">"The Canvas is absolutely beautiful I love it but I am going to order another one a bigger size. The colors blend in perfect with my living room"</p>
+                    </div>
+                    <div>
+                        <p class="text-right font-bold text-xs text-[#46555f]">Posted 4 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="border mx-2">
+                <div class="p-2">
+                    <div class="flex flex-row pl-2">
+                        <p class="text-[#58656e] text-lg mr-2">James Maina</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                    
+                    </div>
+                    <div class="flex flex-row pl-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
+                        </svg>
+
+                        <p class="text-[#46555f] font-bold">Verified Buyer</p>
+                    </div>
+                    <div class="">
+                        <p class="pl-2 text-[#6a757e]">"The Canvas is absolutely beautiful I love it but I am going to order another one a bigger size. The colors blend in perfect with my living room"</p>
+                    </div>
+                    <div>
+                        <p class="text-right font-bold text-xs text-[#46555f]">Posted 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="border mx-2">
+                <div class="p-2">
+                    <div class="flex flex-row pl-2">
+                        <p class="text-[#58656e] text-lg mr-2">James Maina</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                        </svg>
+                    
+                    </div>
+                    <div class="flex flex-row pl-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
+                        </svg>
+
+                        <p class="text-[#46555f] font-bold">Verified Buyer</p>
+                    </div>
+                    <div class="">
+                        <p class="pl-2 text-[#6a757e]">"The Canvas is absolutely beautiful I love it but I am going to order another one a bigger size. The colors blend in perfect with my living room"</p>
+                    </div>
+                    <div>
+                        <p class="text-right font-bold text-xs text-[#46555f]">Posted 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop the Look -->
+    <div class="mx-32 mt-20 text-[#46555f]">
+        
+        <h1 class="text-4xl flex justify-center mb-8 ">Shop The Look</h1>
+        <h5 class="text-lg px-36 flex justify-center text-center">These collections were curated by our design experts. Shop top-trending, handpicked prints.</h5>
+        
+    </div>
+
+    <!-- Images below shop the look -->
+    <div class="flex flex-row my-4  ">
+        <a href="#">
+            <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
+            
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/print-wall-decor.jpg?v=1677494890&width=540" alt="" class="h-96">
+                
+                <p class="text-xl ">Shabby Chic Hallway</p>
+                <p class="text-base">Shabby-chic decor is about exploring deconstructed details and feminine design.</p>
+                <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP SHABBY CHIC HALLWAY</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/exclusive-wall-art.jpg?v=1677494890&width=540" alt="" class="h-96 ">
+
+                <p class="text-xl ">Scandinavian Bedroom</p>
+                <p class="text-base ">Feel the power of Hygge. Create a cozy bedroom inspired by Nordic interiors.</p>
+                <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP SCANDINAVIAN BEDROOM</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-canvas-prints.jpg?v=1677494890&width=540" alt="" class="h-96">
+
+                <p class="text-xl">Bohemian Bedroom</p>
+                <p class="text-base">Boho style is all about embracing organic details and free-spirited decor.</p>
+                <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP BOHEMIAN BEDROOM</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Artists -->
+    <div class="flex justify-center">
+        <p class="text-3xl text-[#485760]">Meet Our Artists</p>
+    </div>
+    <div>
+        <div class="">
+            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+                <p>to all artists</p>
+            </a>
+        </div>
+
+        <div class="flex flex-row">
+            <!-- Artist 1 -->
+            <div class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-artists.jpg?v=1677495180&width=360" alt="">
+                    <p class="text-center text-[#485760] text-2xl mt-4">Claudia Schoen</p>
+                    <p  class="text-center text-[#485760] text-2xl mb-4">USA</p>
+    
+                <ul class="flex flex-row justify-center">
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_scenic-drive-california-wall-art.jpg?v=1665055293&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_squirrel-collage-wall-art.jpg?v=1676051346&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_feather-arrow-viii-wall-art.jpg?v=1676051454&width=640" alt="" class="h-20">
+                    </li>                
+                </ul>
+                <p class="uppercase text-center underline underline-offset-2 text-[#485760] mt-4">More from this artist</p>
+
+            </div>
+            
+            <!-- Artist 2 -->
+            <div class="mx-2">
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-arts-store.jpg?v=1677495402&width=360" alt="">
+                    <p class="text-center text-[#485760] text-2xl mt-4">Daniel Jean-Baptiste</p>
+                    <p  class="text-center text-[#485760] text-2xl mb-4 uppercase">CANADA</p>
+    
+                <ul class="flex flex-row justify-center">
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_atlantic-spadefish-wall-art.jpg?v=1665288461&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_bamboo-and-pitons-wall-art.jpg?v=1665285915&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_eagle-ray-wall-art.jpg?v=1664643469&width=640" alt="" class="h-20">
+                    </li>                
+                </ul>
+                <p class="uppercase text-center underline underline-offset-2 text-[#485760] mt-4">More from this artist</p>
+
+            </div>
+
+            <!-- Artist 3 -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-artists.jpg?v=1677495180&width=360" alt="">
+                    <p class="text-center text-[#485760] text-2xl mt-4">Claudia Schoen</p>
+                    <p  class="text-center text-[#485760] text-2xl mb-4">USA</p>
+    
+                <ul class="flex flex-row justify-center">
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_scenic-drive-california-wall-art.jpg?v=1665055293&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_squirrel-collage-wall-art.jpg?v=1676051346&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_feather-arrow-viii-wall-art.jpg?v=1676051454&width=640" alt="" class="h-20">
+                    </li>                
+                </ul>
+                <p class="uppercase text-center underline underline-offset-2 text-[#485760] mt-4">More from this artist</p>
+
+            </div>
+
+            <!-- Artist 4 -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-artists.jpg?v=1677495180&width=360" alt="">
+                    <p class="text-center text-[#485760] text-2xl mt-4">Claudia Schoen</p>
+                    <p  class="text-center text-[#485760] text-2xl mb-4">USA</p>
+    
+                <ul class="flex flex-row justify-center">
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_scenic-drive-california-wall-art.jpg?v=1665055293&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_squirrel-collage-wall-art.jpg?v=1676051346&width=640" alt="" class="h-20">
+                    </li>
+
+                    <li class="mx-1">
+                        <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/main_feather-arrow-viii-wall-art.jpg?v=1676051454&width=640" alt="" class="h-20">
+                    </li>                
+                </ul>
+                <p class="uppercase text-center underline underline-offset-2 text-[#485760] mt-4">More from this artist</p>
+
             </div>
         </div>
     </div>
