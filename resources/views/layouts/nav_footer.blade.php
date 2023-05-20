@@ -70,7 +70,9 @@
 			<p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">styles</p>
 		</li>
 		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-			<p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">convas sets</p>
+			<a href="{{'huntlayout'}}">
+				<p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">convas sets</p>
+			</a>
 		</li>
 		<li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
 			<p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">push pin maps</p>
