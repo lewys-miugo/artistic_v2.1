@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('collections', function () {
     return view('collections');
 });
+
+Route::get('huntlayout', function () {
+    return view('huntlayout');
+});
