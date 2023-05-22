@@ -98,7 +98,7 @@
 
 @yield('content')
 
-<footer class="p-6 mt-16 bg-[#556E7B] text-white dark:bg-gray-800 dark:text-gray-100">
+<footer class="p-6 relative z-100 top-0 mt-16 bg-[#556E7B] text-white dark:bg-gray-800 dark:text-gray-100">
 
 	<div class="my-8">
 		<h3 class="text-4xl text-center uppercase">Enjoy 20% Welcome Gift</h3>
@@ -211,6 +211,8 @@
 		<span class="dark:text-gray-400">© Copyright 2023, Artistic Excursions. All Rights Reserved.</span>
 	</div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 </html>
 
