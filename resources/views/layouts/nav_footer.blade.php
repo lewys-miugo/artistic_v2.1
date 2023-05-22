@@ -10,7 +10,9 @@
 <body>
     <!-- component -->
 <nav class="flex justify-between pl-12 py-10 items-center bg-white">
-  <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1>
+	<a href="{{'/'}}">
+  		<h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1>
+	</a>
   <div class="flex mr-8 items-center">
     <div class="flex bg-gray-200 items-center">
       
