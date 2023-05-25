@@ -1,22 +1,20 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./node_modules/flowbite/**/*.js",
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
     ],
-    theme: {
-        // colors: {
-        //     'border-pink': '#C45472',
-        // },
 
-        extend: {},
-    },
-    variants: {
+    theme: {
         extend: {
-            display:['group-focus']
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
         },
     },
-    plugins: [require("flowbite/plugin")],
-};
 
+    plugins: [require('@tailwindcss/forms')],
+};
