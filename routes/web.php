@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\HomeComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('collections', function () {
-    return view('collections');
-});
+// Route::get('collections', function () {
+//     return view('collections');
+// });
 
-Route::get('huntlayout', function () {
-    return view('huntlayout');
-});
+// Route::get('huntlayout', function () {
+//     return view('huntlayout');
+// });
+
+Route::get('/',HomeComponent::class)->name('home.index');
