@@ -36,6 +36,49 @@
                         <ul class="flex items-center pl-8 space-x-6">
                         <li class="font-semibold text-gray-700">Free Shipping</li>
                         <li class="font-semibold text-gray-700">Returns</li>
+                        <li class="font-semibold text-gray-700">
+                            <button id="myaccount-btn">
+                                My Account
+                                <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
+                                    @auth
+                                        @if(Auth::user()->utype== 'ADM')    
+                                            <ul class="text-center border rounded">
+                                                <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
+                                                <li class="px-12 border-t "></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Products</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Categories</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Customers</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
+
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
+
+                                            </ul>
+                                        @else
+                                            <ul class="text-center border rounded">
+                                                <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
+                                                <li class="px-12 border-t "></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('user.dashboard')}}">Dashboard</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Products</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Categories</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Customers</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
+
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
+
+                                            </ul>
+                                        @endif
+                                    @endif
+                                        
+                                </div>
+                            </button>
+                        </li>
                         @auth
                             <li>
                                 <button class="group" id="usr-btn">
@@ -299,6 +342,16 @@
                 usrBtn.addEventListener('click', () => {
                     usrDropdown.classList.toggle('hidden')
                     usrDropdown.classList.toggle('flex')
+                })
+            });
+
+            window.addEventListener('DOMContentLoaded', ()=>{
+                const myaccountBtn=document.querySelector('#myaccount-btn')
+                const myaccountDropdown=document.querySelector('#myaccountdropdown')
+
+                myaccountBtn.addEventListener('click', () => {
+                    myaccountDropdown.classList.toggle('hidden')
+                    myaccountDropdown.classList.toggle('flex')
                 })
             });
         </script>
