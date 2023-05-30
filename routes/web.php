@@ -19,21 +19,6 @@ use App\Http\Livewire\CheckoutComponent;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-// Route::get('collections', function () {
-//     return view('collections');
-// });
-
-// Route::get('huntlayout', function () {
-//     return view('huntlayout');
-// });
-
 Route::get('/',HomeComponent::class)->name('home.index');
 
 Route::get('/shop',ShopComponent::class)->name('shop');
@@ -41,6 +26,10 @@ Route::get('/shop',ShopComponent::class)->name('shop');
 Route::get('/cart',CartComponent::class)->name('shop.cart');
 
 Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
