@@ -62,11 +62,8 @@
                                                 <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
                                                 <li class="px-12 border-t "></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('user.dashboard')}}">Dashboard</a></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Products</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Categories</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Offers</li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Customers</li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
 
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
@@ -167,7 +164,9 @@
                             <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">Trending</p>
                         </li>
                         <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">New</p>
+                            <a href="{{route('shop')}}">
+                                <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">New</p>
+                            </a>
                         </li>
                         <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
                             <a href="{{'collections'}}">
