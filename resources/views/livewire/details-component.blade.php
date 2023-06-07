@@ -45,8 +45,8 @@
                     <p class="text-gray-700 line-through text-xl mb-4">Ksh{{$product->regular_price}}</p>
                     <p class="text-gray-700 text-xl mb-4">Ksh{{$product->sale_price}}</p>
 
-                    <button
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    <button type="button"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price}})">
                         Add to Cart
                     </button>
                 </div>
