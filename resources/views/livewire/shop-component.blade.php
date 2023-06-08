@@ -1,7 +1,7 @@
 <div>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     <div class="m-4 flex flex-col-12">
-        <aside id="default-sidebar" class="relative sticky top-0 left-0  w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidenav">
+        <!-- <aside id="default-sidebar" class="relative sticky top-0 left-0  w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidenav">
             <div class="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
                 <ul class="space-y-2 ">
                     <li class="">
@@ -125,7 +125,61 @@
                     </li>
                 </ul>
             </div>
+        </aside> -->
+
+        <!-- <div class="flex">
+            <div class="w-1/4">
+                
+            </div>
+                <div class="w-3/4">
+                    <p>Main Content</p>
+                </div>
+        </div> -->
+
+        <aside class="relative sticky top-0 left-0  w-1/2  h-full transition-transform -translate-x-full sm:translate-x-0">
+            <div class="overflow-y-auto py-5 px-3 h-full rounded-lg bg-white border-r border-gray-200" >
+                <ul>
+                    <li class="px-4 py-2 border-b-2">
+                        <button class="toggle-button flex flex-row" onclick="toggleList()"> 
+                            <p>Category 1</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-4 mt-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg> 
+                            
+                        </button>
+                    </li>
+                    <ul id="collapsedList" class="hidden scroll-smooth">
+                        @foreach($categories as $category)
+                        
+                        <li class="px-4 py-2"><a href="{{route('product.category',['slug'=>$category->slug])}}">{{$category->name}}</a></li>
+    
+                    
+                        @endforeach
+                    </ul>
+
+                </ul>
+
+                <ul>
+                    <li class="px-4 py-2 border-b-2">
+                        <button class="toggle-button flex flex-row" onclick="toggleList1()"> 
+                            <p>Category 2</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-4 mt-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg> 
+                            
+                        </button>
+                    </li>
+                    <ul id="collapsedList1" class="hidden">
+                        <li class="px-4 py-2">Subentry 1</li>
+                        <li class="px-4 py-2">Subentry 2</li>
+                        <li class="px-4 py-2">Subentry 3</li>
+                    </ul>
+                </ul>
+            </div>
         </aside>
+
+        
+
 
         <div class="m-2 ">
             <div>
@@ -140,7 +194,7 @@
                 <div class="mx-4">
                     <p class="text-5xl">Canvas</p>
                     <div class="mx-4">
-                        <p class="border-x-2 border-[#000000] mx-4 text-center text-sm">WALL ART</p>
+                        <p class="border-x-2 border-[#000000] mx-4 text-center text-sm">WALL ART {{$category_name}}</p>
                     </div>
                 </div>
 
@@ -153,9 +207,12 @@
 
             <div class="bg-[#f2f3f4] flex flex-col-12">
                 <div class="flex justify-left text-[#46555f] m-2">
-                    <div class="mx-2 font-bold uppercase text-sm border-b-4 border-[#B76573]">Popular</div>
-                    <div class="mx-2 font-bold uppercase text-sm">Trending</div>
-                    <div class="mx-2 font-bold uppercase text-sm">Newest</div>
+                    <!-- border-b-4 border-[#B76573] -->
+                    
+                    <a href="" class="mx-2 font-bold uppercase text-sm {{ $orderBy=='Default' ? 'active' : ''}} nav-link" wire:click.prevent="changeOrderBy('Default')">Default</a>
+                    <a href="" class="mx-2 font-bold uppercase text-sm  nav-link" wire:click.prevent="changeOrderBy('Default')">Trending</a>
+                    <a href="" class="mx-2 font-bold uppercase text-sm  {{ $orderBy=='Latest' ? 'active' : ''}} nav-link" wire:click.prevent="changeOrderBy('Latest')">Latest</a>
+
                 </div>
 
                 <div class="flex flex-1"></div>
@@ -184,7 +241,7 @@
             <!-- Number of pieces -->
             <div class="flex justify-end my-4">
                 <div>
-                <p class="uppercase text-[#46555f] text-sm">656 Wall Arts</p>
+                <p class=" text-[#46555f] text-sm"> We have found {{$products->total()}} pieces</p>
                 </div>
             </div>
 
@@ -344,4 +401,17 @@
 
         </div>
     </div>
+
+    <script>
+        function toggleList() {
+            const collapsedList = document.getElementById('collapsedList');
+            collapsedList.classList.toggle('hidden');
+        }
+
+        function toggleList1() {
+            const collapsedList = document.getElementById('collapsedList1');
+            collapsedList.classList.toggle('hidden');
+        }
+    </script>
+
 </div>
