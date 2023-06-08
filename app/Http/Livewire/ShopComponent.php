@@ -4,12 +4,15 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Product;
+use App\Models\Category;
 use Livewire\WithPagination;
 use Cart;
 
 class ShopComponent extends Component
 {
     use WithPagination;
+    public $pageSize=12;
+    public $orderBy= "Default";
 
     public function store($product_id,$product_name,$product_price)
     {
@@ -18,9 +21,23 @@ class ShopComponent extends Component
         return redirect()->route('shop.cart');
     }
 
+    public function changeOrderBy($order)
+    {
+        $this->orderBy = $order;
+    }
+
     public function render()
     {
-        $products = Product::paginate(12);
-        return view('livewire.shop-component',['products'=>$products]);
+        if($this->orderBy == 'Latest')
+        {
+            $products = Product::orderBy('created_at','DESC')->paginate(12);
+
+        }
+        else{
+            $products = Product::paginate(12);            
+        }
+
+        $categories = Category::orderBy('name','ASC')->get();
+        return view('livewire.shop-component',['products'=>$products,'categories'=>$categories]);
     }
 }
