@@ -13,7 +13,7 @@
                 </div>
             @endif
 
-            @if(Cart::count()>0)
+            @if(Cart::instance('cart')->count()>0)
                 <table class="w-full">
                     <thead>
                         <tr class="bg-gray-200">
@@ -28,7 +28,7 @@
                     <tbody>
                         
                         
-                        @foreach(Cart::content() as $item)
+                        @foreach(Cart::instance('cart')->content() as $item)
                             <tr>
                                 <td class="py-2 px-4">
                                     <img src="{{asset('images/product--1.webp')}}" alt="Product Image" class="w-16 mx-auto max-w-max">
