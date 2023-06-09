@@ -7,6 +7,7 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
+use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
@@ -35,6 +36,8 @@ Route::get('/cart',CartComponent::class)->name('shop.cart');
 Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
 
 Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.category');
+
+Route::get('/search',SearchComponent::class)->name('product.search');
 
 // Route::get('/', function () {
 //     return view('welcome');
