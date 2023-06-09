@@ -26,6 +26,11 @@ class ShopComponent extends Component
         $this->orderBy = $order;
     }
 
+    public function addToWishlist($product_id,$product_name,$product_price)
+    {
+        Cart::instance('wishlist')->add($product_id,$product_name,$product_price)->associate('App\Models\Product');
+    }
+
     public function render()
     {
         if($this->orderBy == 'Latest')
