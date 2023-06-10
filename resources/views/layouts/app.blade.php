@@ -38,17 +38,16 @@
                             <li class="font-semibold text-gray-700">Free Shipping</li>
                             <li class="font-semibold text-gray-700">Returns</li>
                             <li class="font-semibold text-gray-700">
-                                <button id="myaccount-btn">
-                                    My Account
-                                    <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
-                                        @auth
+                                @auth
+                                    <button id="myaccount-btn">My Account
+                                        <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
                                             @if(Auth::user()->utype== 'ADM')    
                                                 <ul class="text-center border rounded">
                                                     <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
                                                     <li class="px-12 border-t "></li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Products</li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Categories</li>
+                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Customers</li>
@@ -72,10 +71,11 @@
 
                                                 </ul>
                                             @endif
-                                        @endif
-                                            
-                                    </div>
-                                </button>
+                                                
+                                        </div>
+                                    </button>
+                                @endif
+
                             </li>
                             @auth
                                 <li>
