@@ -6,7 +6,7 @@
         <div class="container mx-auto p-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="p-4">
-                    <img src="{{asset('images/product--1.webp')}}" alt="Art Product" class="w-full">
+                    <img src="{{asset('images/products')}}/{{$product->image}}" alt="Art Product" class="w-full">
                 </div>
                 <div class="p-4">
                     <h1 class="text-3xl font-bold mb-2">{{$product->name}}</h1>
