@@ -46,7 +46,7 @@
                                                     <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
                                                     <li class="px-12 border-t "></li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Products</li>
+                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.products')}}">Art Pieces</a></li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
                                                     <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
