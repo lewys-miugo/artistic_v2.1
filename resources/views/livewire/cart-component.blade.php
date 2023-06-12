@@ -31,7 +31,7 @@
                         @foreach(Cart::instance('cart')->content() as $item)
                             <tr>
                                 <td class="py-2 px-4">
-                                    <img src="{{asset('images/product--1.webp')}}" alt="Product Image" class="w-16 mx-auto max-w-max">
+                                    <img src="{{$item->model->image}}" alt="Product Image" class="w-16 mx-auto max-w-max">
                                     <!-- $item->model->id vid:8 minute:15:30-15:36 -->
                                 </td>
                                 <td class="py-2 px-4 text-center">
