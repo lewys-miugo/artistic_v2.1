@@ -8,7 +8,7 @@
     <h1 class="text-center">All Products</h1>
 
     <div class="text-right mx-8 my-2">
-        <!-- <a href="{{-- route('admin.products.add') --}}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded ">Add New Category</a> -->
+        <a href="{{ route('admin.product.add') }}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded ">Add New Product/listing</a>
     </div>
 
     <div class="mx-8">
@@ -41,7 +41,7 @@
                 @foreach($products as $product)
                     <tr class="even:bg-gray-100 odd:bg-white">
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{++$i}}</td>
-                        <td class="py-2 px-4  text-center"><img src="{{asset('images/product--1.webp')}}" alt="{{$product->name}}"></td>
+                        <td class="py-2 px-4  text-center"><img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}"></td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->name}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->stock_status}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->regular_price}}</td>
