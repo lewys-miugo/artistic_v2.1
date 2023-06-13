@@ -1,4 +1,18 @@
 <div>
+    <div class="">
+        <ul class="gray-300 list-none flex flex-row  pl-4 mx-4 text-[#46555f]">
+            <li class=" grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+                <a href="{{route('shop')}}">
+                    <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">All Pieces</p>
+                </a>
+            </li>
+            @foreach($categories as $category)
+                <li class="grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]"><a href="{{route('product.category',['slug'=>$category->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{$category->name}}</a></li>
+
+            @endforeach
+
+        </ul>
+    </div>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     <div class="m-4 flex flex-col-12">
         <!-- <aside id="default-sidebar" class="relative sticky top-0 left-0  w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidenav">
@@ -136,7 +150,7 @@
                 </div>
         </div> -->
 
-        <aside class="relative sticky top-0 left-0  w-1/2  h-full transition-transform -translate-x-full sm:translate-x-0">
+        <!-- <aside class="relative sticky top-0 left-0  w-1/2  h-full transition-transform -translate-x-full sm:translate-x-0">
             <div class="overflow-y-auto py-5 px-3 h-full rounded-lg bg-white border-r border-gray-200" >
                 <ul>
                     <li class="px-4 py-2 border-b-2">
@@ -176,17 +190,17 @@
                     </ul>
                 </ul>
             </div>
-        </aside>
+        </aside> -->
 
         
 
 
         <div class="m-2 ">
             <div>
-                <p class="text-left text-xs text-[#6a767e]"><a href="/" class="uppercase">Home</a> > CANVAS SETS</p>
+                <p class="text-left text-xs text-[#6a767e]"><a href="/" class="uppercase">Home</a> > All Pieces</p>
             </div>
 
-            <div class="flex flex-col-12 my-4 text-[#46555f]">
+            <!-- <div class="flex flex-col-12 my-4 text-[#46555f]">
                 <div class="justify-center m-2">
                     <img src="https://cdn.shopify.com/s/files/1/1568/8443/collections/canvas-sets-wall-art.jpg?v=1672415275&width=200" alt="" class="">
                 </div>
@@ -201,7 +215,7 @@
                 <div>
                     <p class="text-sm">Discover stunning Canvas Sets Wall Art ideas and choose from our curated selection designs. Based on your unique interior, browse Digital Art, Photography. Explore various styles, including Illustration, Typography, Kids & Teens and Photographic Canvas Sets Wall Art by top artists like Taylor Greene, cheryl warrick and more. Choose Canvas Sets Wall Art layout types such as multi panel, and framed prints, to personalize your home with the perfect piece of art.</p>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Navbar 2 -->
 
@@ -215,7 +229,7 @@
 
                 </div>
 
-                <div class="flex flex-1"></div>
+                <!-- <div class="flex flex-1"></div>
 
                 <div class="flex justify-end">
                     <div class="px-2 pt-1">
@@ -235,7 +249,7 @@
 
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Number of pieces -->
@@ -246,10 +260,9 @@
             </div>
 
             <!-- art-rows origina -->
-            <div>
+            <!-- <div>
                 <div class="mb-8">
                     <div class="flex flex-row">
-                        <!-- Trending 1 -->
                         <div class="flex flex-col m-2">
                             <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/ep1_es_229_layout_5_mess_japanese-mountain-landscape-abstract-5-piece-wall-art.webp?v=1668564076&width=360" alt="" class="h-64">
 
@@ -268,7 +281,6 @@
 
                         </div>
 
-                        <!-- Trending 2 -->
                         <div class="flex flex-col m-2">
                             <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/aurora_d8_layout_5_mess_northern-lights-5-piece-wall-art.webp?v=1668641208&width=360" alt="" class="h-64">
 
@@ -287,7 +299,6 @@
 
                         </div>
 
-                        <!-- Trending 3 -->
                         <div class="flex flex-col m-2">
                             <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/surf_md7_layout_4_mess_ocean-wave-4-piece-wall-art.webp?v=1668522551&width=360" alt="" class="h-64">
 
@@ -306,7 +317,6 @@
 
                         </div>
 
-                        <!-- Trending 4 -->
                         <div class="flex flex-col m-2">
                             <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/npp_58_layout_3_horizontal_have-faith-quote-3-piece-wall-art.webp?v=1669192072&width=360" alt="" class="h-64">
 
@@ -324,28 +334,9 @@
                             <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
 
                         </div>
-
-                        <!-- Trending 5 -->
-                        <!-- <div class="flex flex-col m-2 ">
-                            <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/xgn_es_yt4_layout_3_horizontal_mandala-on-wood-3-piece-wall-art.webp?v=1668721232&width=360" alt="" class="h-64">
-
-
-                            <ul class="flex flex-row text-[#46555f] text-base pl-2 bg-white">
-                                <li class="text-xs">Mandala On Wood</li>
-                                <li class="ml-24 flex flex-row">
-                                    <p class="text-xs">1324</p> 
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg>
-                                </li>
-                            </ul>
-
-                            <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
-
-                        </div> -->
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Product shop -->
             <div>
@@ -361,21 +352,20 @@
                                 <!-- <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/ep1_es_229_layout_5_mess_japanese-mountain-landscape-abstract-5-piece-wall-art.webp?v=1668564076&width=360" alt="" class="h-64"> -->
                                 <a href="{{route('product.details',['slug'=>$product->slug])}}">
                                     <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64">
-                                </a>
 
-                                <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
                                     <li class="text-xs">{{$product->name}}</li>
-                                    <li class="ml-8 flex flex-row">
+                                    <!-- <li class="ml-8 flex flex-row">
                                         <p class="text-xs">674</p> 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                                         </svg>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <div class="flex flex-row">
                                     <ul>
                                         <!-- category -->
-                                        <li class="text-xs pl-2 text-[#46555f]">Hot</li>
+                                        <!-- <li class="text-xs pl-2 text-[#46555f]">Hot</li> -->
                                         <!-- price -->
                                         <li class="flex flex-row text-xs pl-2 text-[#46555f]">
                                             <p>{{$product->price}}</p>
@@ -402,10 +392,15 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                                         </svg>
                                     </a>
-
                                 </div>
 
-                                <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
+                                <p class="text-xs pl-2 text-[#46555f] italic">ksh.{{$product->regular_price}}</p>
+
+                                
+                                </a>
+
+                                
+
 
                             </div>
                         @endforeach
