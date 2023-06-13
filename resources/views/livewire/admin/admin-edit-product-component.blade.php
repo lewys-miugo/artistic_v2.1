@@ -98,8 +98,8 @@
 
             <!-- Featured Product -->
             <div class="mb-4">
-                <label for="featured" class="block mb-1" wire:model="featured">Featured</label>
-                <select name="featured" id="">
+                <label for="featured" class="block mb-1" >Featured</label>
+                <select name="featured" wire:model="featured" id="">
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
