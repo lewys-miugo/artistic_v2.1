@@ -19,10 +19,11 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            <header>
-                <nav class="flex justify-between pl-12 py-10 items-center bg-white">
+            <header class="sticky top-0">
+                <nav class="flex justify-between h-20 pl-12 py-10 items-center bg-white">
                     <a href="{{'/'}}">
-                        <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1>
+                        <!-- <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1> -->
+                        <img src="{{asset('Logo.jpeg')}}" alt="Artistc Excursion Logo" class="w-48">
                     </a>
                     <div class="flex mr-8 items-center">
                         <!-- <div class=" flex bg-gray-200 items-center">
@@ -35,8 +36,7 @@
                         </div> -->
                         @livewire('header-search-component')
                         <ul class="flex items-center pl-8 space-x-6">
-                            <li class="font-semibold text-gray-700">Free Shipping</li>
-                            <li class="font-semibold text-gray-700">Returns</li>
+                            <li class="font-semibold text-gray-700">Return Policy</li>
                             <li class="font-semibold text-gray-700">
                                 @auth
                                     <button id="myaccount-btn">My Account
@@ -147,60 +147,10 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="gray-300  ">
-                    <ul class="list-none flex pl-4 mx- text-[#46555f]">
-                        <li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472] ">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">Best Sellers</p>
-                        </li>
-                        <li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472] ">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">Trending</p>
-                        </li>
-                        <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <a href="{{route('shop')}}">
-                                <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">New</p>
-                            </a>
-                        </li>
-                        <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <a href="{{'collections'}}">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">Subject</p>
-                            </a>			
-                        </li>
-                        <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">colors</p>
-                        </li>
-                        <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">rooms</p>
-                        </li>
-                        <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">styles</p>
-                        </li>
-                        <li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <a href="{{'huntlayout'}}">
-                                <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">convas sets</p>
-                            </a>
-                        </li>
-                        <li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">push pin maps</p>
-                        </li>
-                        <li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">Exclusive</p>
-                        </li>
-                        <li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">artists</p>
-                        </li>
-                        <li class=" border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">officially licensed</p>
-                        </li>
-                        <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-1 my-2 uppercase text-sm text-[#c45472] font-bold ">Personalized gifts</p>
-                        </li>
-                        <li class="border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                            <p class="mx-1 my-2 uppercase text-sm text-[#c45472] font-bold">hot deals</p>
-                        </li>
-
-                    </ul>
-                </div>
+                
             </header>
+
+            
 
             <!-- Page Content -->
             <main>
