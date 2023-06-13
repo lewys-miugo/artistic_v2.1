@@ -1,7 +1,7 @@
 <div>
 
 <div class="mx-4 mb-4">
-    <!-- 3-images -->
+    <!-- 3-banner-images -->
     <div class="flex flex-row mt-2">
         <div class="basis-2/4">
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-0163.png?v=1683114560&width=720" alt="">
@@ -22,7 +22,7 @@
         
     </div>
 
-    <div class="mx-20 my-8">
+    <!-- <div class="mx-20 my-8">
         <ul class="flex flex-row justify-center text-[#58656E]">
             <li class="uppercase flex flex-row mx-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mx-2">
@@ -52,11 +52,11 @@
                 <p class=""> 30 day free returns</p>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- images -->
 
-    <div class="flex flex-row">
+    <!-- <div class="flex flex-row">
         <div class="relative px-2">
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-canvases.jpg?v=1677492149&width=360" alt="">
         </div>
@@ -73,12 +73,12 @@
             </div>
         </div>
             
-        <!-- component -->
+        
         <div class="flex  items-center justify-center bg-slate-400">
-            <!-- Border animation Here -->
+            
             <div class="relative h-32 w-32 border before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b before:border-r before:transition-all before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t after:border-l after:transition-all after:duration-300 after:ease-in-out hover:before:h-[calc(100%+16px)]  hover:after:h-[calc(100%+16px)] hover:after:w-[calc(100%+16px)]"></div>
         </div>
-    </div>
+    </div> -->
 
     <!-- SHOP BY ROOM -->
     <div class="mt-12 mb-8 flex justify-center">
@@ -127,12 +127,13 @@
     </div>
 
     <!-- Browse different -->
-    <div class="mx-32 mt-20 text-[#46555f]">
+    <!-- <div class="mx-32 mt-20 text-[#46555f]">
         
         <h1 class="text-3xl flex justify-center mb-4 ">Browse Different Layouts and Sizes</h1>
         <h5 class="text-lg px-36 flex justify-center text-center">Filter wall art by shape and arrangement</h5>
-    </div>
-    <div class="my-4">
+    </div> -->
+    <!-- Images for types -->
+    <!-- <div class="my-4">
         <ul class="flex flex-row justify-center text-xl text-[#46555f]">
             <li class="px-4 border-b-2 border-b-transparent hover:border-b-[#c45472]">Shop by wall art type</li>
             <li class="px-4 border-b-2 border-b-transparent hover:border-b-[#c45472]">Shop by shapes</li>
@@ -172,15 +173,17 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <!-- Shop Our Top-Trending Collections -->
-    <div class="mx-32 mt-20 text-[#46555f]">
+    <!-- <div class="mx-32 mt-20 text-[#46555f]">
         
         <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Top-Trending Collections</h1>
-    </div>
+    </div> -->
+
+    <!-- Personalized gifts -->
     
-    <div class="relative ">
+    <!-- <div class="relative ">
         <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/canvas-art-wall-decor.jpg?v=1677492776&width=1512" alt="" class="">
         <div class="absolute top-0 m-20 pl-20 text-[#46555f]">
             <p class="text-4xl font-bold">Personalized Gifts</p>                
@@ -188,10 +191,10 @@
             <p class="text-base">Choose a personalized  print for the perfect gift.</p>            
             <p class="uppercase underline underline-offset-2 pt-4">Shop personalized gifts</p>
         </div>
-    </div>
+    </div> -->
 
     <!-- Images below personalized gifts -->
-    <div class="flex flex-row my-4  ">
+    <!-- <div class="flex flex-row my-4  ">
         <a href="#">
             <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
             
@@ -220,10 +223,10 @@
                 <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP GALLERY WALL ART</p>
             </div>
         </a>
-    </div>
+    </div> -->
 
     <!-- Officialy licensed -->
-    <div>
+    <!-- <div>
         <div class="flex flex-row justify-center my-8"> 
             <p class="text-3xl text-[#485760]"> Officially Licensed </p>
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-hangings-22.png?v=1677058921&width=36" alt="" class="pl-4">
@@ -237,12 +240,18 @@
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/print-wall-art.png?v=1677494422&width=360" alt="" class="ml-2 h-20">
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-print.png?v=1677494663&width=180" alt="" class="mx-2 h-20">
         </div>
+    </div> -->
+
+    <!-- Trending title -->
+    <!-- <div class="flex justify-center">
+        <p class="text-3xl text-[#485760]">Trending</p>
+    </div> -->
+    <!-- Shop Our Top-Trending Collections -->
+    <div class="mx-32 mt-20 text-[#46555f]">
+        
+        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Top-Trending Collections</h1>
     </div>
 
-    <!-- Trending -->
-    <div class="flex justify-center">
-        <p class="text-3xl text-[#485760]">Trending</p>
-    </div>
     <div>
         <div class="">
             <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right"><p>to all trending</p></a>
@@ -339,112 +348,48 @@
         </div>
     </div>
 
-    <!-- Exclusive -->
-    <div class="flex justify-center">
-        <p class="text-3xl text-[#485760]">Exclusive</p>
+    <!-- Shop Our Top-Trending Collections -->
+    <div class="mx-32 mt-20 text-[#46555f]">
+        
+        <h1 class="text-3xl flex justify-center mb-4 ">Latest Collections</h1>
     </div>
+
+    <!-- Exclusive -->
+    <!-- <div class="flex justify-center">
+        <p class="text-3xl text-[#485760]">Latest</p>
+    </div> -->
     <div>
         <div class="">
             <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
-                <p>to all exclusives</p>
+                <p>To all latest</p>
             </a>
         </div>
         <div class="mb-8">
-            <div class="flex flex-row">
+            <div class="flex flex-row flex-wrap">
                 <!-- Trending 1 -->
+                @foreach($lproducts as $lproduct)
+
+
                 <div class="flex flex-col m-2">
-                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/ep1_es_229_layout_5_mess_japanese-mountain-landscape-abstract-5-piece-wall-art.webp?v=1668564076&width=360" alt="" class="h-64">
+                    <a href="{{route('product.details',['slug'=>$lproduct->slug])}}">
+                        <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64">
 
 
-                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
-                        <li class="text-xs">Japanese Mountain Landscape</li>
-                        <li class="ml-8 flex flex-row">
-                            <p class="text-xs">674</p> 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </li>
-                    </ul>
+                        <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                            <li class="text-xs">{{$lproduct->name}}</li>
+                            <li class="ml-8 flex flex-row">
+                                <p class="text-xs">674</p> 
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                            </li>
+                        </ul>
 
-                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
-
-                </div>
-
-                <!-- Trending 2 -->
-                <div class="flex flex-col m-2">
-                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/aurora_d8_layout_5_mess_northern-lights-5-piece-wall-art.webp?v=1668641208&width=360" alt="" class="h-64">
-
-
-                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
-                        <li class="text-xs">Northern Lights</li>
-                        <li class="ml-24 flex flex-row">
-                            <p class="text-xs">843</p> 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </li>
-                    </ul>
-
-                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
+                        <p class="text-xs pl-2 text-[#46555f] italic">{{$lproduct->sale_price}}</p>
+                    </a>
 
                 </div>
-
-                <!-- Trending 3 -->
-                <div class="flex flex-col m-2">
-                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/surf_md7_layout_4_mess_ocean-wave-4-piece-wall-art.webp?v=1668522551&width=360" alt="" class="h-64">
-
-
-                    <ul class="flex flex-row text-[#46555f] text-base pl-2">
-                        <li class="text-xs">Ocean Wave</li>
-                        <li class="ml-24 flex flex-row">
-                            <p class="text-xs">977</p> 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </li>
-                    </ul>
-
-                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
-
-                </div>
-
-                <!-- Trending 4 -->
-                <div class="flex flex-col m-2">
-                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/npp_58_layout_3_horizontal_have-faith-quote-3-piece-wall-art.webp?v=1669192072&width=360" alt="" class="h-64">
-
-
-                    <ul class="flex flex-row text-[#46555f] text-base pl-2 bg-white">
-                        <li class="text-xs">Faith Qoute</li>
-                        <li class="ml-24 flex flex-row">
-                            <p class="text-xs">1713</p> 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </li>
-                    </ul>
-
-                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
-
-                </div>
-
-                <!-- Trending 5 -->
-                <div class="flex flex-col m-2 ">
-                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/xgn_es_yt4_layout_3_horizontal_mandala-on-wood-3-piece-wall-art.webp?v=1668721232&width=360" alt="" class="h-64">
-
-
-                    <ul class="flex flex-row text-[#46555f] text-base pl-2 bg-white">
-                        <li class="text-xs">Mandala On Wood</li>
-                        <li class="ml-24 flex flex-row">
-                            <p class="text-xs">1324</p> 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        </li>
-                    </ul>
-
-                    <p class="text-xs pl-2 text-[#46555f] italic">Exclusive</p>
-
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
