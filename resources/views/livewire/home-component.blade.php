@@ -1,8 +1,22 @@
 <div>
+    <div class="">
+                <ul class="gray-300 list-none flex flex-row  pl-4 mx-4 text-[#46555f]">
+                    <li class=" grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+                        <a href="{{route('shop')}}">
+                            <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">All Pieces</p>
+                        </a>
+                    </li>
+                    @foreach($categories as $category)
+                        <li class="grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]"><a href="{{route('product.category',['slug'=>$category->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{$category->name}}</a></li>
+    
+                    @endforeach
+
+                </ul>
+    </div>
 
 <div class="mx-4 mb-4">
     <!-- 3-banner-images -->
-    <div class="flex flex-row mt-2">
+    <!-- <div class="flex flex-row mt-2">
         <div class="basis-2/4">
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-0163.png?v=1683114560&width=720" alt="">
         </div>
@@ -12,7 +26,7 @@
         <div class="basis-1/4">
            <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-decorations-124.png?v=1679569588&width=360" alt="">
         </div>
-    </div>
+    </div> -->
 
     <!-- stunning wall art -->
     <div class="mx-32 mt-20 text-[#46555f]">
@@ -81,11 +95,11 @@
     </div> -->
 
     <!-- SHOP BY ROOM -->
-    <div class="mt-12 mb-8 flex justify-center">
+    <!-- <div class="mt-12 mb-8 flex justify-center">
         <p class="text-3xl text-[#46555f]">Shop by Room</p>
-    </div>
+    </div> -->
     <!-- IMAGES Shop by room -->
-    <div class="flex flex-row mb-10">
+    <!-- <div class="flex flex-row mb-10">
         <ul class="flex flex-row text-[#46555f] text-xl">
             <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
                 <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
@@ -124,7 +138,7 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- Browse different -->
     <!-- <div class="mx-32 mt-20 text-[#46555f]">
@@ -247,18 +261,17 @@
         <p class="text-3xl text-[#485760]">Trending</p>
     </div> -->
     <!-- Shop Our Top-Trending Collections -->
-    <div class="mx-32 mt-20 text-[#46555f]">
+    <!-- <div class="mx-32 mt-20 text-[#46555f]">
         
-        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Top-Trending Collections</h1>
-    </div>
+        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Trending Art Pieces</h1>
+    </div> -->
 
-    <div>
+    <!-- <div>
         <div class="">
             <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right"><p>to all trending</p></a>
         </div>
         <div class="mb-8">
             <div class="flex flex-row">
-                <!-- Trending 1 -->
                 <div class="flex flex-col m-2">
                     <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/pg3_es_pme_layout_floating_horizontal_majestic-sunset-at-mount-rainer-framed-wall-art.webp?v=1668523885&width=360" alt="" class="h-64">
 
@@ -274,7 +287,6 @@
                     </ul>
                 </div>
 
-                <!-- Trending 2 -->
                 <div class="flex flex-col m-2">
                     <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/tsn_art_h23_layout_3_horizontal_pew-pew-3-piece-wall-art.webp?v=1668590422&width=360" alt="" class="h-64">
 
@@ -292,7 +304,6 @@
 
                 </div>
 
-                <!-- Trending 3 -->
                 <div class="flex flex-col m-2">
                     <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/fsv_es_sy7_layout_2_horizontal_brave-enough-amanda-gorman-2-piece-wall-art.webp?v=1668625612&width=360" alt="" class="h-64">
 
@@ -310,7 +321,6 @@
 
                 </div>
 
-                <!-- Trending 4 -->
                 <div class="flex flex-col m-2">
                     <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/wtv_es_gzk_layout_3_horizontal_funny-bathroom-french-bulldog-3-piece-wall-art.webp?v=1668757199&width=360" alt="" class="h-64">
 
@@ -326,7 +336,6 @@
                     </ul>
                 </div>
 
-                <!-- Trending 5 -->
                 <div class="flex flex-col m-2 ">
                     <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/s3j_art_rjr_layout_1_vertical_wide_great-sea-turtle-wall-art.webp?v=1668562509&width=360" alt="" class="h-64">
 
@@ -346,18 +355,75 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- Shop Our Top-Trending Collections -->
+      <!-- Shop Our Latest Collections -->
     <div class="mx-32 mt-20 text-[#46555f]">
         
-        <h1 class="text-3xl flex justify-center mb-4 ">Latest Collections</h1>
+        <h1 class="text-3xl flex justify-center mb-4 ">Shop Featured Art Pieces</h1>
     </div>
 
     <!-- Exclusive -->
     <!-- <div class="flex justify-center">
         <p class="text-3xl text-[#485760]">Latest</p>
     </div> -->
+    <!-- Latest products -->
+    <div>
+        <div class="">
+            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+                <p>To all Featured</p>
+            </a>
+        </div>
+        <div class="mb-8">
+            <div class="flex flex-row flex-wrap">
+                <!-- Trending 1 -->
+                @foreach($fproducts as $fproduct)
+
+
+                <div class="flex flex-col m-2">
+                    <a href="{{route('product.details',['slug'=>$fproduct->slug])}}">
+                        <img src="{{asset('images/products')}}/{{$fproduct->image}}" alt="{{$fproduct->name}}" class="h-64">
+
+
+                        <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                            <li class="text-xs">{{$fproduct->name}}</li>
+                            
+                        </ul>
+
+                        <ul class="flex flex-row text-[#46555f] text-base pl-2 justify-end">
+                            <li class=" flex flex-row justify-end">
+                                <p class="text-xs">674</p> 
+                                <!-- Cart -->
+                                    <a href="#" wire:click.prevent="store({{$fproduct->id}},'{{$fproduct->name}}',{{$fproduct->regular_price}})">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-4 ">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                    </a>
+                            </li>
+                        </ul>
+
+
+
+                        <p class="text-xs pl-2 text-[#46555f] italic">{{$fproduct->regular_price}}</p>
+                    </a>
+
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop Our Latest Collections -->
+    <div class="mx-32 mt-20 text-[#46555f]">
+        
+        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Latest Art Pieces</h1>
+    </div>
+
+    <!-- Exclusive -->
+    <!-- <div class="flex justify-center">
+        <p class="text-3xl text-[#485760]">Latest</p>
+    </div> -->
+    <!-- Latest products -->
     <div>
         <div class="">
             <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
@@ -377,15 +443,22 @@
 
                         <ul class="flex flex-row text-[#46555f] text-base pl-2">
                             <li class="text-xs">{{$lproduct->name}}</li>
-                            <li class="ml-8 flex flex-row">
+                            
+                        </ul>
+
+                        <ul class="flex flex-row text-[#46555f] text-base pl-2 justify-end">
+                            <li class=" flex flex-row justify-end">
                                 <p class="text-xs">674</p> 
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
+                                <!-- Cart -->
+                                    <a href="#" wire:click.prevent="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->regular_price}})">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-4 ">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                    </a>
                             </li>
                         </ul>
 
-                        <p class="text-xs pl-2 text-[#46555f] italic">{{$lproduct->sale_price}}</p>
+                        <p class="text-xs pl-2 text-[#46555f] italic">{{$lproduct->regular_price}}</p>
                     </a>
 
                 </div>
@@ -394,13 +467,14 @@
         </div>
     </div>
 
+
     <!-- Hot deals alert -->
-    <div>
+    <!-- <div>
         <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-decor-art.jpg?v=1677495945&width=1512" alt="">
-    </div>
+    </div> -->
 
     <!-- REVIEWS -->
-    <div class="flex flex-row mt-4 border-b-2 border-[#707070]">
+    <!-- <div class="flex flex-row mt-4 border-b-2 border-[#707070]">
         <div>
             <p class="uppercase text-[#485760]">Company Reviews</p>
         </div>
@@ -410,9 +484,9 @@
             <p class="uppercase mr-2 text-sm">Based on</p>
             <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/reviewsio-logo--coloured.png?v=1627020194&width=180" alt="" class="h-5">
         </div>
-    </div>
+    </div> -->
     <div>
-        <div class="flex flex-row divide-x-2 mt-2 divide-[#707070]">
+        <!-- <div class="flex flex-row divide-x-2 mt-2 divide-[#707070]">
             <div class="flex flex-row">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                     <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
@@ -442,11 +516,11 @@
                 <p class="px-2 text-[#4e7d91]">10.3k</p>
                 <p class="text-[#46555f] text-base uppercase">Reviews</p>
             </div>
-        </div>
+        </div> -->
 
         <div class="flex flex-row my-4">
             <!-- Review 1 -->
-            <div class="border mx-2">
+            <!-- <div class="border mx-2">
                 <div class="p-2">
                     <div class="flex flex-row pl-2">
                         <p class="text-[#58656e] text-lg mr-2">James Maina</p>
@@ -481,10 +555,10 @@
                         <p class="text-right font-bold text-xs text-[#46555f]">Posted 2 days ago</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Review 2 -->
-            <div class="border mx-2">
+            <!-- <div class="border mx-2">
                 <div class="p-2">
                     <div class="flex flex-row pl-2">
                         <p class="text-[#58656e] text-lg mr-2">Muihaki Catherine</p>
@@ -519,10 +593,10 @@
                         <p class="text-right font-bold text-xs text-[#46555f]">Posted 4 days ago</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Review 3 -->
-            <div class="border mx-2">
+            <!-- <div class="border mx-2">
                 <div class="p-2">
                     <div class="flex flex-row pl-2">
                         <p class="text-[#58656e] text-lg mr-2">James Maina</p>
@@ -557,10 +631,10 @@
                         <p class="text-right font-bold text-xs text-[#46555f]">Posted 2 days ago</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Review 4 -->
-            <div class="border mx-2">
+            <!-- <div class="border mx-2">
                 <div class="p-2">
                     <div class="flex flex-row pl-2">
                         <p class="text-[#58656e] text-lg mr-2">James Maina</p>
@@ -595,20 +669,20 @@
                         <p class="text-right font-bold text-xs text-[#46555f]">Posted 2 days ago</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <!-- Shop the Look -->
-    <div class="mx-32 mt-20 text-[#46555f]">
+    <!-- <div class="mx-32 mt-20 text-[#46555f]">
         
         <h1 class="text-4xl flex justify-center mb-8 ">Shop The Look</h1>
         <h5 class="text-lg px-36 flex justify-center text-center">These collections were curated by our design experts. Shop top-trending, handpicked prints.</h5>
         
-    </div>
+    </div> -->
 
     <!-- Images below shop the look -->
-    <div class="flex flex-row my-4  ">
+    <!-- <div class="flex flex-row my-4  ">
         <a href="#">
             <div class="flex flex-col mx-2 text-[#485760] transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-200">
             
@@ -637,13 +711,13 @@
                 <p class="uppercase text-sm underline underline-offset-1 mt-2">SHOP BOHEMIAN BEDROOM</p>
             </div>
         </a>
-    </div>
+    </div> -->
 
     <!-- Artists -->
-    <div class="flex justify-center mt-20">
+    <!-- <div class="flex justify-center mt-20">
         <p class="text-3xl text-[#485760]">Meet Our Artists</p>
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
         <div class=" mb-4">
             <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
                 <p>to all artists</p>
@@ -651,7 +725,7 @@
         </div>
 
         <div class="flex flex-row">
-            <!-- Artist 1 -->
+            Artist 1
             <div class="mx-2">
                 <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-art-artists.jpg?v=1677495180&width=360" alt="">
                     <p class="text-center text-[#485760] text-2xl mt-4">Claudia Schoen</p>
@@ -674,7 +748,7 @@
 
             </div>
             
-            <!-- Artist 2 -->
+            Artist 2
             <div class="mx-2">
                 <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-arts-store.jpg?v=1677495402&width=360" alt="">
                     <p class="text-center text-[#485760] text-2xl mt-4">Daniel Jean-Baptiste</p>
@@ -697,7 +771,7 @@
 
             </div>
 
-            <!-- Artist 3 -->
+            Artist 3
             <div class="mx-2">
                 <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/canvas-wall-art-prints.jpg?v=1677495586&width=360" alt="">
                     <p class="text-center text-[#485760] text-2xl mt-4">Ahmad Shariff</p>
@@ -720,7 +794,7 @@
 
             </div>
 
-            <!-- Artist 4 -->
+            Artist 4
             <div class="mx-2">
                 <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/elephantstock-wall-art.jpg?v=1677495430&width=360" alt="">
                     <p class="text-center text-[#485760] text-2xl mt-4">Emily Loius Heard</p>
@@ -743,7 +817,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 

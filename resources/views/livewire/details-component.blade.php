@@ -10,7 +10,7 @@
                 </div>
                 <div class="p-4">
                     <h1 class="text-3xl font-bold mb-2">{{$product->name}}</h1>
-                    <p class="text-gray-700 text-lg mb-4">Artist Name</p>
+                    <!-- <p class="text-gray-700 text-lg mb-4">Artist Name</p> -->
                     <p class="text-gray-600 mb-6">{{$product->short_description}}</p>
                     <div class="flex items-center mb-6">
                         <span class="mr-2">Rating:</span>
@@ -42,8 +42,8 @@
                             </svg>
                         </div>
                     </div>
-                    <p class="text-gray-700 line-through text-xl mb-4">Ksh{{$product->regular_price}}</p>
-                    <p class="text-gray-700 text-xl mb-4">Ksh{{$product->sale_price}}</p>
+                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price}}</p>
+                    <!-- <p class="text-gray-700 text-xl mb-4">Ksh{{$product->sale_price}}</p> -->
 
                     <button type="button"
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price}})">
@@ -56,10 +56,10 @@
                 <ul class="list-disc list-inside">
                     <p class="text-gray-600 mb-6">{{$product->description}}</p>
 
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <!-- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                     <li>Nullam congue turpis quis ligula finibus tincidunt.</li>
                     <li>Fusce lobortis pharetra libero, id commodo metus.</li>
-                    <li>Suspendisse eu sem in tellus venenatis rhoncus.</li>
+                    <li>Suspendisse eu sem in tellus venenatis rhoncus.</li> -->
                 </ul>
             </div>
 
@@ -75,7 +75,7 @@
                             <h3 class="text-lg font-bold">{{$rproduct->name}}</h3>
                             <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <p class="text-gray-700">${{$rproduct->regular_price}}</p>
-                            <p class="text-gray-700">${{$rproduct->sale_price}}</p>
+                            <!-- <p class="text-gray-700">${{$rproduct->sale_price}}</p> -->
 
                         </div>
                     @endforeach

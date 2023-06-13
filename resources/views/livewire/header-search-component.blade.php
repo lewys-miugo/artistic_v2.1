@@ -1,4 +1,4 @@
-<div class="relative">
+<div class="relative ">
     <form action="{{route('product.search')}}" >
         <input id="searchInput" type="text" name="q" class="w-full rounded-md pl-2 pr-10 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search" value="{{$q}}">
 
