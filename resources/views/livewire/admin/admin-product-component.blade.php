@@ -23,9 +23,9 @@
         <table class="w-full px-8 border rounded-lg ">
             <thead>
                 <tr class="bg-blue-200">
-                <th class="py-2 px-4">#</th>
+                <th class="py-2 px-2">#</th>
                 <th class="py-2 px-4">Image</th>
-                <th class="py-2 px-4">Product Name</th>
+                <th class="py-2 px-2">Product Name</th>
                 <th class="py-2 px-4">Stock</th>
                 <th class="py-2 px-4">Price</th>
                 <th class="py-2 px-4">Category</th>
@@ -40,15 +40,17 @@
 
                 @foreach($products as $product)
                     <tr class="even:bg-gray-100 odd:bg-white">
-                        <td class="py-2 px-4 whitespace-nowrap text-center">{{++$i}}</td>
+                        <td class="py-2 px-2 whitespace-nowrap text-center">{{++$i}}</td>
                         <td class="py-2 px-4  text-center"><img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}"></td>
-                        <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->name}}</td>
+                        <td class="py-2 px-2 whitespace-wrap text-center">{{$product->name}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->stock_status}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->regular_price}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->category->name}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->created_at}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">
-                            
+                            <a href="{{route('admin.product.edit',['product_id'=>$product->id])}}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded">Edit</a>
+                            <button class="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded" onclick="deleteConfirmation({{-- $category->id --}})">Delete</button>
+                            <!-- {{-- $category->id --}} -->
                         </td>
                     </tr>
 
