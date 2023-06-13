@@ -10,6 +10,15 @@ use App\Models\Category;
 class AdminProductComponent extends Component
 {
     use WithPagination;
+    public $product_id;
+
+    public function deleteProduct()
+    {
+        $product = Product::find($this->product_id);
+        unlink('images/products/'.$product->image);
+        $product->delete();
+        session()->flash('message','Product has been deleted!!');
+    }
     
     public function render()
     {

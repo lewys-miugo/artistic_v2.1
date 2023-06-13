@@ -49,8 +49,8 @@
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->created_at}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">
                             <a href="{{route('admin.product.edit',['product_id'=>$product->id])}}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded">Edit</a>
-                            <button class="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded" onclick="deleteConfirmation({{-- $category->id --}})">Delete</button>
-                            <!-- {{-- $category->id --}} -->
+
+                            <button class="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded" onclick="deleteConfirmation({{$product->id }})">Delete</button>
                         </td>
                     </tr>
 
@@ -62,3 +62,38 @@
     </div>
 
 </div>
+
+
+<div id="deleteConfirmation" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+  <div class="bg-white w-1/2 rounded-lg p-8">
+    <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
+    <p class="mb-6">Are you sure you want to delete this item?</p>
+    <div class="flex justify-end">
+      <button onclick="deleteProduct()"  class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mr-4">Yes</button>
+      <button onclick="cancelDelete()" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function deleteConfirmation(id) {
+    // Set the category ID
+    document.getElementById('deleteConfirmation').classList.remove('hidden');
+    // Simulate setting the category_id in a Laravel Livewire component
+    console.log("Deleting product with ID:", id);
+    @this.set('product_id', id);
+  }
+
+    function deleteProduct() {
+    // Get the category ID
+    @this.call('deleteProduct');
+    var categoryId = document.getElementById('deleteConfirmation').dataset.id;
+    document.getElementById('deleteConfirmation').classList.add('hidden');
+  }
+
+  function cancelDelete() {
+    document.getElementById('deleteConfirmation').classList.add('hidden');
+    console.log("Canceling deleting product ");
+
+  }
+</script>
