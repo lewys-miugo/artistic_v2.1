@@ -31,7 +31,7 @@
                         @foreach(Cart::instance('cart')->content() as $item)
                             <tr>
                                 <td class="py-2 px-4">
-                                    <img src="{{$item->model->image}}" alt="Product Image" class="w-16 mx-auto max-w-max">
+                                    <img src="{{asset('images/products')}}/{{$item->model->image}}" alt="Product Image" class="w-16 mx-auto max-w-max">
                                     <!-- $item->model->id vid:8 minute:15:30-15:36 -->
                                 </td>
                                 <td class="py-2 px-4 text-center">
@@ -87,13 +87,13 @@
                 <p class="text-center">Sorry but there are no item in your Cart</p>
             @endif
             <div class="flex justify-end mt-8">
-                <button
+                <!-- <button
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 rounded focus:outline-none focus:shadow-outline">
                     Update Cart
-                </button>
+                </button> -->
                 <button
                     class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                    Continue Shopping
+                    <a href="{{'/'}}">Continue Shopping</a>
                 </button>
             </div>
         </div>
@@ -102,24 +102,41 @@
         <div class="container mx-auto py-8">
             <div class="flex justify-between mb-8">
                 <div class="w-1/2 pr-4">
-                    <h2 class="text-lg font-bold mb-4">Shipping Details</h2>
-                    <div class="mb-4">
+                    <h2 class="text-lg font-bold mb-4">Delivery Details</h2>
+                    <!-- <div class="mb-4">
                         <label class="block mb-2 text-sm font-medium">County</label>
                         <select class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <option>Select County</option>
                             <option>County 1</option>
                             <option>County 2</option>
-                            <!-- Add more options as needed -->
+                            add more options
                         </select>
-                    </div>
+                    </div> -->
                     <div class="mb-4">
-                        <label class="block mb-2 text-sm font-medium">Or enter a state manually:</label>
-                        <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <label class="block mb-2 text-sm font-medium">Enter County</label>
+                        <input type="text" class="w-3/4 px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter name of County ">
                     </div>
-                    <div class="mb-4">
-                        <label class="block mb-2 text-sm font-medium">Town</label>
-                        <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <div class="flex flex-row">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium">Sub-County or Town</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Sub-county or Town">
+                        </div>
+                        <div class="mb-4 mx-2">
+                            <label class="block mb-2 text-sm font-medium">Specific Area</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter specific area">
+                        </div>
                     </div>
+                    <div class="flex flex-row">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium">Full Name</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Full names">
+                        </div>
+                        <div class="mb-4 mx-2">
+                            <label class="block mb-2 text-sm font-medium">Phone number</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Phone number">
+                        </div>
+                    </div>
+                    
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                         Update
                     </button>
@@ -128,20 +145,20 @@
                 <div class="w-1/2 pl-4">
                     <h2 class="text-lg font-bold mb-4">Cart Summary</h2>
                     <table class="w-full">
-                        <tbody>
-                            <tr>
+                        <tbody class="border">
+                            <tr class="border">
                                 <td class="py-2 px-4">Subtotal</td>
                                 <td class="py-2 px-4">Ksh.{{Cart::subtotal()}}</td>
                             </tr>
-                            <tr>
+                            <tr class="border">
                                 <td class="py-2 px-4">Tax</td>
                                 <td class="py-2 px-4">Ksh.{{Cart::tax()}}</td>
                             </tr>
-                            <tr>
-                                <td class="py-2 px-4">Shipping</td>
-                                <td class="py-2 px-4">Free Shipping</td>
+                            <tr class="border">
+                                <td class="py-2 px-4">Delivery</td>
+                                <td class="py-2 px-4">Ksh.500.00</td>
                             </tr>
-                            <tr>
+                            <tr class="border">
                                 <td class="py-2 px-4">Total</td>
                                 <td class="py-2 px-4">Ksh.{{Cart::total()}}</td>
                             </tr>
