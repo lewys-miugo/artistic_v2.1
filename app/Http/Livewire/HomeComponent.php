@@ -21,7 +21,7 @@ class HomeComponent extends Component
     {
         $lproducts = Product::orderBy('created_at', 'DESC')->get()->take(16);
         $fproducts = Product::where('featured',1)->inRandomOrder()->get()->take(16);
-        $categories = Category::orderBy('name','ASC')->get();
+        $categories = Category::orderBy('name','ASC')->get()->take(5);
         return view('livewire.home-component',['lproducts'=>$lproducts,'fproducts'=>$fproducts,'categories'=>$categories]);
     }
 }

@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         @livewireStyles 
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
         <!-- Scripts -->
@@ -19,133 +21,173 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            <header class="sticky top-0">
-                <nav class="flex justify-between h-20 pl-12 py-10 items-center bg-white">
-                    <a href="{{'/'}}">
-                        <!-- <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1> -->
-                        <img src="{{asset('Logo.jpeg')}}" alt="Artistc Excursion Logo" class="w-48">
+            <header id="lg-screen" class="sticky top-0">
+                <!-- <nav class="flex justify-between h-20 pl-12 py-10 items-center bg-white">
+                    <a href="{{-- '/' --}}"> 
+                         <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1> 
+                         <img src="{{-- asset('Logo.jpeg') --}}" alt="Artistc Excursion Logo" class="w-48">
                     </a>
-                    <div class="flex mr-8 items-center">
-                        <!-- <div class=" flex bg-gray-200 items-center">
+                    <div class="flex mr-8 items-center"> 
+                        <div class=" flex bg-gray-200 items-center">
                         
                             <input class="mr-2 outline-none bg-transparent font-" type="text" name="search" id="search" placeholder="Search by subject,color,room" />
 
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pt-0.5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
-                        </div> -->
-                        @livewire('header-search-component')
+                        </div>
+                        
                         <ul class="flex items-center pl-8 space-x-6">
                             <li class="font-semibold text-gray-700">Return Policy</li>
                             <li class="font-semibold text-gray-700">
-                                @auth
-                                    <button id="myaccount-btn">My Account
-                                        <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
-                                            @if(Auth::user()->utype== 'ADM')    
-                                                <ul class="text-center border rounded">
-                                                    <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
-                                                    <li class="px-12 border-t "></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.products')}}">Art Pieces</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.home.slider')}}">Manage Slider</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Customers</li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
-
-                                                    <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
-
-                                                </ul>
-                                            @else
-                                                <ul class="text-center border rounded">
-                                                    <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
-                                                    <li class="px-12 border-t "></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('user.dashboard')}}">Dashboard</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Offers</li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
-
-                                                    <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
-                                                    <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
-
-                                                </ul>
-                                            @endif
-                                                
-                                        </div>
-                                    </button>
-                                @endif
+                                
 
                             </li>
-                            @auth
-                                <li>
-                                    <button class="group" id="usr-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-
-                                        <div class="absolute hidden -ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
-                                            
-                                            <ul class="text-center border rounded" >
-                                                <li class="px-4 py-1  m-4">{{Auth::user()->name}}</li>
-                                                <li class="px-12 border-t "></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">
-                                                    <form action="{{route('logout')}}" method="POST">
-                                                        @csrf
-                                                        <a href="{{route('logout')}}" class="underline underline-offset-2 text-blue-400" onclick="event.preventDefault(); this.closest('form').submit();">Log out</a>
-                                                    </form>
-                                                </li>
-                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
-
-                                            </ul>
-                                            
-                                        </div>
-
-                                    </button>
-
-                                </li>
-                            @else
-                                <li>
-                                    <button class="group" id="usr-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                        </svg>
-                                        <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
-                                            
-                                            <ul class="text-center border rounded">
-                                                <li class="px-4 py-1  m-4">Create your account to:</li>
-                                                <li class="px-12 border-t "></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Save your wishlist</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Track your order</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Save your order data</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li>
-
-                                            </ul>
-                                            
-                                        </div>
-
-                                    </button>
-
-                                </li>
-                            @endif
-                            <li >
-                                @livewire('wishlist-icon-component')
-
-                            </li>
-                            <li>
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                </svg> -->
-
-
-                                <!-- Cart component -->
-                                @livewire('cart-icon-component')
-
-                            </li>
+                            
                         </ul>
                     </div>
+                </nav>  -->
+
+                <!-- Latest navbar -->
+
+                <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+                    <div class="flex justify-between items-center ">
+                        <span class="text-2xl font-[Poppins] cursor-pointer">
+                            <img src="{{asset('Logo.jpeg')}}" alt="Artistc Excursion Logo" class="w-52">
+
+                        </span>
+
+                        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                        </span>
+                    </div>
+
+                    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                        <li class="mx-4 my-6 md:my-0">
+                            <!-- <a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a> -->
+                            @livewire('header-search-component')
+
+                        </li>
+                        <li class="mx-4 my-6 md:my-0 cursor-pointer font-semibold text-gray-700 hover:text-cyan-500 duration-500">
+                            <!-- <a href="#" class="text-xl hover:text-cyan-500 duration-500">SERVICE</a> -->
+                                <a>Return Policy</a>
+
+                        </li>
+                        <li class="mx-4 my-6 md:my-0 ">
+                            @auth
+                                <button id="myaccount-btn">My Account
+                                    <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
+                                        @if(Auth::user()->utype== 'ADM')    
+                                            <ul class="text-center border rounded">
+                                                <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
+                                                <li class="px-12 border-t "></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.products')}}">Art Pieces</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.home.slider')}}">Manage Slider</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Customers</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
+
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
+
+                                            </ul>
+                                        @else
+                                            <ul class="text-center border rounded">
+                                                <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
+                                                <li class="px-12 border-t "></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('user.dashboard')}}">Dashboard</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Offers</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
+
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
+
+                                            </ul>
+                                        @endif
+                                            
+                                    </div>
+                                </button>
+                            @endif
+                        </li>
+                        <!-- <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="text-xl hover:text-cyan-500 duration-500">CONTACT</a>
+                        </li>
+                        <li class="mx-4 my-6 md:my-0">
+                            <a href="#" class="text-xl hover:text-cyan-500 duration-500">BLOG'S</a>
+                        </li>
+
+                        <button class="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+                            Get started
+                        </button> -->
+
+                        @auth
+                            <li class="mx-4 my-6 md:my-0">
+                                <button class="group" id="usr-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+
+                                    <div class="absolute hidden -ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
+                                        
+                                        <ul class="text-center border rounded" >
+                                            <li class="px-4 py-1  m-4">{{Auth::user()->name}}</li>
+                                            <li class="px-12 border-t "></li>
+                                            <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">
+                                                <form action="{{route('logout')}}" method="POST">
+                                                    @csrf
+                                                    <a href="{{route('logout')}}" class="underline underline-offset-2 text-blue-400" onclick="event.preventDefault(); this.closest('form').submit();">Log out</a>
+                                                </form>
+                                            </li>
+                                            <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
+
+                                        </ul>
+                                        
+                                    </div>
+
+                                </button>
+
+                            </li>
+                        @else
+                            <li class="mx-4 my-6 md:my-0">
+                                <button class="group" id="usr-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                    </svg>
+                                    <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
+                                        
+                                        <ul class="text-center border rounded">
+                                            <li class="px-4 py-1  m-4">Create your account to:</li>
+                                            <li class="px-12 border-t "></li>
+                                            <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Save your wishlist</li>
+                                            <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Track your order</li>
+                                            <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Save your order data</li>
+                                            <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
+                                            <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li>
+
+                                        </ul>
+                                        
+                                    </div>
+
+                                </button>
+
+                            </li>
+                        @endif
+
+                        <li class="mx-4 my-6 md:my-0">
+                            @livewire('wishlist-icon-component')
+
+                        </li>
+                        <li class="mx-4 my-6 md:my-0">
+                            <!-- Cart component -->
+                            @livewire('cart-icon-component')
+
+                        </li>
+                        <!-- <h2 class=""></h2> -->
+                    </ul>
                 </nav>
                 
             </header>
@@ -276,6 +318,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
         @livewireScripts
        
+        <!-- MAKING MENU RESPONSIVE -->
+        <script>
+            function Menu(e){
+            let list = document.querySelector('ul');
+            e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+            }
+        </script>
         <!-- Making drop down menu on user -->
         <script>
             window.addEventListener('DOMContentLoaded', ()=>{
