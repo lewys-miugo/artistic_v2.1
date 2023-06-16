@@ -19,7 +19,7 @@ class HomeComponent extends Component
 
     public function render()
     {
-        $lproducts = Product::orderBy('created_at', 'DESC')->get()->take(16);
+        $lproducts = Product::orderBy('created_at', 'DESC')->get()->take(12);
         $fproducts = Product::where('featured',1)->inRandomOrder()->get()->take(16);
         $categories = Category::orderBy('name','ASC')->get()->take(5);
         return view('livewire.home-component',['lproducts'=>$lproducts,'fproducts'=>$fproducts,'categories'=>$categories]);
