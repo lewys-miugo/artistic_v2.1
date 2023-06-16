@@ -94,13 +94,15 @@
                             @error('password')
                                 <p class="text-white bg-red-300">{{$message}}</p>
                             @enderror
+                            <div class="flex flex-row m-2"><input type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" onclick="myVisiblePassword()"><p class="block mb-2 ml-2 text-sm font-medium text-gray-900 dark:text-white">Show Password</p></div>
                         </div>
                         <div>
                             <label for="confirm-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
-                            <input type="confirm-password" name="password_confirmation" id="confirm-password" placeholder="Confirm password" required  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+                            <input type="password" name="password_confirmation" id="confirm-password" placeholder="Confirm password" required  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                             @error('password_confirmation')
                                 <p class="text-white bg-red-300">{{$message}}</p>
                             @enderror
+                            <div class="flex flex-row m-2"><input type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" onclick="myVisibleCPassword()"><p class="block mb-2 ml-2 text-sm font-medium text-gray-900 dark:text-white">Show Password</p></div>
                         </div>
                         <div class="flex items-start">
                             <div class="flex items-center h-5">
@@ -122,4 +124,24 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function myVisiblePassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        function myVisibleCPassword(){
+            var x= document.getElementById("confirm-password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 </x-app-layout>
