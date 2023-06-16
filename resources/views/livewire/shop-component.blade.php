@@ -224,7 +224,7 @@
                     <!-- border-b-4 border-[#B76573] -->
                     
                     <a href="" class="mx-2 font-bold uppercase text-sm {{ $orderBy=='Default' ? 'active' : ''}} nav-link" wire:click.prevent="changeOrderBy('Default')">Default</a>
-                    <a href="" class="mx-2 font-bold uppercase text-sm  nav-link" wire:click.prevent="changeOrderBy('Default')">Trending</a>
+                    <!-- <a href="" class="mx-2 font-bold uppercase text-sm  nav-link" wire:click.prevent="changeOrderBy('Default')">Trending</a> -->
                     <a href="" class="mx-2 font-bold uppercase text-sm  {{ $orderBy=='Latest' ? 'active' : ''}} nav-link" wire:click.prevent="changeOrderBy('Latest')">Latest</a>
 
                 </div>
