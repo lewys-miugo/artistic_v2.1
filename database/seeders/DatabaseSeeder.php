@@ -25,12 +25,12 @@ class DatabaseSeeder extends Seeder
             'utype'=>'ADM',
         ]);
 
-        \App\Models\User::factory(1)->create([
-            'name'=>'lewis Miugo',
-            'email'=>'artisticexcursions@gmail.com',
-            'password'=>'PLMzaq&4321',
-            'utype'=>'ADM',
-        ]);
+        // \App\Models\User::factory(1)->create([
+        //     'name'=>'lewis Miugo',
+        //     'email'=>'lewismiugo01@gmail.com',
+        //     'password'=>'PLMzaq&4321',
+        //     'utype'=>'ADM',
+        // ]);
         
 
         // \App\Models\User::factory()->create([
