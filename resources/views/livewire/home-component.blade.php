@@ -357,6 +357,61 @@
         </div>
     </div> -->
 
+
+    <!-- Shop Our Latest Collections -->
+    <div class="mx-32 mt-20 text-[#46555f]">
+        
+        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Latest Art Pieces</h1>
+    </div>
+
+    <!-- Exclusive -->
+    <!-- <div class="flex justify-center">
+        <p class="text-3xl text-[#485760]">Latest</p>
+    </div> -->
+    <!-- Latest products -->
+    <div>
+        <div class="">
+            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+                <p>To all latest</p>
+            </a>
+        </div>
+        <div class="mb-8">
+            <div class="flex flex-row flex-wrap">
+                <!-- Trending 1 -->
+                @foreach($lproducts as $lproduct)
+
+
+                <div class="flex flex-col m-2">
+                    <a href="{{route('product.details',['slug'=>$lproduct->slug])}}">
+                        <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64">
+
+
+                        <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                            <li class="text-xs">{{$lproduct->name}}</li>
+                            
+                        </ul>
+
+                        <ul class="flex flex-row text-[#46555f] text-base pl-2 justify-end">
+                            <li class=" flex flex-row justify-end">
+                                <p class="text-xs">674</p> 
+                                <!-- Cart -->
+                                    <a href="#" wire:click.prevent="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->regular_price}})">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-4 ">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                    </a>
+                            </li>
+                        </ul>
+
+                        <p class="text-xs pl-2 text-[#46555f] italic">{{$lproduct->regular_price}}</p>
+                    </a>
+
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
       <!-- Shop Our Latest Collections -->
     <div class="mx-32 mt-20 text-[#46555f]">
         
@@ -405,60 +460,6 @@
 
 
                         <p class="text-xs pl-2 text-[#46555f] italic">{{$fproduct->regular_price}}</p>
-                    </a>
-
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-
-    <!-- Shop Our Latest Collections -->
-    <div class="mx-32 mt-20 text-[#46555f]">
-        
-        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Latest Art Pieces</h1>
-    </div>
-
-    <!-- Exclusive -->
-    <!-- <div class="flex justify-center">
-        <p class="text-3xl text-[#485760]">Latest</p>
-    </div> -->
-    <!-- Latest products -->
-    <div>
-        <div class="">
-            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
-                <p>To all latest</p>
-            </a>
-        </div>
-        <div class="mb-8">
-            <div class="flex flex-row flex-wrap">
-                <!-- Trending 1 -->
-                @foreach($lproducts as $lproduct)
-
-
-                <div class="flex flex-col m-2">
-                    <a href="{{route('product.details',['slug'=>$lproduct->slug])}}">
-                        <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64">
-
-
-                        <ul class="flex flex-row text-[#46555f] text-base pl-2">
-                            <li class="text-xs">{{$lproduct->name}}</li>
-                            
-                        </ul>
-
-                        <ul class="flex flex-row text-[#46555f] text-base pl-2 justify-end">
-                            <li class=" flex flex-row justify-end">
-                                <p class="text-xs">674</p> 
-                                <!-- Cart -->
-                                    <a href="#" wire:click.prevent="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->regular_price}})">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-4 ">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                        </svg>
-                                    </a>
-                            </li>
-                        </ul>
-
-                        <p class="text-xs pl-2 text-[#46555f] italic">{{$lproduct->regular_price}}</p>
                     </a>
 
                 </div>
