@@ -91,7 +91,7 @@
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.home.slider')}}">Manage Slider</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Customers</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.customers')}}">Customers</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
 
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
