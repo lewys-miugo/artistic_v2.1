@@ -21,6 +21,7 @@ use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminAddHomeSlideComponent;
 use App\Http\Livewire\Admin\AdminEditHomeSlideComponent;
 use App\Http\Livewire\Admin\AdminUsersComponent;
+use App\Http\Livewire\Admin\AdminEditUserComponent;
 
 use App\Http\Livewire\User\UserDashboardComponent;
 
@@ -75,6 +76,7 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/slider/edit/{slide_id}',AdminEditHomeSlideComponent::class)->name ('admin.home.slide.edit');
 
     Route::get('/admin/users',AdminUsersComponent::class)->name('admin.customers');
+    Route::get('/admin/user/edit/{user_id}',AdminEditUserComponent::class)->name('admin.user.edit');
 });
 
 // Route::get('/dashboard', function () {
