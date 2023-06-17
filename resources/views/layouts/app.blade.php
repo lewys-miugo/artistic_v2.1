@@ -300,7 +300,8 @@
                         <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
                             <a rel="noopener noreferrer" href="#">Facebook</a>
                             <a rel="noopener noreferrer" href="#">Instagram</a>
-                            <a rel="noopener noreferrer" href="mailto:artisticexcurions@gmail.com">Email: artisticexcurions@gmail.com</a>
+                            <a rel="noopener noreferrer" href="mailto:artisticexcursions@gmail.com">Email: artisticexcursions@gmail.com</a>
+                            <a href="tel:+254716340285">Phone no: +254716340285</a>
 
                             <!-- <a rel="noopener noreferrer" href="#">By Shape</a>
                             <a rel="noopener noreferrer" href="#">By Atmosphere</a>
