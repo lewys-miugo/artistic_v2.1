@@ -55,7 +55,9 @@
                 <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
                     <div class="flex justify-between items-center ">
                         <span class="text-2xl font-[Poppins] cursor-pointer">
-                            <img src="{{asset('Logo.jpeg')}}" alt="Artistc Excursion Logo" class="w-52">
+                           <a href="/">
+                                <img src="{{asset('Logo.jpeg')}}" alt="Artistc Excursion Logo" class=" w-36 md:w-40 lg:w-52">
+                           </a>
 
                         </span>
 
@@ -72,13 +74,13 @@
                         </li>
                         <li class="mx-4 my-6 md:my-0 cursor-pointer font-semibold text-gray-700 hover:text-cyan-500 duration-500">
                             <!-- <a href="#" class="text-xl hover:text-cyan-500 duration-500">SERVICE</a> -->
-                                <a>Return Policy</a>
+                            <a href="">Return Policy</a>
 
                         </li>
                         <li class="mx-4 my-6 md:my-0 ">
                             @auth
-                                <button id="myaccount-btn">My Account
-                                    <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
+                                <button id="myaccount-btn">{{ Auth::user()->name }}
+                                    <div class="absolute hidden ml-8 md:-ml-28 lg:-ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
                                         @if(Auth::user()->utype== 'ADM')    
                                             <ul class="text-center border rounded">
                                                 <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
@@ -133,7 +135,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
 
-                                    <div class="absolute hidden -ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
+                                    <div class="absolute hidden ml-8 md:-ml-28 lg:-ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
                                         
                                         <ul class="text-center border rounded" >
                                             <li class="px-4 py-1  m-4">{{Auth::user()->name}}</li>
@@ -159,7 +161,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                     </svg>
-                                    <div class="absolute hidden  -ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
+                                    <div class="absolute hidden ml-8 md:-ml-28 lg:-ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
                                         
                                         <ul class="text-center border rounded">
                                             <li class="px-4 py-1  m-4">Create your account to:</li>
@@ -179,11 +181,11 @@
                             </li>
                         @endif
 
-                        <li class="mx-4 my-6 md:my-0">
+                        <li class=" relative mx-4 my-6 md:my-0">
                             @livewire('wishlist-icon-component')
 
                         </li>
-                        <li class="mx-4 my-6 md:my-0">
+                        <li class=" relative mx-4 my-6 md:my-0">
                             <!-- Cart component -->
                             @livewire('cart-icon-component')
 
@@ -203,7 +205,7 @@
 
             <footer class="p-6 relative z-100 top-0 mt-16 bg-[#556E7B] text-white dark:bg-gray-800 dark:text-gray-100">
 
-                <div class="my-8">
+                <!-- <div class="my-8">
                     <h3 class="text-4xl text-center uppercase">Enjoy 20% Welcome Gift</h3>
                     <p class="text-xl text-center my-4">Subscribe For Exclusive Tips, Updates, & Inspiration</p>
 
@@ -228,21 +230,19 @@
                             </div>
                         </div>
                     </section>
-                </div>
-                <div class="container grid grid-cols-2 mx-auto gap-x-3 gap-y-12 sm:grid-cols-3 md:grid-cols-6">
+                </div> -->
+                <div class="container grid grid-cols-2 mx-4 md:mx-12 lg:mx-16 gap-y-12 sm:grid-cols-2 md:grid-cols-2">
                     <div class="flex flex-col space-y-4">
                         <h2 class="font-medium ">CUSTOMER SERVICE</h2>
                         <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                            <a rel="noopener noreferrer" href="#">Help Center</a>
-                            <a rel="noopener noreferrer" href="#">Shipping & Delivery</a>
-                            <a rel="noopener noreferrer" href="#">Track Order</a>
+                            
+                            <a rel="noopener noreferrer" href="#">Delivery</a>
                             <a rel="noopener noreferrer" href="#">Return Policy</a>
-                            <a rel="noopener noreferrer" href="#">Customer Service</a>
+                            <a href="">FAQs</a>
                             <a rel="noopener noreferrer" href="#">Accessibility Statement</a>
-                            <a rel="noopener noreferrer" href="#">Let's Chat</a>
                         </div>
                     </div>
-                    <div class="flex flex-col space-y-4">
+                    <!-- <div class="flex flex-col space-y-4">
                         <h2 class="font-medium">SHOP BY</h2>
                         <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
                             <a rel="noopener noreferrer" href="#">Subjects</a>
@@ -254,8 +254,8 @@
                             <a rel="noopener noreferrer" href="#">Exclusive Wall Art</a>
                             <a rel="noopener noreferrer" href="#">Photo Prints</a>
                         </div>
-                    </div>
-                    <div class="flex flex-col space-y-4">
+                    </div> -->
+                    <!-- <div class="flex flex-col space-y-4">
                         <h2 class="font-medium">FOR BUSINESS</h2>
                         <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
                             <a rel="noopener noreferrer" href="#">Healthcare</a>
@@ -266,8 +266,8 @@
                             <a rel="noopener noreferrer" href="#">Accounting Office</a>
                             <a rel="noopener noreferrer" href="#">Plugins</a>
                         </div>
-                    </div>
-                    <div class="flex flex-col space-y-4">
+                    </div> -->
+                    <!-- <div class="flex flex-col space-y-4">
                         <h2 class="font-medium">WALL ART BY ROOM</h2>
                         <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
                             <a rel="noopener noreferrer" href="#">Subjects</a>
@@ -279,9 +279,9 @@
                             <a rel="noopener noreferrer" href="#">Exclusive Wall Art</a>
                             <a rel="noopener noreferrer" href="#">Photo Prints</a>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="flex flex-col space-y-4">
+                    <!-- <div class="flex flex-col space-y-4">
                         <h2 class="font-medium">POPULAR WALL ART</h2>
                         <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
                             <a rel="noopener noreferrer" href="#">Subjects</a>
@@ -293,19 +293,19 @@
                             <a rel="noopener noreferrer" href="#">Exclusive Wall Art</a>
                             <a rel="noopener noreferrer" href="#">Photo Prints</a>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="flex flex-col space-y-4">
-                        <h2 class="font-medium">COMPANY</h2>
+                        <h2 class="font-medium">COMPANY CONTACT</h2>
                         <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                            <a rel="noopener noreferrer" href="#">Subjects</a>
-                            <a rel="noopener noreferrer" href="#">New Arrivals</a>
-                            <a rel="noopener noreferrer" href="#">By Style</a>
-                            <a rel="noopener noreferrer" href="#">By Color</a>
-                            <a rel="noopener noreferrer" href="#">By Shape</a>
+                            <a rel="noopener noreferrer" href="#">Facebook</a>
+                            <a rel="noopener noreferrer" href="#">Instagram</a>
+                            <a rel="noopener noreferrer" href="mailto:artisticexcurions@gmail.com">Email: artisticexcurions@gmail.com</a>
+
+                            <!-- <a rel="noopener noreferrer" href="#">By Shape</a>
                             <a rel="noopener noreferrer" href="#">By Atmosphere</a>
                             <a rel="noopener noreferrer" href="#">Exclusive Wall Art</a>
-                            <a rel="noopener noreferrer" href="#">Photo Prints</a>
+                            <a rel="noopener noreferrer" href="#">Photo Prints</a> -->
                         </div>
                     </div>
                     
