@@ -8,7 +8,7 @@
       <h1 class="text-center">All Categories</h1>
     </div>
     <div class="text-right mx-8 my-2">
-        <a href="{{route('admin.categories.add')}}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded ">Add New Category</a>
+        <a href="{{route('admin.categories.add')}}" class="bg-blue-500 cursor-pointer hover:bg-blue-600 text-white py-1 px-2 rounded ">Add New Category</a>
     </div>
 
     <div class="mx-8">
