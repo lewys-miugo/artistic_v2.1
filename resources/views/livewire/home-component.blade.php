@@ -371,7 +371,7 @@
     <!-- Latest products -->
     <div>
         <div class="">
-            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+            <a href="{{route('shop')}}" class="uppercase underline underline-offset-2 text-[#485760] text-right">
                 <p>To all latest</p>
             </a>
         </div>
@@ -409,6 +409,12 @@
                 </div>
                 @endforeach
             </div>
+        </div>
+
+        <div class="md:hidden lg:hidden">
+            <a href="{{route('shop')}}" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+                <p>To all latest</p>
+            </a>
         </div>
     </div>
 
