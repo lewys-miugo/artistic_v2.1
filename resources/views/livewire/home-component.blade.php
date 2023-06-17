@@ -29,10 +29,10 @@
     </div> -->
 
     <!-- stunning wall art -->
-    <div class="mx-32 mt-20 text-[#46555f]">
+    <div class="lg:mx-32 mt-20 text-[#46555f]">
         
-        <h1 class="text-4xl flex justify-center mb-8 ">Stunning Wall Art at an Affordable Price</h1>
-        <h5 class="text-lg px-36 flex justify-center text-center">We’ve curated an accessible, extensive selection of wall art. Discover top-trending designs and create your dream interior in the blink of an eye!</h5>
+        <h1 class="text-4xl flex justify-center text-center mb-8 ">Stunning Wall Art at Affordable Prices</h1>
+        <h5 class="text-lg lg:px-36 flex justify-center text-center">We’ve curated an accessible, extensive selection of wall art for you. Discover top-trending designs and create your dream interior in the blink of an eye!</h5>
         
     </div>
 
@@ -359,9 +359,9 @@
 
 
     <!-- Shop Our Latest Collections -->
-    <div class="mx-32 mt-20 text-[#46555f]">
+    <div class="mt-8 lg:mx-32 lg:mt-20 text-[#46555f]">
         
-        <h1 class="text-3xl flex justify-center mb-4 ">Shop Our Latest Art Pieces</h1>
+        <h1 class="text-3xl flex justify-center text-center mb-4 ">Shop Our Latest Art Pieces</h1>
     </div>
 
     <!-- Exclusive -->
@@ -419,9 +419,9 @@
     </div>
 
       <!-- Shop Our Latest Collections -->
-    <div class="mx-32 mt-20 text-[#46555f]">
+    <div class="sm:mt-8 lg:mx-32 lg:mt-20 text-[#46555f]">
         
-        <h1 class="text-3xl flex justify-center mb-4 ">Shop Featured Art Pieces</h1>
+        <h1 class="text-3xl flex justify-center text-center mb-4 ">Shop Featured Art Pieces</h1>
     </div>
 
     <!-- Exclusive -->
@@ -471,6 +471,11 @@
                 </div>
                 @endforeach
             </div>
+        </div>
+        <div class="">
+            <a href="" class="md:hidden lg:hidden uppercase underline underline-offset-2 text-[#485760] text-right">
+                <p>To all Featured</p>
+            </a>
         </div>
     </div>
 
