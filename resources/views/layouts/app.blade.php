@@ -22,7 +22,7 @@
         @vite(['resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-gray-100">
             <header id="lg-screen" class="sticky top-0">
                 <!-- <nav class="flex justify-between h-20 pl-12 py-10 items-center bg-white">
                     <a href="{{-- '/' --}}"> 
@@ -203,7 +203,7 @@
                 {{ $slot }}
             </main>
 
-            <footer class="p-6 relative z-100 top-0 mt-16 bg-[#556E7B] text-white dark:bg-gray-800 dark:text-gray-100">
+            <footer class="p-6 relative z-100 top-0 mt-16 bg-[#556E7B] text-white">
 
                 <!-- <div class="my-8">
                     <h3 class="text-4xl text-center uppercase">Enjoy 20% Welcome Gift</h3>
@@ -234,7 +234,7 @@
                 <div class="container grid grid-cols-2 mx-4 md:mx-12 lg:mx-16 gap-y-12 sm:grid-cols-2 md:grid-cols-2">
                     <div class="flex flex-col space-y-4">
                         <h2 class="font-medium ">CUSTOMER SERVICE</h2>
-                        <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                        <div class="flex flex-col space-y-2 text-sm">
                             
                             <a rel="noopener noreferrer" href="#">Delivery</a>
                             <a rel="noopener noreferrer" href="#">Return Policy</a>
@@ -297,7 +297,7 @@
 
                     <div class="flex flex-col space-y-4">
                         <h2 class="font-medium">COMPANY CONTACT</h2>
-                        <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                        <div class="flex flex-col space-y-2 text-sm">
                             <a rel="noopener noreferrer" href="#">Facebook</a>
                             <a rel="noopener noreferrer" href="#">Instagram</a>
                             <a rel="noopener noreferrer" href="mailto:artisticexcursions@gmail.com">Email: artisticexcursions@gmail.com</a>
@@ -312,7 +312,7 @@
                     
                 </div>
                 <div class="flex items-center justify-center px-6 pt-12 text-sm">
-                    <span class="dark:text-gray-400">© Copyright 2023, Artistic Excursions. All Rights Reserved.</span>
+                    <span class="">© Copyright 2023, Artistic Excursions. All Rights Reserved.</span>
                 </div>
             </footer>
 
