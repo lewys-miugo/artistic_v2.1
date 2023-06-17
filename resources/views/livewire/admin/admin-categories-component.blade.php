@@ -1,4 +1,5 @@
 <div>
+<div>
     <div class="mx-4">
         <p class="text-left text-xs text-[#6a767e]"><a href="/" class="uppercase">Home</a> > Wishlist</p>
     </div>
@@ -87,3 +88,4 @@
 
   }
 </script>
+</div>
