@@ -82,17 +82,18 @@
                                 <button id="myaccount-btn">{{ Auth::user()->name }}
                                     <div class="absolute hidden ml-8 md:-ml-28 lg:-ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
                                         @if(Auth::user()->utype== 'ADM')    
-                                            <ul class="text-center border rounded">
+                                            <ul class="text-center border rounded space-y-2">
                                                 <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
                                                 <li class="px-12 border-t "></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.products')}}">Art Pieces</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.home.slider')}}">Manage Slider</a></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
+                                                <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{-- route('admin.home.slider') --}}">Manage Slider</a></li> -->
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li> -->
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li> -->
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.customers')}}">Customers</a></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li> -->
 
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
@@ -102,10 +103,10 @@
                                             <ul class="text-center border rounded">
                                                 <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
                                                 <li class="px-12 border-t "></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('user.dashboard')}}">Dashboard</a></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Offers</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('/')}}">Dashboard</a></li>
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Offers</li> -->
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li> -->
+                                                <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li> -->
 
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('register')}}" class="underline underline-offset-2 text-blue-400">Sign up</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
