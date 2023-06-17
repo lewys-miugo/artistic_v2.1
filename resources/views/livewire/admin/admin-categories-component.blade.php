@@ -1,12 +1,11 @@
 <div>
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
-
     <div class="mx-4">
         <p class="text-left text-xs text-[#6a767e]"><a href="/" class="uppercase">Home</a> > Wishlist</p>
     </div>
 
-    <h1 class="text-center">All Categories</h1>
-
+    <div>   
+      <h1 class="text-center">All Categories</h1>
+    </div>
     <div class="text-right mx-8 my-2">
         <a href="{{route('admin.categories.add')}}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded ">Add New Category</a>
     </div>
@@ -53,38 +52,17 @@
 
     </div>
 
-</div>
-
-<!-- <div id="deleteConfirmation" class="absolute z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-  <div class="bg-white w-1/2 rounded-lg p-8">
-    <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
-    <p class="mb-6">Are you sure you want to delete?</p>
-    <div class="flex justify-end">
-      <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mr-4" data-bs-target="#deleteConfirmation" data-bs-toggle="modal">Delete</button>
-      <button class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">Cancel</button>
+    <div id="deleteConfirmation" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+      <div class="bg-white w-1/2 rounded-lg p-8">
+        <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
+        <p class="mb-6">Are you sure you want to delete this item?</p>
+        <div class="flex justify-end">
+          <button onclick="deleteCategory()"  class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mr-4">Yes</button>
+          <button onclick="cancelDelete()" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">Cancel</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-
-@push('scripts')
-    <script>
-        function deleteConfirmation(id) {
-            @this.set('category_id',id);
-            $('#deleteConfirmation').modal('show');
-        }
-    </script>
-@endpush -->
-
-<div id="deleteConfirmation" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
-  <div class="bg-white w-1/2 rounded-lg p-8">
-    <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
-    <p class="mb-6">Are you sure you want to delete this item?</p>
-    <div class="flex justify-end">
-      <button onclick="deleteCategory()"  class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mr-4">Yes</button>
-      <button onclick="cancelDelete()" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">Cancel</button>
-    </div>
-  </div>
 </div>
 
 <script>
