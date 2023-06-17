@@ -39,7 +39,7 @@
                         <td class="py-2 px-4  text-center">{{$user->email}}</td>
                         <td class="py-2 px-4  text-center">{{$user->utype}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">
-                            <a href="{{-- route('admin.category.edit',['category_id'=>$category->id]) --}}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded">Edit</a>
+                            <a href="{{ route('admin.user.edit',['user_id'=>$user->id]) }}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded">Edit</a>
                         </td>
                     </tr>
 
