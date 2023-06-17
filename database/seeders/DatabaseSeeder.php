@@ -21,16 +21,16 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(1)->create([
             'name'=>'Anthony Wahome',
             'email'=>'artisticexcursions@gmail.com',
-            'password'=>'PLMzaq&4321',
+            'password'=>bcrypt('PLMzaq&4321x'),
             'utype'=>'ADM',
         ]);
 
-        // \App\Models\User::factory(1)->create([
-        //     'name'=>'lewis Miugo',
-        //     'email'=>'lewismiugo01@gmail.com',
-        //     'password'=>'PLMzaq&4321',
-        //     'utype'=>'ADM',
-        // ]);
+        \App\Models\User::factory(1)->create([
+            'name'=>'lewis Miugo',
+            'email'=>'lewiswambugu01@gmail.com',
+            'password'=>bcrypt('PLMzaq&4321x'),
+            'utype'=>'ADM',
+        ]);
         
 
         // \App\Models\User::factory()->create([
