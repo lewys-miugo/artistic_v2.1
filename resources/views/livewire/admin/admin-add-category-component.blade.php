@@ -29,7 +29,7 @@
                 <span class="font-semibold">Success! | {{Session::get('message')}}</span>
             </div>
         @endif
-        <form class="max-w-md mx-auto" wire:submit.prevent="storeCategory">
+        <form class="max-w-md mx-auto" wire:submit.prevent="storeCategory" >
             <div class="mb-4">
                 <label for="name" class="block mb-1">Name</label>
                 <input id="name" type="text" name="name" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter name of category" wire:model="name" wire:keyup="generateSlug()">
