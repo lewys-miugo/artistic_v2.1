@@ -3,7 +3,7 @@
 
     <body class="bg-gray-100">
         <div class="container mx-auto py-8">
-            <h1 class="text-2xl font-bold mb-8">Shopping Cart</h1>
+            <h1 class="text-2xl font-bold mb-8 mx-4">Shopping Cart</h1>
             @if(Session::has('success_message'))
                 <div class="flex items-center justify-center bg-green-200 text-green-700 p-4 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -14,7 +14,9 @@
             @endif
 
             @if(Cart::instance('cart')->count()>0)
-                <table class="w-full">
+                <div class="overflow-x-auto mx-4">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <!-- w-full -->
                     <thead>
                         <tr class="bg-gray-200">
                             <th class="py-2 px-4">Image</th>
@@ -73,9 +75,10 @@
                         
                     </tbody>
                 </table>
+                </div>
 
                 
-                <div class="flex items-right">
+                <div class="flex items-right mx-4">
                     <button class="text-red-600 hover:text-red-700 focus:outline-none" wire:click.prevent="clearAll()">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -99,9 +102,10 @@
         </div>
 
         <!-- More details -->
-        <div class="container mx-auto py-8">
-            <div class="flex justify-between mb-8">
-                <div class="w-1/2 pr-4">
+        <div class="container mx-2 py-8">
+            <div class="flex flex-col md:flex-row lg:flex-row  mb-8">
+                <!-- justify-between -->
+                <div class="w-full md:w-1/2 lg:w-1/2 md:pr-4">
                     <h2 class="text-lg font-bold mb-4">Delivery Details</h2>
                     <!-- <div class="mb-4">
                         <label class="block mb-2 text-sm font-medium">County</label>
@@ -142,7 +146,7 @@
                     </button>
                 </div>
 
-                <div class="w-1/2 pl-4">
+                <div class="mt-4 w-full md:w-1/2 lg:w-1/2 md:pl-4">
                     <h2 class="text-lg font-bold mb-4">Cart Summary</h2>
                     <table class="w-full">
                         <tbody class="border">
