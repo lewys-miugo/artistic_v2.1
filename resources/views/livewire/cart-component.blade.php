@@ -95,7 +95,7 @@
                     Update Cart
                 </button> -->
                 <button
-                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 mx-2 px-4 rounded focus:outline-none focus:shadow-outline">
                     <a href="{{'/'}}">Continue Shopping</a>
                 </button>
             </div>
@@ -155,26 +155,67 @@
                                 <td class="py-2 px-4">Ksh.{{Cart::subtotal()}}</td>
                             </tr>
                             <tr class="border">
-                                <td class="py-2 px-4">Tax</td>
+                                <td class="py-2 px-4">Delivery</td>
                                 <td class="py-2 px-4">Ksh.{{Cart::tax()}}</td>
                             </tr>
-                            <tr class="border">
+                            <!-- <tr class="border">
                                 <td class="py-2 px-4">Delivery</td>
                                 <td class="py-2 px-4">Ksh.500.00</td>
-                            </tr>
+                            </tr> -->
                             <tr class="border">
                                 <td class="py-2 px-4">Total</td>
                                 <td class="py-2 px-4">Ksh.{{Cart::total()}}</td>
                             </tr>
                         </tbody>
                     </table>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline" onclick="payment()">
                         Proceed to Checkout
                     </button>
                 </div>
             </div>
         </div>
-        
+
+        <!-- Checkout modal number and amount -->
+        <div id="payment" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+            <div class="bg-white w-1/2 rounded-lg p-8">
+                <div>
+                    <label for="tel">Phone number:</label>
+                    <input type="number" name="" id="" placeholder="valid safaricom number">
+                </div>
+
+                <div>
+                    <label for="amount">Amount</label>
+                    <input type="number" name="" placeholder="Enter total amount">
+                </div>
+                <div class="flex justify-center my-4">
+                    <button onclick="proceedPayment()"  class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded mr-4">proceed</button>
+                    <button onclick="cancelPayment()" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- Payment modal js -->
+        <script>
+            function payment(id) {
+                // Set the category ID
+                document.getElementById('payment').classList.remove('hidden');
+                // Simulate setting the category_id in a Laravel Livewire component
+                console.log("payment", id);
+                // @this.set('category_id', id);
+            }
+
+            function proceedPayment() {
+            // Get the category ID
+            // @this.call('deleteCategory');
+            var categoryId = document.getElementById('payment').dataset.id;
+            document.getElementById('payment').classList.add('hidden');
+            }
+
+            function cancelPayment() {
+                document.getElementById('payment').classList.add('hidden');
+                console.log("Canceling payment ");
+
+            }
+        </script>
 
         <!-- Increment and decrement JS -->
         <script>

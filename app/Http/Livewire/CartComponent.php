@@ -6,7 +6,16 @@ use Livewire\Component;
 use Cart;
 
 class CartComponent extends Component
+
 {
+    public $cartTotal;
+
+    public function mount()
+    {
+        $this->cartTotal=Cart::total();
+    }
+
+
     public function increaseQuantity($rowId)
     {
         $product = Cart::instance('cart')->get($rowId);
@@ -15,7 +24,7 @@ class CartComponent extends Component
         $this->emitTo('cart-icon-component','refreshComponent');
     }
 
-     public function decreaseQuantity($rowId)
+    public function decreaseQuantity($rowId)
     {
         $product = Cart::instance('cart')->get($rowId);
         $qty = $product->qty - 1;
@@ -35,6 +44,7 @@ class CartComponent extends Component
         Cart::destroy();
         session()->flash('success_message','Cart has been cleared');
     }
+
 
     public function render()
     {
