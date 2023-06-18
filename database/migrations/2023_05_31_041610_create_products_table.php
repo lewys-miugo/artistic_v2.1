@@ -25,7 +25,7 @@ return new class extends Migration
             $table->enum('stock_status',['instock','outofstock']);
             $table->boolean('featured')->default(false);
             $table->unsignedInteger('quantity')->default(10);
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->text('images')->nullable();
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->timestamps();
