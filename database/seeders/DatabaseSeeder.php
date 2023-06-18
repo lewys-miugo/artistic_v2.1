@@ -31,6 +31,33 @@ class DatabaseSeeder extends Seeder
             'password'=>bcrypt('PLMzaq&4321x'),
             'utype'=>'ADM',
         ]);
+
+        \App\Models\Category::factory(1)->create([
+            'name'=>'Abstract',
+            'slug'=>'Abstract'
+        ]);
+
+        \App\Models\Category::factory(1)->create([
+            'name'=>'Landscape',
+            'slug'=>'Landscape'
+        ]);
+
+        \App\Models\Category::factory(1)->create([
+            'name'=>'Anime',
+            'slug'=>'Anime'
+        ]);
+
+        \App\Models\Category::factory(1)->create([
+            'name'=>'Photorealism',
+            'slug'=>'Photorealism'
+        ]);
+
+        \App\Models\Category::factory(1)->create([
+            'name'=>'Superhero',
+            'slug'=>'Superhero'
+        ]);
+        
+        
         
 
         // \App\Models\User::factory()->create([
