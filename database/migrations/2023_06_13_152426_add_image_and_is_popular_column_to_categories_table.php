@@ -11,13 +11,13 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->string('image');
-            $table->boolean('is_popular')->default(false);
-        });
-    }
+    // public function up()
+    // {
+    //     Schema::table('categories', function (Blueprint $table) {
+    //         $table->string('image');
+    //         $table->boolean('is_popular')->default(false);
+    //     });
+    // }
 
     /**
      * Reverse the migrations.
@@ -26,8 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->dropColumn(['image','is_popular']);
-        });
+        // Schema::table('categories', function (Blueprint $table) {
+        //     $table->dropColumn(['image','is_popular']);
+        // });
     }
 };
