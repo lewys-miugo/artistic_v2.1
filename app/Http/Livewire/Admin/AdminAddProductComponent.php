@@ -37,7 +37,6 @@ class AdminAddProductComponent extends Component
             'name'=>'required',
             'slug'=>'required',
             'regular_price'=>'required',
-            'image'=>'required',
             'category_id'=>'required',
 
         ]);
