@@ -31,12 +31,12 @@
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                class="h-4 w-4 text-gray-400">
+                                class="h-4 w-4 text-yellow-400">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                class="h-4 w-4 text-gray-400">
+                                class="h-4 w-4 text-yellow-400">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
@@ -51,17 +51,17 @@
                     </button>
                 </div>
             </div>
-            <div class="mt-8">
+            <!-- <div class="mt-8">
                 <h2 class="text-2xl font-bold mb-4">Product Details</h2>
                 <ul class="list-disc list-inside">
-                    <p class="text-gray-600 mb-6">{{$product->description}}</p>
+                    <p class="text-gray-600 mb-6">{{-- $product->description --}}</p>
 
-                    <!-- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                     <li>Nullam congue turpis quis ligula finibus tincidunt.</li>
                     <li>Fusce lobortis pharetra libero, id commodo metus.</li>
-                    <li>Suspendisse eu sem in tellus venenatis rhoncus.</li> -->
+                    <li>Suspendisse eu sem in tellus venenatis rhoncus.</li>
                 </ul>
-            </div>
+            </div> -->
 
             <!-- Related Products -->
             <div class="mt-8">
@@ -70,7 +70,7 @@
                     @foreach($rproducts as $rproduct)
                         <div class="bg-white shadow-lg rounded-lg p-4">
                             <a href="{{route('product.details',['slug'=>$rproduct->slug])}}">
-                                <img src="{{asset('images/product--1.webp')}}" alt="{{$rproduct->name}} 3" class="w-full mb-4">
+                                <img src="{{asset('images/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}} 3" class="w-full mb-4">
                             </a>
                             <h3 class="text-lg font-bold">{{$rproduct->name}}</h3>
                             <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -89,7 +89,7 @@
                     @foreach($nproducts as $nproduct)
                         <div class="bg-white shadow-lg rounded-lg p-4">
                                 <a href="{{route('product.details',['slug'=>$nproduct->slug])}}">
-                                    <img src="{{asset('images/product--1.webp')}}" alt="{{$nproduct->name}} 3" class="w-full mb-4">
+                                    <img src="{{asset('images/products')}}/{{$nproduct->image}}" alt="{{$nproduct->name}} 3" class="w-full mb-4">
                                 </a>
                                 <h3 class="text-lg font-bold">{{$nproduct->name}}</h3>
                                 <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
