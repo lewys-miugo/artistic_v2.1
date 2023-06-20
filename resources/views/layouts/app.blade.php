@@ -15,7 +15,28 @@
         @livewireStyles 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- Styles -->
+        <style>
+            /* Hide the scrollbar for WebKit (Chrome, Safari, Opera) */
+            ::-webkit-scrollbar {
+            width: 0.5rem;
+            background-color: transparent;
+            }
 
+            ::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            }
+
+            /* Hide the scrollbar for Firefox */
+            /* Note: Firefox currently doesn't support the ::-webkit-scrollbar properties,
+            but you can use these styles to target Firefox when it does. */
+            @-moz-document url-prefix() {
+            .overflow-y-auto {
+                scrollbar-width: none;
+            }
+            }
+
+        </style>
 
         <!-- Scripts -->
         @vite(['resources/css/app.css'])
@@ -232,7 +253,7 @@
                         </div>
                     </section>
                 </div> -->
-                <div class="container grid grid-cols-2 mx-4 md:mx-12 lg:mx-16 gap-y-12 sm:grid-cols-2 md:grid-cols-2">
+                <div class="container grid grid-cols-2 mx-2 md:mx-12 lg:mx-16 gap-y-12 sm:grid-cols-2 md:grid-cols-2">
                     <div class="flex flex-col space-y-4">
                         <h2 class="font-medium ">CUSTOMER SERVICE</h2>
                         <div class="flex flex-col space-y-2 text-sm">
@@ -298,10 +319,11 @@
 
                     <div class="flex flex-col space-y-4">
                         <h2 class="font-medium">COMPANY CONTACT</h2>
-                        <div class="flex flex-col space-y-2 text-sm">
+                        <div class="flex flex-col space-y-2 text-sm ">
                             <a rel="noopener noreferrer" href="#">Facebook</a>
-                            <a rel="noopener noreferrer" href="#">Instagram</a>
-                            <a rel="noopener noreferrer" href="mailto:artisticexcursions@gmail.com">Email: artisticexcursions@gmail.com</a>
+                            <a rel="noopener noreferrer" href="">Instagram</a>
+                            <a rel="noopener noreferrer" href="mailto:artisticexcursions@gmail.com" class="truncate">Email: artisticexcursions@gmail.com</a>
+                            <a href="tel:+254716340285">Phone no: +254708016072</a>
                             <a href="tel:+254716340285">Phone no: +254716340285</a>
 
                             <!-- <a rel="noopener noreferrer" href="#">By Shape</a>
@@ -321,6 +343,8 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
         @livewireScripts
+
+        
        
         <!-- MAKING MENU RESPONSIVE -->
         <script>
