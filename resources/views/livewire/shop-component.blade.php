@@ -1,18 +1,36 @@
 <div>
     <div class="">
-        <ul class="gray-300 list-none flex flex-row  pl-4 mx-4 text-[#46555f]">
+        <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-4 mx-4 text-[#46555f]">
             <li class=" grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
                 <a href="{{route('shop')}}">
-                    <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">All Pieces</p>
+                    <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">All</p>
                 </a>
             </li>
             @foreach($categories as $category)
                 <li class="grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]"><a href="{{route('product.category',['slug'=>$category->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{$category->name}}</a></li>
 
             @endforeach
-
         </ul>
     </div>
+
+    <!-- <div class="swiper w-10">
+        <div class="swiper-wrapper">
+            <ul class="gray-300 list-none flex flex-row  pl-4 mx-4 text-[#46555f]">
+                <li class=" grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
+                    <a href="{{route('shop')}}">
+                        <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">All Pieces</p>
+                    </a>
+                </li>
+                @foreach($categories as $category)
+                    <div class="swiper-slide">
+                        <li class="grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]"><a href="{{route('product.category',['slug'=>$category->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{$category->name}}</a></li>
+                    </div>
+
+                @endforeach
+
+            </ul>
+        </div>
+    </div> -->
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     <div class="m-4 flex flex-col-12">
         <!-- <aside id="default-sidebar" class="relative sticky top-0 left-0  w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidenav">
@@ -415,6 +433,32 @@
 
         </div>
     </div>
+
+    <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
+            const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            });
+
+        </script>
 
     <script>
         function toggleList() {
