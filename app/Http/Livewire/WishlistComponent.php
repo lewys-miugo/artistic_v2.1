@@ -7,6 +7,14 @@ use Cart;
 
 class WishlistComponent extends Component
 {
+    public function store($product_id,$product_name,$product_price)
+    {
+        Cart::instance('cart')->add($product_id,$product_name,1,$product_price)->associate('\App\Models\Product');
+        session()->flash('success_message','Item added in Cart');
+        $this->emitTo('cart-icon-component','refreshComponent');
+        return redirect()->route('shop.cart');
+    }
+    
     public function removeFromWishlist($product_id)
     {
         foreach(Cart::instance('wishlist')->content() as $witem)
