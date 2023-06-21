@@ -389,7 +389,7 @@
                         <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64">
 
 
-                        <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <ul class="flex flex-row text-[#46555f] text-base mt-2 pl-2">
                             <li class="text-xs">{{$lproduct->name}}</li>
                             
                         </ul>
@@ -446,7 +446,7 @@
     <!-- Latest products -->
     <div>
         <div class="">
-            <a href="" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+            <a href="{{route('featured.products')}}" class="uppercase underline underline-offset-2 text-[#485760] text-right">
                 <p>To all Featured</p>
             </a>
         </div>
@@ -465,7 +465,7 @@
                         <img src="{{asset('images/products')}}/{{$fproduct->image}}" alt="{{$fproduct->name}}" class="h-64">
 
 
-                        <ul class="flex flex-row text-[#46555f] text-base pl-2">
+                        <ul class="flex flex-row text-[#46555f] text-base mt-2 pl-2">
                             <li class="text-xs">{{$fproduct->name}}</li>
                             
                         </ul>
@@ -505,7 +505,7 @@
             </div>
         </div>
         <div class="">
-            <a href="" class="md:hidden lg:hidden uppercase underline underline-offset-2 text-[#485760] text-right">
+            <a href="{{route('featured.products')}}" class="md:hidden lg:hidden uppercase underline underline-offset-2 text-[#485760] text-right">
                 <p>To all Featured</p>
             </a>
         </div>
