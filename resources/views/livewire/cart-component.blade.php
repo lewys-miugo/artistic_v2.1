@@ -87,17 +87,22 @@
                 </div>
                 
             @else                        
-                <p class="text-center">Sorry but there are no item in your Cart</p>
+                <p class="text-center">Sorry but there are no item in your Cart, Proceed with your art excursion below</p>
+                <div class="flex mt-2 justify-center flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 rounded focus:outline-none focus:shadow-outline">
+                        <a href="{{'/'}}">Continue Exploring</a>
+                    </button>
+                </div>
             @endif
             <div class="flex justify-end mt-8">
                 <!-- <button
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 rounded focus:outline-none focus:shadow-outline">
                     Update Cart
                 </button> -->
-                <button
-                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 mx-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                    <a href="{{'/'}}">Continue Shopping</a>
-                </button>
+                
             </div>
         </div>
 
