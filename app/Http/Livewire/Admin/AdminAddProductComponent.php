@@ -35,7 +35,6 @@ class AdminAddProductComponent extends Component
     {
         $this->validate([
             'name'=>'required',
-            'slug'=>'required',
             'regular_price'=>'required',
             'category_id'=>'required',
 
