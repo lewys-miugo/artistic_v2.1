@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             'utype'=>'ADM',
         ]);
 
+        
         \App\Models\Category::factory(1)->create([
             'name'=>'Abstract',
             'slug'=>'Abstract'
@@ -56,6 +57,18 @@ class DatabaseSeeder extends Seeder
             'name'=>'Superhero',
             'slug'=>'Superhero'
         ]);
+
+        // \App\Models\Product::factory(1)->create([
+        //     'name'=>'japanese',
+        //     'slug'=>'japanese',
+        //     'short_description'=>'japanese_desc',
+        //     'description'=>'japanes_des2',
+        //     'regular_price'=>'4500',
+        //     'stock_status'=>'instock',
+        //     'featured'=>'1',
+        //     'category_id'=>'2',
+        // ]);
+
         
         
         
