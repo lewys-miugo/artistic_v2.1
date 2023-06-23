@@ -78,12 +78,19 @@
                 </div>
 
                 
-                <div class="flex items-right mx-4">
+                <div class="flex justify-end mx-4">
                     <button class="text-red-600 hover:text-red-700 focus:outline-none" wire:click.prevent="clearAll()">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg> Clear cart
                     </button>
+                </div>
+
+                <div class="flex justify-end mt-8">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 rounded focus:outline-none focus:shadow-outline ">
+                        Continue Exploring
+                    </button>
+                
                 </div>
                 
             @else                        
@@ -92,64 +99,19 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
-                    <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 rounded focus:outline-none focus:shadow-outline">
+                    <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 rounded focus:outline-none focus:shadow-outline animate-pulse">
                         <a href="{{'/'}}">Continue Exploring</a>
                     </button>
                 </div>
             @endif
-            <div class="flex justify-end mt-8">
-                <!-- <button
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-4 rounded focus:outline-none focus:shadow-outline">
-                    Update Cart
-                </button> -->
-                
-            </div>
+            
         </div>
 
         <!-- More details -->
         <div class="container mx-2 py-8">
             <div class="flex flex-col md:flex-row lg:flex-row  mb-8">
                 <!-- justify-between -->
-                <div class="w-full md:w-1/2 lg:w-1/2 md:pr-4">
-                    <h2 class="text-lg font-bold mb-4">Delivery Details</h2>
-                    <!-- <div class="mb-4">
-                        <label class="block mb-2 text-sm font-medium">County</label>
-                        <select class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                            <option>Select County</option>
-                            <option>County 1</option>
-                            <option>County 2</option>
-                            add more options
-                        </select>
-                    </div> -->
-                    <div class="mb-4">
-                        <label class="block mb-2 text-sm font-medium">Enter County</label>
-                        <input type="text" class="w-3/4 px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter name of County ">
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="mb-4">
-                            <label class="block mb-2 text-sm font-medium">Sub-County or Town</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Sub-county or Town">
-                        </div>
-                        <div class="mb-4 mx-2">
-                            <label class="block mb-2 text-sm font-medium">Specific Area</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter specific area">
-                        </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="mb-4">
-                            <label class="block mb-2 text-sm font-medium">Full Name</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Full names">
-                        </div>
-                        <div class="mb-4 mx-2">
-                            <label class="block mb-2 text-sm font-medium">Phone number</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter Phone number">
-                        </div>
-                    </div>
-                    
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                        Update
-                    </button>
-                </div>
+                
 
                 <div class="mt-4 w-full md:w-1/2 lg:w-1/2 md:pl-4">
                     <h2 class="text-lg font-bold mb-4">Cart Summary</h2>
@@ -173,7 +135,12 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline" onclick="payment()">
+
+                    <!--This one raises the payment modal <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline" onclick="payment()">
+                        Proceed to Checkout
+                    </button> -->
+                    
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="checkout()">
                         Proceed to Checkout
                     </button>
                 </div>
