@@ -19,6 +19,7 @@ class CategoryComponent extends Component
     {
         Cart::instance('cart')->add($product_id,$product_name,1,$product_price)->associate('\App\Models\Product');
         session()->flash('success_message','Item added in Cart');
+        
         return redirect()->route('shop.cart');
     }
 
