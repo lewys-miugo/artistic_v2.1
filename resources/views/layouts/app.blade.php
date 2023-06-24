@@ -124,7 +124,8 @@
                                             <ul class="text-center border rounded">
                                                 <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
                                                 <li class="px-12 border-t "></li>
-                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('/')}}">Dashboard</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{-- route('/') --}}">Dashboard</a></li>
+                                                <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('user.order')}}">My Orders</a></li>
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Offers</li> -->
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li> -->
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Logout</li> -->
