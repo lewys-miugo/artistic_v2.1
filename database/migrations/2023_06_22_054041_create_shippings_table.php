@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('mobile');
             $table->string('email');
-            $table->string('line1');
+            $table->string('line1')->nullable();
             $table->string('line2')->nullable();
             $table->string('county');
-            $table->string('subcounty');
+            $table->string('subcounty')->nullable();
             $table->string('town');
             $table->string('specificarea');
             $table->timestamps();
