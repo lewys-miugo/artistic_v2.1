@@ -1,8 +1,32 @@
 <div>
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     <div class="">
-        <div>Ordered Items</div>
+        <div>Ordered Detaisl</div>
         <div><a href="{{route('admin.order')}}">All Orders</a></div>
+        <div>
+            <table>
+                <tr>
+                    <th>Order Id:</th>
+                    <td>{{$order->id}}</td>
+                    <th>Order date</th>
+                    <td>{{$order->created_at}}</td>
+                    
+                </tr>
+                <tr>
+                    <th>Order Status:</th>
+                    <td>{{$order->status}}</td>
+                    @if($order->status=="delivered")
+                        <th>Delivery Date</th>
+                        <td>{{$order->delivered_date}}</td>
+                    @elseif($order->status=="canceled")
+                        <th>canceled Date</th>
+                        <td>{{$order->canceled_date}}</td>
+                    @endif
+
+                </tr>
+            </table>
+        </div>
+
         <div class="overflow-x-auto mx-4">
             <table class="min-w-full divide-y divide-gray-200">
                     <!-- w-full -->
@@ -13,7 +37,7 @@
                         <th class="py-2 px-4">Price</th>
                         <th class="py-2 px-4">Quantity</th>
                         <th class="py-2 px-4">Subtotal</th>
-                        <th class="py-2 px-4">Remove</th>
+                        <!-- <th class="py-2 px-4">Remove</th> -->
                     </tr>
                 </thead>
                 <tbody>
