@@ -109,7 +109,7 @@
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.products')}}">Art Pieces</a></li>
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
-                                                <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
+                                                <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.order')}}">Orders</a></li>
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{-- route('admin.home.slider') --}}">Manage Slider</a></li> -->
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li> -->
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li> -->
