@@ -26,7 +26,11 @@ use App\Http\Livewire\Admin\AdminUsersComponent;
 use App\Http\Livewire\Admin\AdminEditUserComponent;
 use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
+
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\User\UserOrderComponent;
+use App\Http\Livewire\User\UserOrderDetailComponent;
+
 
     
 
@@ -68,6 +72,9 @@ Route::get('/featured/products',FeaturedProductsComponent::class)->name('feature
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/order',UserOrderComponent::class)->name('user.order');
+    Route::get('/user/order/{order_id}',UserOrderDetailComponent::class)->name('user.orderdetails');
+
 });
 
 Route::middleware(['auth','authadmin'])->group(function(){
