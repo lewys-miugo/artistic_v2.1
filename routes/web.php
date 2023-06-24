@@ -25,8 +25,7 @@ use App\Http\Livewire\Admin\AdminEditHomeSlideComponent;
 use App\Http\Livewire\Admin\AdminUsersComponent;
 use App\Http\Livewire\Admin\AdminEditUserComponent;
 use App\Http\Livewire\Admin\AdminOrderComponent;
-
-
+use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 
     
@@ -87,6 +86,7 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/user/edit/{user_id}',AdminEditUserComponent::class)->name('admin.user.edit');
 
     Route::get('/admin/order',AdminOrderComponent::class)->name('admin.order');
+    Route::get('/admin/order/{order_id}',AdminOrderDetailsComponent::class)->name('admin.orderdetails');
 });
 
 // Route::get('/dashboard', function () {
