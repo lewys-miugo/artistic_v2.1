@@ -65,6 +65,81 @@
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
             </div>
+            <div class="flex flex-row space-x-2 flex-wrap">
+                <div class="mb-4">
+                    <label for="regular_price_A0" class="block mb-1">A0 Price</label>
+                    <input id="##" type="text" name="regular_price_A0" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A0">
+                    @error('regular_price_A0')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_A1" class="block mb-1">A1 Price</label>
+                    <input id="##" type="text" name="regular_price_A1" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A1">
+                    @error('regular_price_A1')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_A2" class="block mb-1">A2 Price</label>
+                    <input id="##" type="text" name="regular_price_A2" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A2">
+                    @error('regular_price_A2')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_A3" class="block mb-1">A3 Price</label>
+                    <input id="##" type="text" name="regular_price_A3" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A3">
+                    @error('regular_price_A3')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_A4" class="block mb-1">A3 Price</label>
+                    <input id="##" type="text" name="regular_price_A4" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A4">
+                    @error('regular_price_A4')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_2p" class="block mb-1">2 Pieces Price</label>
+                    <input id="##" type="text" name="regular_price_2p" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_2p">
+                    @error('regular_price_2p')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_3p" class="block mb-1">3 Pieces Price</label>
+                    <input id="##" type="text" name="regular_price_3p" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_3p">
+                    @error('regular_price_3p')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_4p" class="block mb-1">4 pieces Price</label>
+                    <input id="##" type="text" name="regular_price_4p" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_4p">
+                    @error('regular_price_4p')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_5p" class="block mb-1">5 pieces Price</label>
+                    <input id="##" type="text" name="regular_price_5p" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_5p">
+                    @error('regular_price_5p')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_pa" class="block mb-1">Panaroma Price</label>
+                    <input id="##" type="text" name="regular_price_pa" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_pa">
+                    @error('regular_price_pa')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+            </div>
 
             <!-- SAle_Price -->
             <div class="mb-4">
