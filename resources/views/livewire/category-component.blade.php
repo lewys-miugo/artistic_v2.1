@@ -248,7 +248,20 @@
                             <div class="flex flex-col m-2">
                                 <!-- <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/ep1_es_229_layout_5_mess_japanese-mountain-landscape-abstract-5-piece-wall-art.webp?v=1668564076&width=360" alt="" class="h-64"> -->
                                 <a href="{{route('product.details',['slug'=>$product->slug])}}">
-                                    <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64">
+                                    <!-- <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64"> -->
+                                    @php
+                                        $images = App\Models\ProductImages::where('product_unique_id',$product->unique_id)->get();
+                                    @endphp
+                                    <div class="swiper mySwiper w-64 h-64">
+                                        <div class="swiper-wrapper ">
+                                            @foreach($images as $item)
+                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                    <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </a>
 
                                 <ul class="flex flex-row text-[#46555f] text-base pl-2">
