@@ -6,7 +6,21 @@
         <div class="container mx-auto p-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="p-4">
-                    <img src="{{asset('images/products')}}/{{$product->image}}" alt="Art Product" class="w-full">
+                    <!-- <img src="{{asset('images/products')}}/{{$product->image}}" alt="Art Product" class="w-full"> -->
+                    @php
+                        $images = App\Models\ProductImages::where('product_unique_id',$product->unique_id)->get();
+                    @endphp
+                    <div class="swiper mySwiper w-full h-auto md:w-80 md:h-64 lg:w-80">
+                        <div class="swiper-wrapper ">
+                            @foreach($images as $item)
+                                <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                    <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
                 </div>
                 <div class="p-4">
                     <h1 class="text-3xl font-bold mb-2">{{$product->name}}</h1>
@@ -42,13 +56,147 @@
                             </svg>
                         </div>
                     </div>
-                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price}}</p>
+                    <!-- <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price}}</p> -->
                     <!-- <p class="text-gray-700 text-xl mb-4">Ksh{{$product->sale_price}}</p> -->
 
-                    <button type="button"
+                    <!-- <button type="button"
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price}})">
                         Add to Cart
-                    </button>
+                    </button> -->
+                    <!-- PRice change trial -->
+                        <div class="container mx-auto mt-8">
+                        <h1 class="text-2xl font-bold mb-4">Options</h1>
+
+                        <div class="space-x-1 flex flex-row flex-wrap">
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option1" checked class="mr-2">
+                                    <p>A0</p>
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A0}}</p>
+                                    
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A0}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option2" checked class="mr-2">
+                                    <p>A1</p>
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A1}}</p>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A1}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option3" checked class="mr-2">
+                                    <p>A2</p>
+                                
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A2}}</p>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A2}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option4" checked class="mr-2">
+                                    <p>A3</p>
+                                
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A3}}</p>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A3}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option5" checked class="mr-2">
+                                    <p>A4</p>
+                                
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A4}}</p>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A4}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option6" checked class="mr-2">
+                                    <p>4 pieces</p>
+
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_4p}}</p>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_4p}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option7" checked class="mr-2">
+                                    <p>5 pieces</p>
+                                 
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_5p}}</p>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_5p}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="flex items-center">
+                                    <input type="radio" name="options" value="option7" checked class="mr-2">
+                                    <p>Panorama</p>
+                                 
+                                </label>
+                                <div class="option-paragraph hidden">
+                                    <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_pa}}</p>
+                                    <button type="button"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_pa}})">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Repeat the pattern for the remaining options -->
+                            <!-- Option 3 -->
+                            <!-- Option 4 -->
+                            <!-- Option 5 -->
+                            <!-- Option 6 -->
+                            <!-- Option 7 -->
+                        </div>
+                        </div>
+
+
+                    <!-- End of price trial -->
                 </div>
             </div>
             <!-- <div class="mt-8">
@@ -70,7 +218,20 @@
                     @foreach($rproducts as $rproduct)
                         <div class="bg-white shadow-lg rounded-lg p-4">
                             <a href="{{route('product.details',['slug'=>$rproduct->slug])}}">
-                                <img src="{{asset('images/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}} 3" class="w-full mb-4">
+                                <!-- <img src="{{asset('images/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}} 3" class="w-full mb-4"> -->
+                                @php
+                                        $images = App\Models\ProductImages::where('product_unique_id',$rproduct->unique_id)->get();
+                                    @endphp
+                                    <div class="swiper mySwiper w-64 h-64">
+                                        <div class="swiper-wrapper ">
+                                            @foreach($images as $item)
+                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                    <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                             </a>
                             <h3 class="text-lg font-bold">{{$rproduct->name}}</h3>
                             <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -89,7 +250,20 @@
                     @foreach($nproducts as $nproduct)
                         <div class="bg-white shadow-lg rounded-lg p-4">
                                 <a href="{{route('product.details',['slug'=>$nproduct->slug])}}">
-                                    <img src="{{asset('images/products')}}/{{$nproduct->image}}" alt="{{$nproduct->name}} 3" class="w-full mb-4">
+                                    <!-- <img src="{{asset('images/products')}}/{{$nproduct->image}}" alt="{{$nproduct->name}} 3" class="w-full mb-4"> -->
+                                    @php
+                                        $images = App\Models\ProductImages::where('product_unique_id',$nproduct->unique_id)->get();
+                                    @endphp
+                                    <div class="swiper mySwiper w-64 h-64">
+                                        <div class="swiper-wrapper ">
+                                            @foreach($images as $item)
+                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                    <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </a>
                                 <h3 class="text-lg font-bold">{{$nproduct->name}}</h3>
                                 <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -101,6 +275,28 @@
                 </div>    
             </div>
         </div>
+
+        <!-- JS for price change -->
+        
+            <script>
+            const radioInputs = document.querySelectorAll('input[type="radio"]');
+            const optionParagraphs = document.querySelectorAll('.option-paragraph');
+
+            radioInputs.forEach((radio) => {
+                radio.addEventListener('change', () => {
+                optionParagraphs.forEach((paragraph, index) => {
+                    if (radio.checked && radio.value === `option${index + 1}`) {
+                    paragraph.classList.remove('hidden');
+                    } else {
+                    paragraph.classList.add('hidden');
+                    }
+                });
+                });
+            });
+            </script>
+
+        
+
     </body>
 
 
