@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductImages;
 use Carbon\Carbon;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Str;
@@ -26,13 +27,19 @@ class AdminEditProductComponent extends Component
     public $stock_status ='instock';
     public $featured='0';
     public $quantity;
+
+    public $uniqId;
     public $image;
+    public $images;
+    // public $pimage;
+    // public $productImages;
+
     public $category_id;
     public $newimage;
 
     public function mount($product_id)
     {
-        $product = Product::find($product_id);
+        $product = Product::find($product_id)->first();
         $this->product_id = $product->id;
         $this->name = $product->name;
         $this->slug = $product->slug;
@@ -44,9 +51,24 @@ class AdminEditProductComponent extends Component
         $this->stock_status = $product->stock_status;
         $this->featured = $product->featured;
         $this->quantity = $product->quantity;
-        $this->image = $product->image;
         $this->category_id = $product->category_id;
+
+        // $product=Product::where('id',$id)->first();
+
+        // $this->image = $product->image;
+        // $this->productImages=ProductImages::where('product_id',$product->id)->get();
+
+
     }
+
+    public function deleteImage($id)
+    {
+        $image=ProductImages::where('id', $id)->first();
+        $image->delete();
+        session()->flash('message', 'Image has been deleted');
+
+    }
+
 
     public function generateSlug()
     {
@@ -57,8 +79,8 @@ class AdminEditProductComponent extends Component
     {
         $this->validate([
             'name'=>'required',
-            'slug'=>'required',
-            'regular_price'=>'required',
+            // 'slug'=>'required',
+            // 'regular_price'=>'required',
             'category_id'=>'required',
 
         ]);
@@ -73,21 +95,38 @@ class AdminEditProductComponent extends Component
         $product->stock_status = $this->stock_status;
         $product->featured = $this->featured;
         $product->quantity = $this->quantity;
-        if($this->newimage)
-        {
-            unlink('images/products/'.$product->image);
-            $imageName= Carbon::now()->timestamp.'.'.$this->newimage->extension();
-            $this->newimage->storeAs('products', $imageName);
-            $product->image = $imageName;
-        }
+        
         $product->category_id = $this->category_id;
+
+        // $uniqId=Carbon::now()->timestamp.uniqid(); 
+        // $product->unique_id = $uniqId;
+
+        if ($this->images != '') {
+            foreach ($this->images as $key => $image) {
+                $pimage = new ProductImages();
+                $pimage->product_unique_id = $uniqId;
+
+                // $pimage->product_id = $product->id;
+
+                $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
+                $this->images[$key]->storeAs('all',$imageName);
+
+                $pimage->product_id=$product->id;
+
+                $pimage->image=$imageName;
+                $pimage->save();
+            }
+        }
+        $this->images='';
         $product->save();
-        session()->flash('message', 'Product has been Updated!');
+        session()->flash('message', 'Product image has been Updated!');
     }
     public function render()
     {
         $categories=Category::orderBy('name','ASC')->get();
+        $productImages=ProductImages::where('product_id',$this->product_id)->get();
 
-        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories]);
+
+        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories,'productImages'=>$productImages]);
     }
 }
