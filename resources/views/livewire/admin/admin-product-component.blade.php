@@ -41,7 +41,18 @@
                 @foreach($products as $product)
                     <tr class="even:bg-gray-100 odd:bg-white">
                         <td class="py-2 px-2 whitespace-nowrap text-center">{{++$i}}</td>
-                        <td class="py-2 px-4  text-center"><img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}"></td>
+                        <td class="py-2 px-4  text-center">
+                          @php
+                            $images = App\Models\ProductImages::where('product_unique_id',$product->unique_id)->get();
+                          @endphp
+                          <div class="flex flex-row">
+
+                            @foreach($images as $item)
+                              <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-12 m-1 h-12" alt="">
+                            @endforeach
+                          </div>
+
+                        </td>
                         <td class="py-2 px-2 whitespace-wrap text-center">{{$product->name}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->stock_status}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->regular_price}}</td>
