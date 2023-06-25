@@ -1,0 +1,44 @@
+<!-- Image -->
+            <!-- <div class="mb-4">
+                <label for="image" class="block mb-1">Image</label>
+                <input type="file" name="image" id="" wire:model="image">
+                @if($image)
+                    <img src="{{-- $image->temporaryUrl() --}}" class="w-28" alt="">
+                @endif
+                @error('image')
+                    <p class="text-white bg-red-300">{{-- $message --}}</p>
+                @enderror
+            </div> -->
+
+
+<!-- @if($image)
+                    <img src="{{-- $image->temporaryUrl() --}}" class="w-28" alt="">
+                    @endif -->
+
+
+                    <!-- Admin product td images -->
+                    <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}">
+
+<!-- Admin edit product -->
+ <!-- Image -->
+            <div class="mb-4">
+                <label for="image" class="block mb-1">Image</label>
+                <input type="file" name="image" id="" wire:model="newimage">
+                @if($newimage)
+                    <img src="{{$newimage->temporaryUrl()}}" class="w-28" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image}}" class="w-28" alt="">
+                    @endif
+                @error('newimage')
+                    <p class="text-white bg-red-300">{{$message}}</p>
+                @enderror
+            </div>
+
+            <!-- Admin edit product function updateProduct image -->
+            if($this->newimage)
+        {
+            unlink('images/products/'.$product->image);
+            $imageName= Carbon::now()->timestamp.'.'.$this->newimage->extension();
+            $this->newimage->storeAs('products', $imageName);
+            $product->image = $imageName;
+        }
