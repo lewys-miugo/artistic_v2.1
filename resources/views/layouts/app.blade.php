@@ -38,6 +38,9 @@
 
         </style>
 
+        <!-- swiper js -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
         <!-- Scripts -->
         @vite(['resources/css/app.css'])
         @vite(['resources/js/app.js'])
@@ -353,6 +356,35 @@
             let list = document.querySelector('ul');
             e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
             }
+        </script>
+
+        <!-- Swiperjs -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
+            
+        </script>
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            });
         </script>
         <!-- Making drop down menu on user -->
         <script>
