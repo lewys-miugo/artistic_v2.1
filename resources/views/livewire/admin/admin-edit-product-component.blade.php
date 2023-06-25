@@ -117,19 +117,26 @@
                 @enderror
             </div>
 
-            <!-- Image -->
-            <div class="mb-4">
-                <label for="image" class="block mb-1">Image</label>
-                <input type="file" name="image" id="" wire:model="newimage">
-                @if($newimage)
-                    <img src="{{$newimage->temporaryUrl()}}" class="w-28" alt="">
-                    @else
-                        <img src="{{asset('images/products')}}/{{$image}}" class="w-28" alt="">
-                    @endif
-                @error('newimage')
+           <!-- Images -->
+           <div class="mb-4">
+               <label for="">Images</label>
+               <input type="file" name="images" id="" wire:model="images" multiple>
+               @error('images')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
-            </div>
+                <br>
+                <div class="flex flex-row">
+                    @foreach($productImages as $pimage)
+                        <img src="{{asset('uploads/all')}}/{{$pimage->image}}" class="w-14 m-1 h-auto" alt="">
+                        <a href="#" wire:click.prevent="deleteImage({{$pimage->id}})">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </a>
+
+                    @endforeach
+                </div>
+           </div>
 
             <div class="mb-4">
                 <label for="category_id" class="block mb-1">select Category</label>
