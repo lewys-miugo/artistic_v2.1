@@ -15,11 +15,27 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+
+            $table->string('unique_id')->unique();
             $table->string('name')->unique();
+            $table->string('status')->default(1);
+
             $table->string('slug')->unique();
             $table->string('short_description')->nullable();
             $table->text('description')->nullable();
-            $table->decimal('regular_price',8,2);
+            $table->decimal('regular_price',8,2)->nullable();
+            $table->decimal('regular_price_A0',8,2)->default('5000.00')->nullable();
+            $table->decimal('regular_price_A1',8,2)->default('4500.00')->nullable();
+            $table->decimal('regular_price_A2',8,2)->default('3000.00')->nullable();
+            $table->decimal('regular_price_A3',8,2)->default('2500.00')->nullable();
+            $table->decimal('regular_price_A4',8,2)->default('2000.00')->nullable();
+            $table->decimal('regular_price_2p',8,2)->default('6000.00')->nullable();
+            $table->decimal('regular_price_3p',8,2)->default('7000.00')->nullable();
+            $table->decimal('regular_price_4p',8,2)->default('8000.00')->nullable();
+            $table->decimal('regular_price_5p',8,2)->default('9000.00')->nullable();
+            $table->decimal('regular_price_pa',8,2)->default('10000.00')->nullable();
+
+
             $table->decimal('sale_price',8,2)->nullable();
             $table->string('SKU')->nullable();
             $table->enum('stock_status',['instock','outofstock']);
