@@ -21,18 +21,16 @@ class AdminEditProductComponent extends Component
     public $slug;
     public $short_description;
     public $description;
-    public $regular_price;
-    public $sale_price;
-    public $sku;
-    public $stock_status ='instock';
+    // public $regular_price;
+    // public $sale_price;
+    // public $sku;
+    // public $stock_status ='instock';
     public $featured='0';
-    public $quantity;
+    // public $quantity;
 
     public $uniqId;
     public $image;
     public $images;
-    // public $pimage;
-    // public $productImages;
 
     public $category_id;
     public $newimage;
@@ -45,13 +43,42 @@ class AdminEditProductComponent extends Component
         $this->slug = $product->slug;
         $this->short_description = $product->short_description;
         $this->description = $product->description;
-        $this->regular_price = $product->regular_price;
-        $this->sale_price= $product->sale_price;
-        $this->sku = $product->SKU;
-        $this->stock_status = $product->stock_status;
+
+        // $this->regular_price = $product->regular_price;
+
+        $this->regular_price_A0 = $product->regular_price_A0;
+        $this->regular_price_A05= $product->regular_price_A05;
+        $this->regular_price_A1 = $product->regular_price_A1;
+        $this->regular_price_A2 = $product->regular_price_A2;
+        $this->regular_price_A3 = $product->regular_price_A3;
+        $this->regular_price_A4 = $product->regular_price_A4;
+        $this->regular_price_2p = $product->regular_price_2p;
+        $this->regular_price_3p = $product->regular_price_3p;
+        $this->regular_price_4p = $product->regular_price_4p;
+        $this->regular_price_5p = $product->regular_price_5p;
+        $this->regular_price_pa = $product->regular_price_pa;
+
+        // Framed print
+        $this->regular_price_A0f = $product->regular_price_A0f;
+        $this->regular_price_A05f= $product->regular_price_A05f;
+        $this->regular_price_A1f = $product->regular_price_A1f;
+        $this->regular_price_A2f = $product->regular_price_A2f;
+        $this->regular_price_A3f = $product->regular_price_A3f;
+        $this->regular_price_A4f = $product->regular_price_A4f;
+        $this->regular_price_2pf = $product->regular_price_2pf;
+        $this->regular_price_3pf = $product->regular_price_3pf;
+        $this->regular_price_4pf = $product->regular_price_4pf;
+        $this->regular_price_5pf = $product->regular_price_5pf;
+        $this->regular_price_paf = $product->regular_price_paf;
         $this->featured = $product->featured;
-        $this->quantity = $product->quantity;
         $this->category_id = $product->category_id;
+
+
+
+        // $this->sale_price= $product->sale_price;
+        // $this->sku = $product->SKU;
+        // $this->stock_status = $product->stock_status;
+        // $this->quantity = $product->quantity;
 
         // $product=Product::where('id',$id)->first();
 
@@ -89,12 +116,38 @@ class AdminEditProductComponent extends Component
         $product->slug = $this->slug;
         $product->short_description = $this->short_description;
         $product->description = $this->description;
-        $product->regular_price = $this->regular_price;
-        $product->sale_price = $this->sale_price;
-        $product->SKU = $this->sku;
-        $product->stock_status = $this->stock_status;
+        // $product->regular_price = $this->regular_price;
+
+        $product->regular_price_A0 = $this->regular_price_A0;
+        $product->regular_price_A05 = $this->regular_price_A05;
+        $product->regular_price_A1 = $this->regular_price_A1;
+        $product->regular_price_A2 = $this->regular_price_A2;
+        $product->regular_price_A3 = $this->regular_price_A3;
+        $product->regular_price_A4 = $this->regular_price_A4;
+        $product->regular_price_2p = $this->regular_price_2p;
+        $product->regular_price_3p = $this->regular_price_3p;
+        $product->regular_price_4p = $this->regular_price_4p;
+        $product->regular_price_5p = $this->regular_price_5p;
+        $product->regular_price_pa = $this->regular_price_pa;
+
+        // Framed print
+        $product->regular_price_A0f = $this->regular_price_A0f;
+        $product->regular_price_A05f=$this->regular_price_A05f;
+        $product->regular_price_A1f = $this->regular_price_A1f;
+        $product->regular_price_A2f = $this->regular_price_A2f;
+        $product->regular_price_A3f = $this->regular_price_A3f;
+        $product->regular_price_A4f = $this->regular_price_A4f;
+        $product->regular_price_2pf = $this->regular_price_2pf;
+        $product->regular_price_3pf = $this->regular_price_3pf;
+        $product->regular_price_4pf = $this->regular_price_4pf;
+        $product->regular_price_5pf = $this->regular_price_5pf;
+        $product->regular_price_paf = $this->regular_price_paf;
+
+        // $product->sale_price = $this->sale_price;
+        // $product->SKU = $this->sku;
+        // $product->stock_status = $this->stock_status;
         $product->featured = $this->featured;
-        $product->quantity = $this->quantity;
+        // $product->quantity = $this->quantity;
         
         $product->category_id = $this->category_id;
 
