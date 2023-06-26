@@ -55,7 +55,7 @@
                         </td>
                         <td class="py-2 px-2 whitespace-wrap text-center">{{$product->name}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->stock_status}}</td>
-                        <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->regular_price}}</td>
+                        <td class="py-2 px-4 whitespace-nowrap text-center">{{-- $product->regular_price --}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->category->name}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->created_at}}</td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">
