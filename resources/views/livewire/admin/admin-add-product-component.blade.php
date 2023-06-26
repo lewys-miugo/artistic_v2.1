@@ -69,18 +69,28 @@
 
             <!-- Regular PRice -->
 
-            <div class="mb-4">
+            <!-- <div class="mb-4">
                 <label for="regular_price" class="block mb-1">Regular Price</label>
                 <input id="##" type="text" name="regular_price" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price">
                 @error('regular_price')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
-            </div>
+            </div> -->
+
+            <!-- Prices for canvas -->
             <div class="flex flex-row space-x-2 flex-wrap">
                 <div class="mb-4">
                     <label for="regular_price_A0" class="block mb-1">A0 Price</label>
                     <input id="##" type="text" name="regular_price_A0" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A0">
                     @error('regular_price_A0')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_A05" class="block mb-1">A0.5 Price</label>
+                    <input id="##" type="text" name="regular_price_A05" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A05">
+                    @error('regular_price_A05')
                         <p class="text-white bg-red-300">{{$message}}</p>
                     @enderror
                 </div>
@@ -152,26 +162,111 @@
                 </div>
             </div>
 
+            <!--PRices for normal -->
+            <div class="flex flex-row space-x-2 flex-wrap">
+                <div class="mb-4">
+                    <label for="regular_price_A0f" class="block mb-1">A0f Price</label>
+                    <input id="##" type="text" name="regular_price_A0f" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A0f">
+                    @error('regular_price_A0f')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_A05f" class="block mb-1">A0.5f Price</label>
+                    <input id="##" type="text" name="regular_price_A05f" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A05f">
+                    @error('regular_price_A05f')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_A1f" class="block mb-1">A1f Price</label>
+                    <input id="##" type="text" name="regular_price_A1f" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A1f">
+                    @error('regular_price_A1f')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_A2f" class="block mb-1">A2f Price</label>
+                    <input id="##" type="text" name="regular_price_A2f" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A2f">
+                    @error('regular_price_A2f')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_A3f" class="block mb-1">A3f Price</label>
+                    <input id="##" type="text" name="regular_price_A3f" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A3f">
+                    @error('regular_price_A3f')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_A4f" class="block mb-1">A4f Price</label>
+                    <input id="##" type="text" name="regular_price_A4f" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A4f">
+                    @error('regular_price_A4f')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_2pf" class="block mb-1">2 Pieces f Price</label>
+                    <input id="##" type="text" name="regular_price_2pf" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_2pf">
+                    @error('regular_price_2pf')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_3pf" class="block mb-1">3 Pieces f Price</label>
+                    <input id="##" type="text" name="regular_price_3pf" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_3pf">
+                    @error('regular_price_3pf')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_4pf" class="block mb-1">4 pieces f Price</label>
+                    <input id="##" type="text" name="regular_price_4pf" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_4pf">
+                    @error('regular_price_4pf')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="regular_price_5pf" class="block mb-1">5 pieces f Price</label>
+                    <input id="##" type="text" name="regular_price_5pf" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_5pf">
+                    @error('regular_price_5pf')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="regular_price_paf" class="block mb-1">Panaroma f Price</label>
+                    <input id="##" type="text" name="regular_price_paf" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_paf">
+                    @error('regular_price_paf')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+            </div>
+
             <!-- SAle_Price -->
-            <div class="mb-4">
+            <!-- <div class="mb-4">
                 <label for="sale_price" class="block mb-1">Sale Price</label>
                 <input id="##" type="text" name="sale_price" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Sale Price" wire:model="sale_price">
                 @error('sale_price')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
-            </div>
+            </div> -->
 
             <!-- SKU -->
-            <div class="mb-4">
+            <!-- <div class="mb-4">
                 <label for="sku" class="block mb-1">SKU</label>
                 <input id="##" type="text" name="sku" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter SKU" wire:model="sku">
                 @error('sku')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
-            </div>
+            </div> -->
 
             <!-- Stock Status -->
-            <div class="mb-4">
+            <!-- <div class="mb-4">
                 <label for="sale_price" class="block mb-1" wire:model="stock_status">Stock Status</label>
                 <select name="stock_status" id="">
                     <option value="instock">In Stock</option>
@@ -180,7 +275,7 @@
                 @error('stock_status')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
-            </div>
+            </div> -->
 
             <!-- Featured Product -->
             <div class="mb-4">
@@ -195,13 +290,13 @@
             </div>
 
             <!-- Product Quantity -->
-            <div class="mb-4">
+            <!-- <div class="mb-4">
                 <label for="quantity" class="block mb-1">Quantity</label>
                 <input id="##" type="text" name="quantity" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Product Quantity" wire:model="quantity">
                 @error('quantity')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
-            </div>
+            </div> -->
 
             
             <div class="mb-4">
