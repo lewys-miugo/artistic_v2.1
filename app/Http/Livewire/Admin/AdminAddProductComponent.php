@@ -52,7 +52,7 @@ class AdminAddProductComponent extends Component
     // public $quantity;
     // public $image;
 
-    public $images;
+    public $images =[];
     public $unique_id;
     public $product_id;
 
