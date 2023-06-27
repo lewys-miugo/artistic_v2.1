@@ -133,9 +133,7 @@ class AdminAddProductComponent extends Component
 
 
             $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
-            if(!is_null($this->image)){
-                Storage::delete($this->image);
-            }
+            
             $this->images[$key]->storeAs('public/all',$imageName);
 
 
