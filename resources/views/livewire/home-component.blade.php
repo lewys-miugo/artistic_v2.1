@@ -483,7 +483,7 @@
                                         <div class="swiper-wrapper ">
                                             @foreach($images as $item)
                                                 <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{ asset('uploads/public/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
+                                                    <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
                                                 </div>
                                             @endforeach
                                         </div>

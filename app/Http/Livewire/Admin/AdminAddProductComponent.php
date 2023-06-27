@@ -75,6 +75,8 @@ class AdminAddProductComponent extends Component
         ]);
 
         
+        $uniqId=Carbon::now()->timestamp.uniqid(); 
+
 
         $product = new Product();
         $product->name = $this->name;
@@ -108,10 +110,14 @@ class AdminAddProductComponent extends Component
         $product->regular_price_5pf = $this->regular_price_5pf;
         $product->regular_price_paf = $this->regular_price_paf;
 
+        $product->featured = $this->featured;
+        $product->category_id = $this->category_id;
+
+        $product->unique_id = $uniqId;
+
         // $product->sale_price = $this->sale_price;
         // $product->SKU = $this->sku;
         // $product->stock_status = $this->stock_status;
-        $product->featured = $this->featured;
         // $product->quantity = $this->quantity;
 
         
@@ -122,23 +128,22 @@ class AdminAddProductComponent extends Component
 
         // Attempt to add multiple images
         // Attemp to add multiple images;
-        $uniqId=Carbon::now()->timestamp.uniqid(); 
-        $product->unique_id = $uniqId;
+        
         
         // dd($this->images);
         if(!is_null($this->images)){
-                Storage::delete($this->images);
-            }
+            Storage::delete($this->images);
+        }
 
         foreach ($this->images as $key => $image) {
             $pimage = new ProductImages();
             $pimage->product_unique_id = $uniqId;
-            $pimage->product_id=$product->id;
+            // $pimage->product_id=$product->id;
 
 
             $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
             
-            $this->images[$key]->storeAs('uploads/all',$imageName);
+            $this->images[$key]->storeAs('all',$imageName);
 
 
 
@@ -146,7 +151,6 @@ class AdminAddProductComponent extends Component
             $pimage->save();
         }
 
-        $product->category_id = $this->category_id;
         $product->save();
         session()->flash('message', 'Product has been added!');
     }
