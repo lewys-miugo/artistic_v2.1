@@ -136,19 +136,14 @@ class AdminAddProductComponent extends Component
         }
 
         foreach ($this->images as $key => $image) {
-            
             $pimage = new ProductImages();
             $pimage->product_unique_id = $uniqId;
             // $pimage->product_id=$product->id;
 
-
             $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
 
-            
             $this->images[$key]->storeAs('all',$imageName);
-            dd($this->images);
-
-
+            // dd($this->images);
 
             $pimage->image=$imageName;
             $pimage->save();
