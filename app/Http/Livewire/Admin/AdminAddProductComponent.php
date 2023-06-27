@@ -125,7 +125,7 @@ class AdminAddProductComponent extends Component
         $uniqId=Carbon::now()->timestamp.uniqid(); 
         $product->unique_id = $uniqId;
         
-
+        dd($this->images);
         foreach ($this->images as $key => $image) {
             $pimage = new ProductImages();
             $pimage->product_unique_id = $uniqId;
