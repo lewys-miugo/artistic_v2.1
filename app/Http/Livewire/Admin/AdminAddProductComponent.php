@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImages;
 
+use Illuminate\Support\Facades\Storage;
+
 use Carbon\Carbon;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Str;
@@ -131,7 +133,9 @@ class AdminAddProductComponent extends Component
 
 
             $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
-            !is_null($this->images) && Storage::delete($this->image);
+            if(!is_null($this->images)){
+                Storage::delete($category->image);
+            }
             $this->images[$key]->storeAs('public/all',$imageName);
 
 
