@@ -142,7 +142,7 @@ class AdminAddProductComponent extends Component
 
             $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
 
-            $this->images[$key]->storeAs('uploads/all',$imageName);
+            $this->images[$key]->storeAs('public/all',$imageName);
             // dd($this->images);
 
             $pimage->image=$imageName;
