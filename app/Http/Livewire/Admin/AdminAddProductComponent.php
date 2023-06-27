@@ -136,7 +136,6 @@ class AdminAddProductComponent extends Component
         }
 
         foreach ($this->images as $key => $image) {
-            dd($this->images);
             
             $pimage = new ProductImages();
             $pimage->product_unique_id = $uniqId;
@@ -144,6 +143,8 @@ class AdminAddProductComponent extends Component
 
 
             $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
+            
+            dd($this->images);
             
             $this->images[$key]->storeAs('all',$imageName);
 
