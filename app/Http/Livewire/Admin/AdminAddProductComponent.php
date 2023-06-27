@@ -134,9 +134,9 @@ class AdminAddProductComponent extends Component
         if(!is_null($this->images)){
             Storage::delete($this->images);
         }
-         dd($this->images);
 
         foreach ($this->images as $key => $image) {
+            dd($this->images);
             
             $pimage = new ProductImages();
             $pimage->product_unique_id = $uniqId;
