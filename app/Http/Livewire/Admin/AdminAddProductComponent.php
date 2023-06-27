@@ -54,7 +54,7 @@ class AdminAddProductComponent extends Component
     // public $quantity;
     // public $image;
 
-    public $images;
+    public $images=[];
     public $unique_id;
     public $product_id;
 
@@ -134,7 +134,9 @@ class AdminAddProductComponent extends Component
 
 
             $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
-            
+            if(!is_null($this->images)){
+                Storage::delete($this->images);
+            }
             $this->images[$key]->storeAs('public/all',$imageName);
 
 
