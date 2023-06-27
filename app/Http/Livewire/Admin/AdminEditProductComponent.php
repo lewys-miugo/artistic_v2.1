@@ -83,7 +83,7 @@ class AdminEditProductComponent extends Component
         // $product=Product::where('id',$id)->first();
 
         // $this->image = $product->image;
-        // $this->productImages=ProductImages::where('product_id',$product->id)->get();
+        $this->productImages=ProductImages::where('product_unique_id',$product->unique_id)->get();
 
 
     }
