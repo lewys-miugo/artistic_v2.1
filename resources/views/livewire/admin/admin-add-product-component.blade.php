@@ -301,10 +301,78 @@
             
             <div class="mb-4">
                 <label for="image" class="block mb-1">Image</label>
-                <input type="file" name="images" id="" wire:model="images" multiple>
-                
-                @error('images')
-                    <p class="text-white bg-red-300">{{-- $message --}}</p>
+                <input type="file" name="image" id="" wire:model="image">
+                @if($image)
+                    <img src="{{ $image->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="image2" class="block mb-1">Image render</label>
+                <input type="file" name="image2" id="" wire:model="image2">
+                @if($image2)
+                    <img src="{{ $image2->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image2')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="image3" class="block mb-1">Image 3</label>
+                <input type="file" name="image3" id="" wire:model="image3">
+                @if($image3)
+                    <img src="{{ $image3->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image3')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="image4" class="block mb-1">Image 4</label>
+                <input type="file" name="image4" id="" wire:model="image4">
+                @if($image4)
+                    <img src="{{ $image4->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image4')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="image5" class="block mb-1">Image 5</label>
+                <input type="file" name="image5" id="" wire:model="image5">
+                @if($image5)
+                    <img src="{{ $image5->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image5')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="image6" class="block mb-1">Image 6</label>
+                <input type="file" name="image6" id="" wire:model="image6">
+                @if($image6)
+                    <img src="{{ $image6->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image6')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="mb-4">
+                <label for="image7" class="block mb-1">Image 7</label>
+                <input type="file" name="image7" id="" wire:model="image7">
+                @if($image7)
+                    <img src="{{ $image7->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image7')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
                 @enderror
             </div>
 
