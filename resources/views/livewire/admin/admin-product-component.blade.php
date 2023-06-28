@@ -27,8 +27,8 @@
                 <th class="py-2 px-2">#</th>
                 <th class="py-2 px-4">Image</th>
                 <th class="py-2 px-2">Product Name</th>
-                <th class="py-2 px-4">Stock</th>
-                <th class="py-2 px-4">Price</th>
+                <!-- <th class="py-2 px-4">Stock</th>
+                <th class="py-2 px-4">Price</th> -->
                 <th class="py-2 px-4">Category</th>
                 <th class="py-2 px-4">Slug</th>
                 <th class="py-2 px-4">Action</th>
@@ -42,17 +42,8 @@
                 @foreach($products as $product)
                     <tr class="even:bg-gray-100 odd:bg-white">
                         <td class="py-2 px-2 whitespace-nowrap text-center">{{++$i}}</td>
-                        <td class="py-2 px-4  text-center">
-                          @php
-                            $images = App\Models\ProductImages::where('product_unique_id',$product->unique_id)->get();
-                          @endphp
-                          <div class="flex flex-row">
-
-                            @foreach($images as $item)
-                              dd(<img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-12 m-1 h-12" alt="">)
-                            @endforeach
-                          </div>
-
+                        <td class="py-2 px-4  text-center flex justify-center">
+                          <img src="{{asset('images/products')}}/{{$product->image}}" class="h-14 w-auto" alt="{{$product->name}}">
                         </td>
                         <td class="py-2 px-2 whitespace-wrap text-center">{{$product->name}}</td>
                         <!-- <td class="py-2 px-4 whitespace-nowrap text-center">{{$product->stock_status}}</td> -->
