@@ -143,25 +143,47 @@ class AdminAddProductComponent extends Component
             $product->image3 = $imageName3;
         }
 
+        if ($this->image4) {
+            $imageName4 = Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image4->extension();
+            $this->image4->storeAs('products', $imageName4);
+            $product->image4 = $imageName4;
+        }
+        if ($this->image5) {
+            $imageName5 = Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image5->extension();
+            $this->image5->storeAs('products', $imageName5);
+            $product->image5 = $imageName5;
+        }
+        if ($this->image6) {
+            $imageName6 = Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image6->extension();
+            $this->image6->storeAs('products', $imageName6);
+            $product->image6 = $imageName6;
+        }
+
+        if ($this->image7) {
+            $imageName7 = Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image7->extension();
+            $this->image7->storeAs('products', $imageName7);
+            $product->image7 = $imageName7;
+        }
+
         // $imageName3 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image3->extension();
         // $this->image3->storeAs('products', $imageName3);
         // $product->image3 = $imageName3;
 
-        $imageName4 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image4->extension();
-        $this->image4->storeAs('products', $imageName4);
-        $product->image4 = $imageName4;
+        // $imageName4 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image4->extension();
+        // $this->image4->storeAs('products', $imageName4);
+        // $product->image4 = $imageName4;
 
-        $imageName5 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image5->extension();
-        $this->image5->storeAs('products', $imageName5);
-        $product->image5 = $imageName5;
+        // $imageName5 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image5->extension();
+        // $this->image5->storeAs('products', $imageName5);
+        // $product->image5 = $imageName5;
 
-        $imageName6 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image6->extension();
-        $this->image6->storeAs('products', $imageName6);
-        $product->image6 = $imageName6;
+        // $imageName6 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image6->extension();
+        // $this->image6->storeAs('products', $imageName6);
+        // $product->image6 = $imageName6;
 
-        $imageName7 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image7->extension();
-        $this->image7->storeAs('products', $imageName7);
-        $product->image7 = $imageName7;
+        // $imageName7 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image7->extension();
+        // $this->image7->storeAs('products', $imageName7);
+        // $product->image7 = $imageName7;
 
 
         // Attempt to add multiple images
