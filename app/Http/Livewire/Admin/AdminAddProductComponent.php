@@ -144,8 +144,8 @@ class AdminAddProductComponent extends Component
         }
 
         // $imageName3 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image3->extension();
-        $this->image3->storeAs('products', $imageName3);
-        $product->image3 = $imageName3;
+        // $this->image3->storeAs('products', $imageName3);
+        // $product->image3 = $imageName3;
 
         $imageName4 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image4->extension();
         $this->image4->storeAs('products', $imageName4);
