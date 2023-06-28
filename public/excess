@@ -42,3 +42,41 @@
             $this->newimage->storeAs('products', $imageName);
             $product->image = $imageName;
         }
+
+
+        <!-- images -->
+
+        <div class="mb-4">
+                <label for="image" class="block mb-1">Image</label>
+                <input type="file" name="images" id="" wire:model="images" multiple>
+                
+                @error('images')
+                    <p class="text-white bg-red-300">{{-- $message --}}</p>
+                @enderror
+            </div>
+
+            <!-- Multiple images on admin/Products -->
+                        @php
+                            $images = App\Models\ProductImages::where('product_unique_id',$product->unique_id)->get();
+                        @endphp
+                        <div class="flex flex-row">
+
+                            @foreach($images as $item)
+                              dd(<img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-12 m-1 h-12" alt="">)
+                            @endforeach
+                        </div>
+
+                        <!-- Frontedn images -->
+                        @php
+                                $images = App\Models\ProductImages::where('product_unique_id',$lproduct->unique_id)->get();
+                            @endphp
+                                <div class="swiper mySwiper w-64 h-64">
+                                    <div class="swiper-wrapper ">
+                                        @foreach($images as $item)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
