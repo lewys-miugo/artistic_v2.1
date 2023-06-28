@@ -16,13 +16,61 @@
                     <div class="flex flex-col m-2">
                         <!-- <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/ep1_es_229_layout_5_mess_japanese-mountain-landscape-abstract-5-piece-wall-art.webp?v=1668564076&width=360" alt="" class="h-64"> -->
                         <a href="{{route('product.details',['slug'=>$item->model->slug])}}">
-                            <img src="{{asset('images/product--1.webp')}}" alt="{{$item->model->name}}" class="h-64">
+                            <!-- <img src="{{asset('images/product--1.webp')}}" alt="{{$item->model->name}}" class="h-64"> -->
+
+                            <!-- <img src="{{asset('images/products')}}/{{$item->model->image}}" alt="{{$item->model->name}}" class="h-64"> -->
+                            <div class="-z-100 swiper mySwiper w-80  h-auto">
+                                <div class="swiper-wrapper ">
+                                        @if($item->model->image)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$item->model->image}}" alt="{{$item->model->name}}" class="">
+                                            </div>
+                                        @endif
+                                        @if($item->model->image2)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$item->model->image2}}" alt="{{$item->model->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($item->model->image3)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$item->model->image3}}" alt="{{$item->model->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($item->model->image4)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$item->model->image4}}" alt="{{$item->model->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($item->model->image5)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$item->model->image5}}" alt="{{$item->model->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($item->model->image6)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$item->model->image6}}" alt="{{$item->model->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($item->model->image7)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$item->model->image7}}" alt="{{$item->model->name}}" class="h-64">
+                                            </div>
+                                        @endif
+                                        
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </a>
 
                         <ul class="flex flex-row text-[#46555f] text-base pl-2">
                             <li class="text-xs">{{$item->model->name}}</li>
                         </ul>
-                        <div class="flex flex-row">
+                        <div class="flex flex-row justify-end">
                             
 
                             <!-- Wishlist -->
