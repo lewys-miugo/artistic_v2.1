@@ -55,7 +55,15 @@ return new class extends Migration
             $table->boolean('featured')->default(false);
             // $table->unsignedInteger('quantity')->default(10);
             $table->string('image')->nullable();
-            $table->text('images')->nullable(); 
+
+            $table->text('image2')->nullable(); 
+            $table->text('image3')->nullable(); 
+            $table->text('image4')->nullable(); 
+            $table->text('image5')->nullable(); 
+            $table->text('image6')->nullable(); 
+            $table->text('image7')->nullable(); 
+            // $table->text('image8')->nullable(); 
+
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
