@@ -47,7 +47,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            <header id="lg-screen" class="sticky top-0">
+            <header id="lg-screen" class="z-50 sticky top-0">
                 <!-- <nav class="flex justify-between h-20 pl-12 py-10 items-center bg-white">
                     <a href="{{-- '/' --}}"> 
                          <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1> 
