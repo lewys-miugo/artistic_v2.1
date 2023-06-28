@@ -392,5 +392,13 @@
 
             <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Submit</button>
         </form>      
+        @if(Session::has('message'))
+            <div class="flex items-center justify-center bg-green-200 text-green-700 p-4 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="font-semibold">Success! | {{Session::get('message')}}</span>
+            </div>
+        @endif
     </div>
 </div>
