@@ -52,7 +52,7 @@ class AdminAddProductComponent extends Component
     // public $stock_status ='instock';
     public $featured='0';
     // public $quantity;
-    public $image = null;
+    public $image ;
 
     public $image2 = null;
     public $image3 = null;
@@ -128,11 +128,11 @@ class AdminAddProductComponent extends Component
         // $product->quantity = $this->quantity;
 
         
-        if ($this->image2) {
+        
             $imageName = Carbon::now()->timestamp.'.'.$this->image->extension();
             $this->image->storeAs('products', $imageName);
             $product->image = $imageName;
-        }
+        
 
         if ($this->image2) {
             $imageName2 = Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image2->extension();
