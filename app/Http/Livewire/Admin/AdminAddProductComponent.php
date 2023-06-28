@@ -52,9 +52,16 @@ class AdminAddProductComponent extends Component
     // public $stock_status ='instock';
     public $featured='0';
     // public $quantity;
-    // public $image;
+    public $image;
 
-    public $images=[];
+    public $image2;
+    public $image3;
+    public $image4;
+    public $image5;
+    public $image6;
+    public $image7;
+
+    // public $images=[];
     public $unique_id;
     public $product_id;
 
@@ -122,32 +129,53 @@ class AdminAddProductComponent extends Component
 
         
 
-        // $imageName = Carbon::now()->timestamp.'.'.$this->image->extension();
-        // $this->image->storeAs('products', $imageName);
-        // $product->image = $imageName;
+        $imageName = Carbon::now()->timestamp.'.'.$this->image->extension();
+        $this->image->storeAs('products', $imageName);
+        $product->image = $imageName;
+
+        $imageName2 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image2->extension();
+        $this->image2->storeAs('products', $imageName2);
+        $product->image2 = $imageName2;
+
+        $imageName3 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image3->extension();
+        $this->image3->storeAs('products', $imageName3);
+        $product->image3 = $imageName3;
+
+        $imageName4 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image4->extension();
+        $this->image4->storeAs('products', $imageName4);
+        $product->image4 = $imageName4;
+
+        $imageName5 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image5->extension();
+        $this->image5->storeAs('products', $imageName5);
+        $product->image5 = $imageName5;
+
+        $imageName6 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image6->extension();
+        $this->image6->storeAs('products', $imageName6);
+        $product->image6 = $imageName6;
+
+        $imageName7 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image7->extension();
+        $this->image7->storeAs('products', $imageName7);
+        $product->image7 = $imageName7;
+
 
         // Attempt to add multiple images
         // Attemp to add multiple images;
-        
-        
-       
-        if(!is_null($this->images)){
-            Storage::delete($this->images);
-        }
+        // if(!is_null($this->images)){
+        //     Storage::delete($this->images);
+        // }
+        // foreach ($this->images as $key => $image) {
+        //     $pimage = new ProductImages();
+        //     $pimage->product_unique_id = $uniqId;
+        //     $pimage->product_id=$product->id;
 
-        foreach ($this->images as $key => $image) {
-            $pimage = new ProductImages();
-            $pimage->product_unique_id = $uniqId;
-            // $pimage->product_id=$product->id;
+        //     $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
 
-            $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
+        //     $this->images[$key]->storeAs('public/all',$imageName);
+        //     dd($this->images);
 
-            $this->images[$key]->storeAs('public/all',$imageName);
-            // dd($this->images);
-
-            $pimage->image=$imageName;
-            $pimage->save();
-        }
+        //     $pimage->image=$imageName;
+        //     $pimage->save();
+        // }
 
         $product->save();
         session()->flash('message', 'Product has been added!');
