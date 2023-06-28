@@ -3,7 +3,7 @@
         <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-2 mx-2 text-[#46555f]">
             <li class=" grow border-y-2 transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]">
                 <a href="{{route('shop')}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">
-                    All
+                  All
                 </a>
             </li>
             @foreach($categories as $category)
@@ -388,51 +388,51 @@
                         <a href="{{route('product.details',['slug'=>$lproduct->slug])}}">
                             <!-- <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64"> -->
                             <div class="-z-100 swiper mySwiper w-64 h-64">
-                                    <div class="swiper-wrapper ">
-                                            @if($lproduct->image)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64">
-                                                </div>
-                                            @endif
+                                <div class="swiper-wrapper ">
+                                        @if($lproduct->image)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
 
-                                            @if($lproduct->image2)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{asset('images/products')}}/{{$lproduct->image2}}" alt="{{$lproduct->name}}" class="h-64">
-                                                </div>
-                                            @endif
+                                        @if($lproduct->image2)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$lproduct->image2}}" alt="{{$lproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
 
-                                            @if($lproduct->image3)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{asset('images/products')}}/{{$lproduct->image3}}" alt="{{$lproduct->name}}" class="h-64">
-                                                </div>
-                                            @endif
+                                        @if($lproduct->image3)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$lproduct->image3}}" alt="{{$lproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
 
-                                            @if($lproduct->image4)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{asset('images/products')}}/{{$lproduct->image4}}" alt="{{$lproduct->name}}" class="h-64">
-                                                </div>
-                                            @endif
+                                        @if($lproduct->image4)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$lproduct->image4}}" alt="{{$lproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
 
-                                            @if($lproduct->image5)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{asset('images/products')}}/{{$lproduct->image5}}" alt="{{$lproduct->name}}" class="h-64">
-                                                </div>
-                                            @endif
+                                        @if($lproduct->image5)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$lproduct->image5}}" alt="{{$lproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
 
-                                            @if($lproduct->image6)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{asset('images/products')}}/{{$lproduct->image6}}" alt="{{$lproduct->name}}" class="h-64">
-                                                </div>
-                                            @endif
+                                        @if($lproduct->image6)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$lproduct->image6}}" alt="{{$lproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
 
-                                            @if($lproduct->image7)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{asset('images/products')}}/{{$lproduct->image7}}" alt="{{$lproduct->name}}" class="h-64">
-                                                </div>
-                                            @endif
-                                    </div>
-                                    <div class="swiper-pagination"></div>
+                                        @if($lproduct->image7)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$lproduct->image7}}" alt="{{$lproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
                                 </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
 
                             <ul class="flex flex-row text-[#46555f] text-base mt-2 pl-2">
                                 <li class="text-xs">{{$lproduct->name}}</li>
