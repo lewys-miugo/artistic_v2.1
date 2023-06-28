@@ -54,12 +54,12 @@ class AdminAddProductComponent extends Component
     // public $quantity;
     public $image;
 
-    public $image2;
-    public $image3;
-    public $image4;
-    public $image5;
-    public $image6;
-    public $image7;
+    public $image2 = null;
+    public $image3 = null;
+    public $image4 = null;
+    public $image5 = null;
+    public $image6 = null;
+    public $image7 = null;
 
     // public $images=[];
     public $unique_id;
@@ -137,7 +137,13 @@ class AdminAddProductComponent extends Component
         $this->image2->storeAs('products', $imageName2);
         $product->image2 = $imageName2;
 
-        $imageName3 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image3->extension();
+        if ($this->image3) {
+            $imageName3 = Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image3->extension();
+            $this->image3->storeAs('products', $imageName3);
+            $product->image3 = $imageName3;
+        }
+
+        // $imageName3 = Carbon::now()->timestamp.'.'. Str::random(6).'_'.$this->image3->extension();
         $this->image3->storeAs('products', $imageName3);
         $product->image3 = $imageName3;
 
