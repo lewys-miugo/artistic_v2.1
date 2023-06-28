@@ -408,13 +408,17 @@
                                             <div class="swiper-slide flex justify-center content-center m-auto"> 
                                                 <img src="{{asset('images/products')}}/{{$lproduct->image5}}" alt="{{$lproduct->name}}" class="h-64">
                                             </div>
-
+                                            @if($lproduct->image6)
                                             <div class="swiper-slide flex justify-center content-center m-auto"> 
                                                 <img src="{{asset('images/products')}}/{{$lproduct->image6}}" alt="{{$lproduct->name}}" class="h-64">
                                             </div>
-                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                <img src="{{asset('images/products')}}/{{$lproduct->image7}}" alt="{{$lproduct->name}}" class="h-64">
-                                            </div>
+                                            @endif
+
+                                            @if($lproduct->image7)
+                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                    <img src="{{asset('images/products')}}/{{$lproduct->image7}}" alt="{{$lproduct->name}}" class="h-64">
+                                                </div>
+                                            @endif
                                     </div>
                                     <div class="swiper-pagination"></div>
                                 </div>
