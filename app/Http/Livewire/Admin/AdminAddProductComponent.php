@@ -22,7 +22,7 @@ class AdminAddProductComponent extends Component
     public $slug;
     public $short_description;
     public $description;
-    // public $regular_price;
+    public $regular_price='4000';
     public $regular_price_A0;
     public $regular_price_A05;
     public $regular_price_A1;
@@ -76,7 +76,7 @@ class AdminAddProductComponent extends Component
     {
         $this->validate([
             'name'=>'required',
-            // 'regular_price'=>'required', 
+            'regular_price'=>'required', 
             'category_id'=>'required',
 
         ]);
@@ -90,7 +90,7 @@ class AdminAddProductComponent extends Component
         $product->slug = $this->slug;
         $product->short_description = $this->short_description;
         $product->description = $this->description;
-        // $product->regular_price = $this->regular_price;
+        $product->regular_price = '4000';
 
         $product->regular_price_A0 = $this->regular_price_A0;
         $product->regular_price_A05 = $this->regular_price_A05;
