@@ -18,43 +18,48 @@
                 <span class="font-semibold">Success! | {{Session::get('message')}}</span>
             </div>
         @endif
-        <form class="max-w-md mx-auto" wire:submit.prevent="updateProduct">
-            <!-- NAMe -->
-            <div class="mb-4">
-                <label for="name" class="block mb-1">Name</label>
-                <input id="name" type="text" name="name" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter name of artPiece" wire:model="name" wire:keyup="generateSlug()">
-                @error('name')
-                    <p class="text-white bg-red-300">{{$message}}</p>
-                @enderror
-            </div>
+        <form class="flex flex-col justify-center " wire:submit.prevent="updateProduct">
+            <div class="flex flex-row">
+                <!-- NAMe -->
+                <div class="m-4 max-w-md">
+                    <label for="name" class="block mb-1">Name</label>
+                    <input id="name" type="text" name="name" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter name of artPiece" wire:model="name" wire:keyup="generateSlug()">
+                    @error('name')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
 
-            <!-- Slug -->
+                <!-- Slug -->
 
-            <div class="mb-4">
-                <label for="slug" class="block mb-1">Slug</label>
-                <input id="slug" type="text" name="slug" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Product slug" wire:model="slug">
-                @error('slug')
-                    <p class="text-white bg-red-300">{{$message}}</p>
-                @enderror
+                <div class="m-4 max-w-md">
+                    <label for="slug" class="block mb-1">Slug</label>
+                    <input id="slug" type="text" name="slug" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Product slug" wire:model="slug">
+                    @error('slug')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
             </div>
+            
+            <div class="flex flex-row">
+                <!-- Short description -->
+                <div class="m-4">
+                    <label for="short_description" class="block mb-1">Short Description</label>
+                    <textarea name="short_description" id="" cols="50" rows="3" placeholder="Enter short Description" wire:model="short_description"></textarea>
+                    @error('short_description')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
 
-            <!-- Short description -->
-            <div class="mb-4">
-                <label for="short_description" class="block mb-1">Short Description</label>
-                <textarea name="short_description" id="" cols="50" rows="3" placeholder="Enter short Description" wire:model="short_description"></textarea>
-                @error('short_description')
-                    <p class="text-white bg-red-300">{{$message}}</p>
-                @enderror
+                <!-- Descrption -->
+                <div class="m-4">
+                    <label for="description" class="block mb-1">Description</label>
+                    <textarea name="description" id="" cols="50" rows="3" placeholder="Enter Description" wire:model="description"></textarea>
+                    @error('description')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
             </div>
-
-            <!-- Descrption -->
-            <div class="mb-4">
-                <label for="description" class="block mb-1">Description</label>
-                <textarea name="description" id="" cols="50" rows="3" placeholder="Enter Description" wire:model="description"></textarea>
-                @error('description')
-                    <p class="text-white bg-red-300">{{$message}}</p>
-                @enderror
-            </div>
+            
 
             <!-- Regular PRice -->
 
@@ -67,7 +72,11 @@
             </div> -->
 
             <!-- Canvas PRinted -->
+            <div>
+                <h2 class="text-2xl text-center underline">Canvas Prices</h2>
+            </div>
             <div class="flex flex-row space-x-2 flex-wrap">
+
                 <div class="mb-4">
                     <label for="regular_price_A0" class="block mb-1">A0 Price</label>
                     <input id="##" type="text" name="regular_price_A0" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A0">
@@ -151,6 +160,9 @@
 
             <!-- Normal Printed -->
 
+            <div>
+                <h2 class="text-2xl text-center underline">Framed Prices</h2>
+            </div>
             <div class="flex flex-row space-x-2 flex-wrap">
                 <div class="mb-4">
                     <label for="regular_price_A0f" class="block mb-1">A0f Price</label>
@@ -287,25 +299,100 @@
             </div> -->
 
            <!-- Images -->
-           <div class="mb-4">
-               <label for="">Images</label>
-               <input type="file" name="images" id="" wire:model="images" multiple>
-               @error('images')
-                    <p class="text-white bg-red-300">{{$message}}</p>
-                @enderror
-                <br>
-                <div class="flex flex-row">
-                    @foreach($productImages as $pimage)
-                        <img src="{{asset('uploads/all')}}/{{$pimage->image}}" class="w-14 m-1 h-auto" alt="">
-                        <a href="#" wire:click.prevent="deleteImage({{$pimage->id}})">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </a>
-
-                    @endforeach
+           <div class="flex flex-row flex-wrap">
+                <div class="m-2 flex flex-col">
+                    <label for="image">Image 1</label>
+                    <input type="file" name="image" id="" wire:model="newimage">
+                    @if($newimage)
+                        <img src="{{$newimage->temporaryUrl()}}" class="m-2 w-32" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image}}" class="m-2 w-32" alt="">    
+                    @endif    
+                    @error('newimage')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
                 </div>
-           </div>
+
+                <div class="m-2 flex flex-col">
+                    <label for="image2">Image 2</label>
+                    <input type="file" name="image2" id="" wire:model="newimage2">
+                    @if($newimage2)
+                        <img src="{{$newimage2->temporaryUrl()}}" class="m-2 w-32" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image2}}" class="m-2 w-32" alt="">    
+                    @endif    
+                    @error('newimage2')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="m-2 flex flex-col">
+                    <label for="image3">Image 3</label>
+                    <input type="file" name="image3" id="" wire:model="newimage3">
+                    @if($newimage3)
+                        <img src="{{ $newimage3->temporaryUrl() }}" class="m-2 w-32" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image3}}" class="m-2 w-32" alt="">    
+                    @endif    
+                    @error('newimage3')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="m-2 flex flex-col">
+                    <label for="image4">Image 4</label>
+                    <input type="file" name="image4" id="" wire:model="newimage4">
+                    @if($newimage4)
+                        <img src="{{$newimage4->temporaryUrl()}}" class="m-2 w-32" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image4}}" class="m-2 w-32" alt="">    
+                    @endif    
+                    @error('newimage4')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="m-2 flex flex-col">
+                    <label for="image5">Image 5</label>
+                    <input type="file" name="image5" id="" wire:model="newimage5">
+                    @if($newimage5)
+                        <img src="{{$newimage5->temporaryUrl()}}" class="m-2 w-32" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image5}}" class="m-2 w-32" alt="">    
+                    @endif    
+                    @error('newimage5')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="m-2 flex flex-col">
+                    <label for="image6">Image 6</label>
+                    <input type="file" name="image6" id="" wire:model="newimage6">
+                    @if($newimage6)
+                        <img src="{{$newimage6->temporaryUrl()}}" class="m-2 w-32" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image6}}" class="m-2 w-32" alt="">    
+                    @endif    
+                    @error('newimage6')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+                <div class="m-2 flex flex-col">
+                    <label for="image7">Image 7</label>
+                    <input type="file" name="image7" id="" wire:model="newimage7">
+                    @if($newimage7)
+                        <img src="{{$newimage7->temporaryUrl()}}" class="m-2 w-32" alt="">
+                    @else
+                        <img src="{{asset('images/products')}}/{{$image7}}" class="m-2 w-32" alt="">    
+                    @endif    
+                    @error('newimage7')
+                        <p class="text-white bg-red-300">{{$message}}</p>
+                    @enderror
+                </div>
+
+            </div>
+            
 
             <div class="mb-4">
                 <label for="category_id" class="block mb-1">select Category</label>
