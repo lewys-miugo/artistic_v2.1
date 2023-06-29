@@ -375,7 +375,7 @@
             </a>
         </div>
         <div class="mb-8">
-            <div class="flex flex-row flex-wrap">
+            <div class="flex flex-row flex-wrap justify-center space-x-4 space-y-4">
                 <!-- Trending 1 -->
                 @php
                     $witems=Cart::instance('wishlist')->content()->pluck('id');
@@ -384,11 +384,11 @@
                 @foreach($lproducts as $lproduct)
 
 
-                    <div class="flex flex-col m-2">
+                    <div class="flex flex-col m-2  max-w-xs ">
                         <a href="{{route('product.details',['slug'=>$lproduct->slug])}}">
                             <!-- <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64"> -->
-                            <div class="-z-100 swiper mySwiper w-64 h-64">
-                                <div class="swiper-wrapper ">
+                            <div class=" swiper mySwiper ">
+                                <div class="swiper-wrapper max-w-80 ">
                                         @if($lproduct->image)
                                             <div class="swiper-slide flex justify-center content-center m-auto"> 
                                                 <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64">
@@ -434,13 +434,13 @@
                                 <div class="swiper-pagination"></div>
                             </div>
 
-                            <ul class="flex flex-row text-[#46555f] text-base mt-2 pl-2">
-                                <li class="text-xs">{{$lproduct->name}}</li>
+                            <ul class="flex flex-row text-[#46555f] text-base mt-4 pl-2">
+                                <li class="text-xs truncate">{{$lproduct->name}}</li>
                                 
                             </ul>
 
                             <ul class="flex flex-row text-[#46555f] text-base pl-2 justify-end">
-                                <li class=" flex flex-row justify-end">
+                                <li class=" flex flex-row mr-6 justify-end">
                                     @if($witems->contains($lproduct->id))
                                         <a href="#" wire:click.prevent="removeFromWishlist({{$lproduct->id}})">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
