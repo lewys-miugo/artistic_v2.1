@@ -468,22 +468,7 @@
 
                     </div>
 
-                    <!-- New swiper -->
-                    <!-- <div class="swiper mySwiper w-64">
-                        <div class="swiper-wrapper ">
-                            @php
-                                $images = App\Models\ProductImages::where('product_unique_id',$product->unique_id)->get();
-                            @endphp
-                                @foreach($images as $item)
-                            <div class="swiper-slide flex justify-center content-center "> 
-
-                                        <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-full" alt="">
-                            </div>
-
-                                @endforeach
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div> -->
+                    
 
                     <div>
 
