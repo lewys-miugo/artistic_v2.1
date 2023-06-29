@@ -297,7 +297,52 @@
                         @foreach($products as $product)
                             <div class="flex flex-col m-2">
                                 <a href="{{route('product.details',['slug'=>$product->slug])}}">
-                                    <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64">
+                                    <div class="-z-100 swiper mySwiper w-64 h-64">
+                                        <div class="swiper-wrapper ">
+                                                @if($product->image)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image2)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image2}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image3)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image3}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image4)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image4}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image5)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image5}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image6)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image6}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image7)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image7}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </a>
 
                                 <ul class="flex flex-row text-[#46555f] text-base pl-2">
