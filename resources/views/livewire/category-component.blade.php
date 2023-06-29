@@ -249,16 +249,49 @@
                                 <!-- <img src="https://cdn.shopify.com/s/files/1/1568/8443/products/ep1_es_229_layout_5_mess_japanese-mountain-landscape-abstract-5-piece-wall-art.webp?v=1668564076&width=360" alt="" class="h-64"> -->
                                 <a href="{{route('product.details',['slug'=>$product->slug])}}">
                                     <!-- <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64"> -->
-                                    @php
-                                        $images = App\Models\ProductImages::where('product_unique_id',$product->unique_id)->get();
-                                    @endphp
-                                    <div class="swiper mySwiper w-64 h-64">
+                                    <div class="-z-100 swiper mySwiper w-64 h-64">
                                         <div class="swiper-wrapper ">
-                                            @foreach($images as $item)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
-                                                </div>
-                                            @endforeach
+                                                @if($product->image)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image2)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image2}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image3)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image3}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image4)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image4}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image5)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image5}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image6)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image6}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($product->image7)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$product->image7}}" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
                                         </div>
                                         <div class="swiper-pagination"></div>
                                     </div>
