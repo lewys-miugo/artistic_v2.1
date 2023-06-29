@@ -28,23 +28,37 @@ class AdminEditProductComponent extends Component
     public $featured='0';
     // public $quantity;
 
-    public $uniqId;
-    public $image;
-    public $images;
+    // public $uniqId;
+    // public $images;
 
     public $category_id;
+
+    public $image;
     public $newimage;
+    public $newimage2;
+    public $newimage3;
+    public $newimage4;
+    public $newimage5;
+    public $newimage6;
+    public $newimage7;
+    public $image2;
+    public $image3;
+    public $image4;
+    public $image5;
+    public $image6;
+    public $image7;
+
 
     public function mount($product_id)
     {
-        $product = Product::find($product_id)->first();
+        $product = Product::find($product_id);
         $this->product_id = $product->id;
         $this->name = $product->name;
         $this->slug = $product->slug;
         $this->short_description = $product->short_description;
         $this->description = $product->description;
 
-        // $this->regular_price = $product->regular_price;
+        $this->regular_price = $product->regular_price;
 
         $this->regular_price_A0 = $product->regular_price_A0;
         $this->regular_price_A05= $product->regular_price_A05;
@@ -70,8 +84,22 @@ class AdminEditProductComponent extends Component
         $this->regular_price_4pf = $product->regular_price_4pf;
         $this->regular_price_5pf = $product->regular_price_5pf;
         $this->regular_price_paf = $product->regular_price_paf;
+
         $this->featured = $product->featured;
         $this->category_id = $product->category_id;
+
+        // Images
+        $this->image=$product->image;
+        $this->image2=$product->image2;
+        $this->image3=$product->image3;
+        $this->image4=$product->image4;
+        $this->image5=$product->image5;
+        $this->image6=$product->image6;
+        $this->image7=$product->image7;
+
+
+
+
 
 
 
@@ -83,7 +111,9 @@ class AdminEditProductComponent extends Component
         // $product=Product::where('id',$id)->first();
 
         // $this->image = $product->image;
-        $this->productImages=ProductImages::where('product_unique_id',$product->unique_id)->get();
+        // $this->productImages=ProductImages::where('product_unique_id',$product->unique_id)->get();
+
+
 
 
     }
@@ -116,7 +146,7 @@ class AdminEditProductComponent extends Component
         $product->slug = $this->slug;
         $product->short_description = $this->short_description;
         $product->description = $this->description;
-        // $product->regular_price = $this->regular_price;
+        $product->regular_price = '4000';
 
         $product->regular_price_A0 = $this->regular_price_A0;
         $product->regular_price_A05 = $this->regular_price_A05;
@@ -143,6 +173,7 @@ class AdminEditProductComponent extends Component
         $product->regular_price_5pf = $this->regular_price_5pf;
         $product->regular_price_paf = $this->regular_price_paf;
 
+
         // $product->sale_price = $this->sale_price;
         // $product->SKU = $this->sku;
         // $product->stock_status = $this->stock_status;
@@ -150,27 +181,65 @@ class AdminEditProductComponent extends Component
         // $product->quantity = $this->quantity;
         
         $product->category_id = $this->category_id;
+        
 
-        // $uniqId=Carbon::now()->timestamp.uniqid(); 
-        // $product->unique_id = $uniqId;
-
-        if ($this->images != '') {
-            foreach ($this->images as $key => $image) {
-                $pimage = new ProductImages();
-                $pimage->product_unique_id = $uniqId;
-
-                // $pimage->product_id = $product->id;
-
-                $imageName =Carbon::now()->timestamp . $key . '.' .$this->images[$key]->extension();
-                $this->images[$key]->storeAs('all',$imageName);
-
-                $pimage->product_id=$product->id;
-
-                $pimage->image=$imageName;
-                $pimage->save();
-            }
+        if ($this->newimage) {
+            unlink('images/products/'.$product->image);
+            $imageName = Carbon::now()->timestamp.'.'.$this->newimage->extension();
+            $this->newimage->storeAs('products', $imageName);
+            $product->image = $imageName;
         }
-        $this->images='';
+
+        if ($this->newimage2) {
+            unlink('images/products/'.$product->image2);
+            $imageName = Carbon::now()->timestamp.'.'.Str::random(6).$this->newimage2->extension();
+            $this->newimage2->storeAs('products', $imageName);
+            $product->image2 = $imageName;
+        }
+
+        if ($this->newimage3) {
+            if ($this->image3) {
+                unlink('images/products/'.$product->image3);
+            }
+            $imageName = Carbon::now()->timestamp.'.'.Str::random(6).$this->newimage3->extension();
+            $this->newimage3->storeAs('products', $imageName);
+            $product->image3 = $imageName;
+        }
+
+        if ($this->newimage4) {
+            if ($this->image4) {
+                unlink('images/products/'.$product->image4);
+            }
+            $imageName = Carbon::now()->timestamp.'.'.Str::random(6).$this->newimage4->extension();
+            $this->newimage4->storeAs('products', $imageName);
+            $product->image4 = $imageName;
+        }
+        if ($this->newimage5) {
+            if ($this->image5) {
+                unlink('images/products/'.$product->image5);
+            }
+            $imageName = Carbon::now()->timestamp.'.'.Str::random(6).$this->newimage5->extension();
+            $this->newimage5->storeAs('products', $imageName);
+            $product->image5 = $imageName;
+        }
+        if ($this->newimage6) {
+            if ($this->image6) {
+                unlink('images/products/'.$product->image6);
+            }
+            $imageName = Carbon::now()->timestamp.'.'.Str::random(6).$this->newimage6->extension();
+            $this->newimage6->storeAs('products', $imageName);
+            $product->image6 = $imageName;
+        }
+
+        if ($this->newimage7) {
+            if ($this->image7) {
+                unlink('images/products/'.$product->image7);
+            }
+            $imageName = Carbon::now()->timestamp.'.'.Str::random(6).$this->newimage7->extension();
+            $this->newimage7->storeAs('products', $imageName);
+            $product->image7 = $imageName;
+        }
+
         $product->save();
         session()->flash('message', 'Product image has been Updated!');
     }
