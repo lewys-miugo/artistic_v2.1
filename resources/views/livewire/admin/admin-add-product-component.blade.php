@@ -117,7 +117,7 @@
                     @enderror
                 </div>
                 <div class="mb-4">
-                    <label for="regular_price_A4" class="block mb-1">A3 Price</label>
+                    <label for="regular_price_A4" class="block mb-1">A4 Price</label>
                     <input id="##" type="text" name="regular_price_A4" class="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Regular Price" wire:model="regular_price_A4">
                     @error('regular_price_A4')
                         <p class="text-white bg-red-300">{{$message}}</p>
