@@ -21,7 +21,7 @@
                         <tr class="bg-gray-200">
                             <th class="py-2 px-4">Image</th>
                             <th class="py-2 px-4">Name</th>
-                            <th class="py-2 px-4">Price</th>
+                            <!-- <th class="py-2 px-4">Price</th> -->
                             <th class="py-2 px-4">Quantity</th>
                             <th class="py-2 px-4">Subtotal</th>
                             <th class="py-2 px-4">Remove</th>
@@ -40,7 +40,7 @@
                                     <p class="text-blue-500 font-bold text-lg capitalize">{{$item->model->name}}</p>
                                     <p class="max-w-fit text-center">{{$item->model->short_description}}</p>
                                 </td>
-                                <td class="py-2 px-4 text-center">{{$item->model->regular_price}}</td>
+                                <!-- <td class="py-2 px-4 text-center">{{$item->model->regular_price}}</td> -->
                                 <td class="py-2 px-4 text-center">
                                     <!-- <input type="number" value="1" class="text-center w-16 border bg-gray-100 focus:outline-none"> -->
                                     <div class="number-container flex items-center justify-center">
