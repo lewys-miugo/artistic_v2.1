@@ -92,30 +92,32 @@ class AdminAddProductComponent extends Component
         $product->description = $this->description;
         $product->regular_price = '4000';
 
-        $product->regular_price_A0 = $this->regular_price_A0;
-        $product->regular_price_A05 = $this->regular_price_A05;
-        $product->regular_price_A1 = $this->regular_price_A1;
-        $product->regular_price_A2 = $this->regular_price_A2;
-        $product->regular_price_A3 = $this->regular_price_A3;
-        $product->regular_price_A4 = $this->regular_price_A4;
-        $product->regular_price_2p = $this->regular_price_2p;
-        $product->regular_price_3p = $this->regular_price_3p;
-        $product->regular_price_4p = $this->regular_price_4p;
-        $product->regular_price_5p = $this->regular_price_5p;
-        $product->regular_price_pa = $this->regular_price_pa;
+        $product->regular_price_A0 = 7000;
+        $product->regular_price_A05 = 6000;
+        $product->regular_price_A1 = 5000;
+        $product->regular_price_A2 = 3500;
+        $product->regular_price_A3 = 2000;
+        $product->regular_price_A4 = 2000;
+        $product->regular_price_2p = 9000;
+        $product->regular_price_3p = 8500;
+        $product->regular_price_4p = 7500;
+        $product->regular_price_5p = 8000;
+        $product->regular_price_pa = 6000;
+        // $product->regular_price_pa = $this->regular_price_pa;
+        
 
         // Framed print
-        $product->regular_price_A0f = $this->regular_price_A0f;
-        $product->regular_price_A05f=$this->regular_price_A05f;
-        $product->regular_price_A1f = $this->regular_price_A1f;
-        $product->regular_price_A2f = $this->regular_price_A2f;
-        $product->regular_price_A3f = $this->regular_price_A3f;
-        $product->regular_price_A4f = $this->regular_price_A4f;
-        $product->regular_price_2pf = $this->regular_price_2pf;
-        $product->regular_price_3pf = $this->regular_price_3pf;
-        $product->regular_price_4pf = $this->regular_price_4pf;
-        $product->regular_price_5pf = $this->regular_price_5pf;
-        $product->regular_price_paf = $this->regular_price_paf;
+        $product->regular_price_A0f = 7500;
+        $product->regular_price_A05f=7000;
+        $product->regular_price_A1f = 6500;
+        $product->regular_price_A2f = 4500;
+        $product->regular_price_A3f = 3500;
+        $product->regular_price_A4f = 2000;
+        $product->regular_price_2pf = 10000;
+        $product->regular_price_3pf = 7500;
+        $product->regular_price_4pf = 5200;
+        $product->regular_price_5pf = 6000;
+        $product->regular_price_paf = 5500;
 
         $product->featured = $this->featured;
         $product->category_id = $this->category_id;
