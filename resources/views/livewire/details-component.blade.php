@@ -7,7 +7,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="p-4">
                     <!-- <img src="{{asset('images/products')}}/{{$product->image}}" alt="Art Product" class="w-full"> -->
-                    <div class="-z-100 swiper mySwiper md:w-80 md:h-80">
+                    <div class=" swiper mySwiper w-full h-auto md:w-98 md:h-auto">
                         <div class="swiper-wrapper ">
                                 @if($product->image)
                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
@@ -52,6 +52,8 @@
                                 @endif
                         </div>
                         <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next text-gray-500 "></div>
+                        <div class="swiper-button-prev text-gray-500 "></div>
                     </div>
 
                 </div>
