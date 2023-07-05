@@ -264,7 +264,7 @@
                             
                             <a rel="noopener noreferrer" href="#">Delivery</a>
                             <a rel="noopener noreferrer" href="#">Return Policy</a>
-                            <a href="">FAQs</a>
+                            <a href="{{route('faq')}}">FAQs</a>
                             <a rel="noopener noreferrer" href="#">Accessibility Statement</a>
                         </div>
                     </div>
