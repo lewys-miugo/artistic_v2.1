@@ -508,19 +508,52 @@
                 <div class="flex flex-col m-2">
                     <a href="{{route('product.details',['slug'=>$fproduct->slug])}}">
                         <!-- <img src="{{asset('images/products')}}/{{$fproduct->image}}" alt="{{$fproduct->name}}" class="h-64"> -->
-                        @php
-                                        $images = App\Models\ProductImages::where('product_unique_id',$fproduct->unique_id)->get();
-                                    @endphp
-                                    <div class="swiper mySwiper w-64 h-64">
-                                        <div class="swiper-wrapper ">
-                                            @foreach($images as $item)
-                                                <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                    <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                        <div class="swiper-pagination"></div>
-                                    </div>
+                        <div class=" swiper mySwiper ">
+                                <div class="swiper-wrapper max-w-80 ">
+                                        @if($fproduct->image)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$fproduct->image}}" alt="{{$fproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($fproduct->image2)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$fproduct->image2}}" alt="{{$fproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($fproduct->image3)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$fproduct->image3}}" alt="{{$fproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($fproduct->image4)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$fproduct->image4}}" alt="{{$fproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($fproduct->image5)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$fproduct->image5}}" alt="{{$fproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($fproduct->image6)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$fproduct->image6}}" alt="{{$fproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
+
+                                        @if($fproduct->image7)
+                                            <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                <img src="{{asset('images/products')}}/{{$fproduct->image7}}" alt="{{$fproduct->name}}" class="h-64">
+                                            </div>
+                                        @endif
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
 
 
                         <ul class="flex flex-row text-[#46555f] text-base mt-2 pl-2">
