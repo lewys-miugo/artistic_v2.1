@@ -326,7 +326,7 @@
                         <h2 class="font-medium">COMPANY CONTACT</h2>
                         <div class="flex flex-col space-y-2 text-sm ">
                             <a rel="noopener noreferrer" href="#">Facebook</a>
-                            <a rel="noopener noreferrer" href="">Instagram</a>
+                            <a rel="noopener noreferrer" class="truncate" href="https://www.instagram.com/Artistic_Excursions/">Instagram:@Artic_Excursions</a>
                             <a rel="noopener noreferrer" href="mailto:artisticexcursions@gmail.com" class="truncate">Email: artisticexcursions@gmail.com</a>
                             <a href="tel:+254716340285">Phone no: +254708016072</a>
                             <a href="tel:+254716340285">Phone no: +254716340285</a>
