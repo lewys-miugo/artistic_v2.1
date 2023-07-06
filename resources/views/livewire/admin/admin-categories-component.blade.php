@@ -53,7 +53,7 @@
 
     </div>
 
-    <div id="deleteConfirmation" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+    <div wire:ignore id="deleteConfirmation" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
       <div class="bg-white w-1/2 rounded-lg p-8">
         <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
         <p class="mb-6">Are you sure you want to delete this item?</p>
