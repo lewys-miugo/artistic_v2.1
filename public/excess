@@ -123,3 +123,10 @@ class Faqs extends Model
 // faqs db
 $table->string('question')->nullable();
             $table->text('answer')->nullable();
+
+
+            // Delete multiple images
+            $image=ProductImages::where('product_id')->get();
+        foreach($images as $image){
+            $image->delete();
+        }
