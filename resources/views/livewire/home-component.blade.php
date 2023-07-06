@@ -434,7 +434,7 @@
                                 <div class="swiper-pagination"></div>
                             </div>
 
-                            <ul class="flex flex-row text-[#46555f] text-base mt-4 pl-2">
+                            <ul class="flex flex-row text-[#46555f] text-base mt-4 pl-2 md:px-12">
                                 <li class="text-xs truncate">{{$lproduct->name}}</li>
                                 
                             </ul>
@@ -505,7 +505,7 @@
                 @foreach($fproducts as $fproduct)
 
 
-                <div class="flex flex-col m-2">
+                <div class="flex flex-col m-2 max-w-xs">
                     <a href="{{route('product.details',['slug'=>$fproduct->slug])}}">
                         <!-- <img src="{{asset('images/products')}}/{{$fproduct->image}}" alt="{{$fproduct->name}}" class="h-64"> -->
                         <div class=" swiper mySwiper ">
@@ -556,7 +556,7 @@
                             </div>
 
 
-                        <ul class="flex flex-row text-[#46555f] text-base mt-2 pl-2">
+                        <ul class="flex flex-row text-[#46555f] text-base mt-2 pl-2 md:px-12 ">
                             <li class="text-xs">{{$fproduct->name}}</li>
                             
                         </ul>
