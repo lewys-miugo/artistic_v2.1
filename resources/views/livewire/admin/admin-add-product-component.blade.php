@@ -52,7 +52,7 @@
             <!-- Short description -->
             <div class="mb-4">
                 <label for="short_description" class="block mb-1">Short Description</label>
-                <textarea name="short_description" id="" cols="50" rows="3" placeholder="Enter short Description" wire:model="short_description"></textarea>
+                <textarea name="short_description" id="" cols="50" rows="5" placeholder="Enter short Description" wire:model="short_description"></textarea>
                 @error('short_description')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
