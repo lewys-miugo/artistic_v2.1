@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
+use App\Models\Faq;
+
 
 class AdminAddFaqComponent extends Component
 {
@@ -13,7 +15,7 @@ class AdminAddFaqComponent extends Component
     {
         $this->validateOnly($fields,[
             'question'=>'required',
-            'question'=>'required'
+            'answer'=>'required'
         ]);
     }
 
@@ -24,9 +26,9 @@ class AdminAddFaqComponent extends Component
             'answer'=>'required'
         ]);
 
-        $faq=new Faqs();
+        $faq=new Faq();
         $faq->question=$this->question;
-        $faq->question=$this->answer;
+        $faq->answer=$this->answer;
         $faq->save();
         session()->flash('message','New FAQ has been added successfully!');
 
