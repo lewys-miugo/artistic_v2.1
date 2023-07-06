@@ -130,3 +130,18 @@ $table->string('question')->nullable();
         foreach($images as $image){
             $image->delete();
         }
+
+// fproduct multiple display
+// @php
+//                                         $images = App\Models\ProductImages::where('product_unique_id',$fproduct->unique_id)->get();
+// @endphp
+        // <div class="swiper mySwiper w-64 h-64">
+        //     <div class="swiper-wrapper ">
+        //         @foreach($images as $item)
+        //             <div class="swiper-slide flex justify-center content-center m-auto"> 
+        //                 <img src="{{ asset('uploads/all')}}/{{$item->image}}" class="w-full h-auto" alt="">
+        //             </div>
+        //         @endforeach
+        //     </div>
+        //     <div class="swiper-pagination"></div>
+        // </div>
