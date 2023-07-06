@@ -105,7 +105,7 @@ Route::middleware(['auth','authadmin'])->group(function(){
 
     Route::get('admin/faqs',AdminFaqsComponent::class)->name('admin.faqs');
     Route::get('/admin/faq/add',AdminAddFaqComponent::class)->name('admin.faq.add');
-    Route::get('/admin/faq/edit',AdminEditFaqComponent::class)->name('admin.faq.edit');
+    Route::get('/admin/faq/edit/{faq_id}',AdminEditFaqComponent::class)->name('admin.faq.edit');
 });
 
 // Route::get('/dashboard', function () {
