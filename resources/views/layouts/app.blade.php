@@ -263,10 +263,10 @@
                         <h2 class="font-medium ">CUSTOMER SERVICE</h2>
                         <div class="flex flex-col space-y-2 text-sm">
                             
-                            <a rel="noopener noreferrer" href="#">Delivery</a>
-                            <a rel="noopener noreferrer" href="#">Return Policy</a>
+                            <a rel="noopener noreferrer" href="{{route('faq')}}">Delivery</a>
+                            <a rel="noopener noreferrer" href="{{route('faq')}}">Return Policy</a>
                             <a href="{{route('faq')}}">FAQs</a>
-                            <a rel="noopener noreferrer" href="#">Accessibility Statement</a>
+                            <!-- <a rel="noopener noreferrer" href="#">Accessibility Statement</a> -->
                         </div>
                     </div>
                     <!-- <div class="flex flex-col space-y-4">
@@ -325,8 +325,8 @@
                     <div class="flex flex-col space-y-4">
                         <h2 class="font-medium">COMPANY CONTACT</h2>
                         <div class="flex flex-col space-y-2 text-sm ">
-                            <a rel="noopener noreferrer" href="#">Facebook</a>
-                            <a rel="noopener noreferrer" class="truncate" href="https://www.instagram.com/Artistic_Excursions/">Instagram:@Artic_Excursions</a>
+                            <a rel="noopener noreferrer" href="#">Facebook:</a>
+                            <a rel="noopener noreferrer" class="truncate" href="https://www.instagram.com/Artistic_Excursions/">Instagram:@Artistic_Excursions</a>
                             <a rel="noopener noreferrer" href="mailto:artisticexcursions@gmail.com" class="truncate">Email: artisticexcursions@gmail.com</a>
                             <a href="tel:+254716340285">Phone no: +254708016072</a>
                             <a href="tel:+254716340285">Phone no: +254716340285</a>
