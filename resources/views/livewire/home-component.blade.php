@@ -387,7 +387,8 @@
                     <div class="flex flex-col m-2  max-w-xs ">
                         <a href="{{route('product.details',['slug'=>$lproduct->slug])}}">
                             <!-- <img src="{{asset('images/products')}}/{{$lproduct->image}}" alt="{{$lproduct->name}}" class="h-64"> -->
-                            <div class=" swiper mySwiper ">
+                            <!-- swiper mySwiper -->
+                            <div class="swiper  " id="swiper-{{$lproduct->id}}">
                                 <div class="swiper-wrapper max-w-80 ">
                                         @if($lproduct->image)
                                             <div class="swiper-slide flex justify-center content-center m-auto"> 
@@ -508,7 +509,7 @@
                 <div class="flex flex-col m-2 max-w-xs">
                     <a href="{{route('product.details',['slug'=>$fproduct->slug])}}">
                         <!-- <img src="{{asset('images/products')}}/{{$fproduct->image}}" alt="{{$fproduct->name}}" class="h-64"> -->
-                        <div class=" swiper mySwiper ">
+                        <div class=" swiper mySwiper " id="swiper-{{$fproduct->id}}">
                                 <div class="swiper-wrapper max-w-80 ">
                                         @if($fproduct->image)
                                             <div class="swiper-slide flex justify-center content-center m-auto"> 
@@ -955,5 +956,62 @@
     </div> -->
 </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    @foreach($lproducts as $lproduct)
+        <script>
+            var swiper{{$lproduct->id}}=new Swiper('#swiper-{{ $lproduct->id }}',
+            {
+                loop: true,
+
+                autoplay: {
+                    delay: 3000, // Set the delay (in milliseconds) between slides
+                    disableOnInteraction: true, // Allow autoplay to continue even when the user interacts with the slider
+                },
+
+                effect: 'fade', // Specify the transition effect
+                fadeEffect: {
+                crossFade: true, // Enable cross-fade transition for smooth autoplay
+                },
+
+                pagination: {
+                el: '.swiper-pagination',
+                },
+
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>    
+    
+    @endforeach
+    @foreach($fproducts as $fproduct)
+        <script>
+            var swiper{{$fproduct->id}}=new Swiper('#swiper-{{ $fproduct->id }}',
+            {
+                loop: true,
+
+                autoplay: {
+                    delay: 3000, // Set the delay (in milliseconds) between slides
+                    disableOnInteraction: true, // Allow autoplay to continue even when the user interacts with the slider
+                },
+
+                effect: 'fade', // Specify the transition effect
+                fadeEffect: {
+                crossFade: true, // Enable cross-fade transition for smooth autoplay
+                },
+
+                pagination: {
+                el: '.swiper-pagination',
+                },
+
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>    
+    
+    @endforeach
 
 </div>
