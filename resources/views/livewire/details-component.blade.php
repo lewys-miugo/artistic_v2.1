@@ -604,25 +604,51 @@
         </div>
 
         <!-- JS for price change -->
-        
-            <script>
-            const radioInputs = document.querySelectorAll('input[type="radio"]');
-            const optionParagraphs = document.querySelectorAll('.option-paragraph');
+    
+        <script>
+        const radioInputs = document.querySelectorAll('input[type="radio"]');
+        const optionParagraphs = document.querySelectorAll('.option-paragraph');
 
-            radioInputs.forEach((radio) => {
-                radio.addEventListener('change', () => {
-                optionParagraphs.forEach((paragraph, index) => {
-                    if (radio.checked && radio.value === `option${index + 1}`) {
-                    paragraph.classList.remove('hidden');
-                    } else {
-                    paragraph.classList.add('hidden');
-                    }
-                });
-                });
+        radioInputs.forEach((radio) => {
+            radio.addEventListener('change', () => {
+            optionParagraphs.forEach((paragraph, index) => {
+                if (radio.checked && radio.value === `option${index + 1}`) {
+                paragraph.classList.remove('hidden');
+                } else {
+                paragraph.classList.add('hidden');
+                }
             });
-            </script>
+            });
+        });
+        </script>
 
-        
+        <!-- swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+            });
+        </script>
 
     </body>
 
