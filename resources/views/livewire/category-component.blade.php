@@ -1,7 +1,7 @@
 <div>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     <div class="">
-        <div class="">
+        <div class="category-scroll">
             <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-2 mx-2 text-[#46555f]">
                 <li class=" grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
                     <a href="{{route('shop')}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">

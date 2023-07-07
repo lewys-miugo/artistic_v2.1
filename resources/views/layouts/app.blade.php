@@ -17,26 +17,26 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <!-- Styles -->
         <style>
-            /* Hide the scrollbar for WebKit (Chrome, Safari, Opera) */
-            ::-webkit-scrollbar {
-            width: 0.5rem;
-            background-color: transparent;
+            /* Hide the scrollbar for WebKit (Chrome, Safari, Opera) within .category-scroll */
+            .category-scroll ::-webkit-scrollbar {
+                width: 0.5rem;
+                background-color: transparent;
             }
 
-            ::-webkit-scrollbar-thumb {
-            background-color: transparent;
+            .category-scroll ::-webkit-scrollbar-thumb {
+                background-color: transparent;
             }
 
-            /* Hide the scrollbar for Firefox */
+            /* Hide the scrollbar for Firefox within .category-scroll */
             /* Note: Firefox currently doesn't support the ::-webkit-scrollbar properties,
             but you can use these styles to target Firefox when it does. */
             @-moz-document url-prefix() {
-            .overflow-y-auto {
-                scrollbar-width: none;
+                .category-scroll .overflow-y-auto {
+                    scrollbar-width: none;
+                }
             }
-            }
-
         </style>
+
 
         <!-- swiper js -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>

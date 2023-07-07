@@ -1,5 +1,5 @@
 <div>
-    <div class="">
+    <div class="category-scroll">
         <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-4 mx-4 text-[#46555f]">
             <li class=" grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
                 <a href="{{route('shop')}}">
