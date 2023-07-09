@@ -31,13 +31,44 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
                         </svg>
                     </div>
-                    <p class="mt-2 hidden ml-2 ">{{$faq->answer}}</p>
+                    <p class="mt-2 hidden ml-2 mx-4 md:pr-8 ">{{$faq->answer}}</p>
 
                 </div>
             @endforeach
             <!-- Add more FAQ items as needed -->
+
         </div>
     </div>
+
+    <!-- <div class="container mx-auto py-8">
+        <div class="max-w-lg mx-auto">
+            <button onclick="toggleCanvas()" class="bg-blue-500 text-white px-4 py-2 rounded focus:outline-none mb-4">Option 1</button>
+            <div id="canvas-prices" class="bg-gray-200 p-4 hidden">
+                <h2 class="text-lg font-semibold mb-2">Option 1 Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <button onclick="toggleFrame()" class="bg-blue-500 text-white px-4 py-2 rounded focus:outline-none mb-4">Option 2</button>
+            <div id="frame-prices" class="bg-gray-200 p-4 hidden">
+                <h2 class="text-lg font-semibold mb-2">Option 2 Content</h2>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+    function toggleCanvas() {
+        const content1 = document.getElementById('canvas-prices');
+        content1.classList.toggle('hidden');
+    }
+
+    function toggleFrame() {
+        const content2 = document.getElementById('frame-prices');
+        content2.classList.toggle('hidden');
+    }
+    </script>
+
+    
     <script>
         const toggleAnswerElements = document.querySelectorAll('.toggle-answer');
         toggleAnswerElements.forEach((element) => {
@@ -47,4 +78,8 @@
             });
         });
     </script>
+    
+
+
+
 </div>
