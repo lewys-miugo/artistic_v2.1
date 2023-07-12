@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         
+
         \App\Models\Category::factory(1)->create([
             'name'=>'Abstract',
             'slug'=>'Abstract'

@@ -417,7 +417,7 @@
                 </svg>
                 <span class="font-semibold">Success! | {{Session::get('message')}}</span>
             </div>
-        @endif
+            @endif
         </form>      
     </div>
 </div>
