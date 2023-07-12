@@ -12,6 +12,8 @@ use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\FaqComponent;
+use App\Http\Livewire\DeliveryComponent;
+
 use App\Http\Livewire\FeaturedProductsComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
@@ -30,6 +32,8 @@ use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminFaqsComponent;
 use App\Http\Livewire\Admin\AdminAddFaqComponent;
 use App\Http\Livewire\Admin\AdminEditFaqComponent;
+use App\Http\Livewire\Admin\AdminEditDeliveryComponent;
+
 
 
 
@@ -73,6 +77,8 @@ Route::get('/search',SearchComponent::class)->name('product.search');
 Route::get('/featured/products',FeaturedProductsComponent::class)->name('featured.products');
 
 Route::get('/faqs',FaqComponent::class)->name('faq');
+Route::get('/delivery-policy',DeliveryComponent::class)->name('delivery.policy');
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -106,6 +112,8 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('admin/faqs',AdminFaqsComponent::class)->name('admin.faqs');
     Route::get('/admin/faq/add',AdminAddFaqComponent::class)->name('admin.faq.add');
     Route::get('/admin/faq/edit/{faq_id}',AdminEditFaqComponent::class)->name('admin.faq.edit');
+
+    Route::get('/admin/delivery/edit',AdminEditDeliveryComponent::class)->name('admin.delivery.edit');
 });
 
 // Route::get('/dashboard', function () {

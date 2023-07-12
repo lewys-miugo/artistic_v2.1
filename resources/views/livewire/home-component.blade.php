@@ -1,4 +1,5 @@
-<div>
+<div >
+    <!-- class="bg-[#E5E5E5]" -->
     <div class="category-scroll">
         <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-2 mx-2 text-[#46555f]">
             <li class=" grow border-y-2 transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]">
@@ -6,6 +7,11 @@
                   All
                 </a>
             </li>
+            <!-- <li class=" grow border-y-2 transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]">
+                <a href="{{route('shop')}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">
+                  All-test
+                </a>
+            </li> -->
             @foreach($categories as $category)
                 <li class="grow border-y-2  transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]"><a href="{{route('product.category',['slug'=>$category->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{$category->name}}</a></li>
 
@@ -360,7 +366,8 @@
     <!-- Shop Our Latest Collections -->
     <div class="mt-8 lg:mx-32 lg:mt-20 text-[#46555f]">
         
-        <h1 class="text-3xl flex justify-center text-center mb-4 ">Shop Our Latest Art Pieces</h1>
+        <h1 class="text-3xl  flex justify-center text-center mb-4 ">Shop Our Latest Art Pieces</h1>
+        <!-- border-b-4 border-[#C2B4D6] -->
     </div>
 
     <!-- Exclusive -->
@@ -370,7 +377,8 @@
     <!-- Latest products -->
     <div>
         <div class="">
-            <a href="{{route('shop')}}" class="uppercase underline underline-offset-2 text-[#485760] text-right">
+            <a href="{{route('shop')}}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right">
+                <!-- text-[#485760] -->
                 <p>To all latest</p>
             </a>
         </div>

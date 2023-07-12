@@ -94,9 +94,8 @@
                         <li class="mx-4 my-6 md:my-0">
                             <!-- <a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a> -->
                             @livewire('header-search-component')
-
                         </li>
-                        <li class="mx-4 my-6 md:my-0 cursor-pointer font-semibold text-gray-700 hover:text-cyan-500 duration-500">
+                        <li class="mx-4 my-6 md:my-0 cursor-pointer font-semibold text-gray-700 hover:text-[#C2B4D6] duration-500">
                             <!-- <a href="#" class="text-xl hover:text-cyan-500 duration-500">SERVICE</a> -->
                             <a href="">Return Policy</a>
 
@@ -114,6 +113,7 @@
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.categories')}}">Categories</a></li>
                                                 <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.order')}}">Orders</a></li>
                                                 <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.faqs')}}">FAQs</a></li>
+                                                <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.delivery.edit')}}">Delivery Policy</a></li>
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{-- route('admin.home.slider') --}}">Manage Slider</a></li> -->
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Coupons</li> -->
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">Orders</li> -->
@@ -263,7 +263,7 @@
                         <h2 class="font-medium ">CUSTOMER SERVICE</h2>
                         <div class="flex flex-col space-y-2 text-sm">
                             
-                            <a rel="noopener noreferrer" href="{{route('faq')}}">Delivery</a>
+                            <a rel="noopener noreferrer" href="{{route('delivery.policy')}}">Delivery</a>
                             <a rel="noopener noreferrer" href="{{route('faq')}}">Return Policy</a>
                             <a href="{{route('faq')}}">FAQs</a>
                             <!-- <a rel="noopener noreferrer" href="#">Accessibility Statement</a> -->
