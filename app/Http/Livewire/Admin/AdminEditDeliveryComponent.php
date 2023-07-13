@@ -24,10 +24,13 @@ class AdminEditDeliveryComponent extends Component
 
         $delivery->save();
         session()->flash('message', 'Delivery Policy has been Updated!');
+
+        return redirect()->route('delivery.policy');
     }
-    
+
     public function render()
     {
+
         return view('livewire.admin.admin-edit-delivery-component');
     }
 }

@@ -13,6 +13,18 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         @livewireStyles 
+        <!-- summernote -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet"> -->
+        
+        <!-- Icons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <!-- Styles -->
@@ -47,7 +59,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            <header id="lg-screen" class="z-50 sticky top-0">
+            <header id="lg-screen" class="z-50 h-24 sticky top-0">
                 <!-- <nav class="flex justify-between h-20 pl-12 py-10 items-center bg-white">
                     <a href="{{-- '/' --}}"> 
                          <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1> 
@@ -76,7 +88,7 @@
 
                 <!-- Latest navbar -->
 
-                <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+                <nav class="p-5 bg-white h-24 shadow md:flex md:items-center md:justify-between">
                     <div class="flex justify-between items-center ">
                         <span class="text-2xl font-[Poppins] cursor-pointer">
                            <a href="/">
@@ -346,6 +358,9 @@
 
 
         </div>
+        <!-- @stack('scripts') -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script> -->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
         @livewireScripts
 
