@@ -407,6 +407,19 @@
                 @enderror
             </div>
 
+            <div class="mb-4">
+                <label for="theme_id" class="block mb-1">select theme</label>
+                <select name="theme_id" id="" wire:model="theme_id">
+                    <!-- <option value="">Default theme</option> -->
+                    @foreach($themes as $theme)
+                        <option value="{{$theme->id}}">{{$theme->name}}</option>
+                    @endforeach
+                </select>
+                @error('theme_id')
+                    <p class="text-white bg-red-300">{{$message}}</p>
+                @enderror
+            </div>
+
 
             <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Update</button>
 
