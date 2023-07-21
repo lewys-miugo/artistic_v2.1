@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Theme;
+use App\Models\Category;
 use Livewire\WithPagination;
 use Cart;
 
@@ -38,6 +39,9 @@ class ThemeComponent extends Component
 
     public function render()
     {
+        $categories = Category::orderBy('name','ASC')->get()->take(5);
+
+
         $theme=Theme::where('slug',$this->slug)->first();
         $theme_id=$theme->id;
         $theme_name=$theme->name;
@@ -54,6 +58,6 @@ class ThemeComponent extends Component
 
         $themes = Theme::orderBy('name','ASC')->get();
 
-        return view('livewire.theme-component',['products'=>$products,'themes'=>$themes,'theme_name'=>$theme_name]);
+        return view('livewire.theme-component',['products'=>$products,'categories'=>$categories,'themes'=>$themes,'theme_name'=>$theme_name]);
     }
 }
