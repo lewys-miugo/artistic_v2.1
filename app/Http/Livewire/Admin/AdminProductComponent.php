@@ -8,6 +8,8 @@ use App\Models\Product;
 use App\Models\ProductImages;
 
 use App\Models\Category;
+use App\Models\Theme;
+
 
 class AdminProductComponent extends Component
 {

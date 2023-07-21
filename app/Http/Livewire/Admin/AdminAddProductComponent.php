@@ -4,11 +4,11 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Models\Theme;
 use App\Models\Product;
 use App\Models\ProductImages;
 
 use Illuminate\Support\Facades\Storage;
-
 use Carbon\Carbon;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Str;
@@ -66,6 +66,7 @@ class AdminAddProductComponent extends Component
     public $product_id;
 
     public $category_id;
+    public $theme_id;
 
     public function generateSlug()
     {
@@ -78,6 +79,8 @@ class AdminAddProductComponent extends Component
             'name'=>'required',
             'regular_price'=>'required', 
             'category_id'=>'required',
+            'theme_id'=>'required',
+
 
         ]);
 
@@ -121,6 +124,8 @@ class AdminAddProductComponent extends Component
 
         $product->featured = $this->featured;
         $product->category_id = $this->category_id;
+        $product->theme_id = $this->theme_id;
+
 
         $product->unique_id = $uniqId;
 
@@ -222,6 +227,8 @@ class AdminAddProductComponent extends Component
     public function render()
     {
         $categories=Category::orderBy('name','ASC')->get();
-        return view('livewire.admin.admin-add-product-component',['categories'=>$categories]);
+        $themes=Theme::orderBy('name','ASC')->get();
+
+        return view('livewire.admin.admin-add-product-component',['categories'=>$categories, 'themes'=>$themes]);
     }
 }

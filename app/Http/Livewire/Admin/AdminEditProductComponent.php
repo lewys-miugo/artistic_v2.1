@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Models\Theme;
 use App\Models\Product;
 use App\Models\ProductImages;
 use Carbon\Carbon;
@@ -32,6 +33,7 @@ class AdminEditProductComponent extends Component
     // public $images;
 
     public $category_id;
+    public $theme_id;
 
     public $image;
     public $newimage;
@@ -87,6 +89,7 @@ class AdminEditProductComponent extends Component
 
         $this->featured = $product->featured;
         $this->category_id = $product->category_id;
+        $this->theme_id = $product->theme_id;
 
         // Images
         $this->image=$product->image;
@@ -181,6 +184,8 @@ class AdminEditProductComponent extends Component
         // $product->quantity = $this->quantity;
         
         $product->category_id = $this->category_id;
+        $product->theme_id = $this->theme_id;
+
         
 
         if ($this->newimage) {
@@ -246,9 +251,11 @@ class AdminEditProductComponent extends Component
     public function render()
     {
         $categories=Category::orderBy('name','ASC')->get();
+        $themes=Theme::orderBy('name','ASC')->get();
+
         $productImages=ProductImages::where('product_id',$this->product_id)->get();
 
 
-        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories,'productImages'=>$productImages]);
+        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories,'themes'=>$themes,'productImages'=>$productImages]);
     }
 }
