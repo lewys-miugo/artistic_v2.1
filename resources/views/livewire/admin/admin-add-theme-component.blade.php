@@ -47,6 +47,17 @@
                 @enderror
             </div>
 
+            <div class="mb-4">
+                <label for="image" class="block mb-1">Image</label>
+                <input type="file" name="image" id="" wire:model="image">
+                @if($image)
+                    <img src="{{ $image->temporaryUrl() }}" class="w-28" alt="">
+                @endif
+                @error('image')
+                    <p class="text-white bg-red-500 m-2">{{ $message }}</p>
+                @enderror
+            </div>
+
             <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Submit</button>
         </form>      
     </div>
