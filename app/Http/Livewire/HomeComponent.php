@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Theme;
 use Cart;
 
 class HomeComponent extends Component
@@ -40,9 +41,10 @@ class HomeComponent extends Component
     {
         $lproducts = Product::orderBy('created_at', 'DESC')->get()->take(12);
         $fproducts = Product::where('featured',1)->inRandomOrder()->get()->take(16);
-        $categories = Category::orderBy('name','ASC')->get()->take(5);
+        $categories = Category::orderBy('name','ASC')->get();
+        $themes = Theme::orderBy('name','ASC')->get()->take(5);
         $products = Product::paginate(12);            
 
-        return view('livewire.home-component',['lproducts'=>$lproducts,'products'=>$products,'fproducts'=>$fproducts,'categories'=>$categories]);
+        return view('livewire.home-component',['lproducts'=>$lproducts,'products'=>$products,'fproducts'=>$fproducts,'categories'=>$categories, 'themes'=>$themes]);
     }
 }
