@@ -52,7 +52,7 @@ class AdminAddProductComponent extends Component
     // public $stock_status ='instock';
     public $featured='0';
     // public $quantity;
-    public $image ;
+    public $image;
 
     public $image2 = null;
     public $image3 = null;
