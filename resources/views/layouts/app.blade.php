@@ -35,7 +35,16 @@
                 background-color: transparent;
             }
 
+            .theme-scroll ::-webkit-scrollbar {
+                width: 0.5rem;
+                background-color: transparent;
+            }
+
             .category-scroll ::-webkit-scrollbar-thumb {
+                background-color: transparent;
+            }
+
+            .theme-scroll ::-webkit-scrollbar-thumb {
                 background-color: transparent;
             }
 
@@ -44,6 +53,12 @@
             but you can use these styles to target Firefox when it does. */
             @-moz-document url-prefix() {
                 .category-scroll .overflow-y-auto {
+                    scrollbar-width: none;
+                }
+            }
+
+            @-moz-document url-prefix() {
+                .theme-scroll .overflow-y-auto {
                     scrollbar-width: none;
                 }
             }
