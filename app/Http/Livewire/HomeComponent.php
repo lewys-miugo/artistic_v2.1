@@ -42,7 +42,7 @@ class HomeComponent extends Component
         $lproducts = Product::orderBy('created_at', 'DESC')->get()->take(12);
         $fproducts = Product::where('featured',1)->inRandomOrder()->get()->take(16);
         $categories = Category::orderBy('name','ASC')->get();
-        $themes = Theme::orderBy('name','ASC')->get()->take(5);
+        $themes = Theme::orderBy('name','ASC')->get()->take(8);
         $products = Product::paginate(12);            
 
         return view('livewire.home-component',['lproducts'=>$lproducts,'products'=>$products,'fproducts'=>$fproducts,'categories'=>$categories, 'themes'=>$themes]);
