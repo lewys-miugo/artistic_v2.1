@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
+            $table->bigInteger('theme_id')->unsigned()->nullable();
             $table->string('theme')->nullable(); // making it nullable or provide a default value if needed
+            $table->foreign('theme_id')->references('id')->on('themes')->onDelete('cascade');
+
         });
     }
 
