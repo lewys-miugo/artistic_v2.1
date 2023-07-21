@@ -32,8 +32,9 @@
                 </a>
             </li> -->
             @foreach($themes as $theme)
-                <li class="grow border-y-2  transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]"><a href="{{route('product.theme',['slug'=>$theme->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{$theme->name}}</a></li>
-
+                <li class="grow border-y-2  transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]">
+                    <a href="{{route('product.theme',['slug'=>$theme->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{$theme->name}}</a>
+                </li>
             @endforeach
         </ul>
     </div>
@@ -123,15 +124,18 @@
         <p class="text-3xl text-[#46555f]">Shop by Theme</p>
     </div>
     <!-- IMAGES Shop by room -->
-    <div class="flex flex-row mb-10">
-        <ul class="flex flex-row text-[#46555f] text-xl">
+    <div class="flex flex-row mb-10 ">
+        <ul class="flex flex-row text-[#46555f] text-xl flex-wrap">
             @foreach ($themes as $theme)
-                <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
-                    <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
-                    <div class="flex justify-center">
-                        <p>{{$theme->name}}</p>
-                    </div>
-                </li>
+                <a href="{{route('product.theme',['slug'=>$theme->slug])}}">
+                    <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+                        <img src="{{asset('images/themes')}}/{{$theme->image}}" class="h-32 w-auto"  alt="">
+                        <div class="flex justify-center">
+                            <p>{{$theme->name}}</p>
+                        </div>
+                    </li>
+                </a>
+                
             @endforeach
             <!-- <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
                 <img src="https://cdn.shopify.com/s/files/1/1568/8443/files/wall-artwork.jpg?v=1677492370&width=360" alt="">
