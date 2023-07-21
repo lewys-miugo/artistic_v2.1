@@ -17,4 +17,9 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class,'category_id');
     }
+
+    public function theme()
+    {
+        return $this->belongsTo(Theme::class,'theme_id');
+    }
 }
