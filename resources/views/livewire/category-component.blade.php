@@ -190,10 +190,6 @@
                 </ul>
             </div>
         </aside> -->
-
-        
-
-
         <div class="m-4 ">
             <div>
                 <p class="text-left text-xs uppercase text-[#6a767e]"><a href="/" class="uppercase">Home</a> > category</p>
