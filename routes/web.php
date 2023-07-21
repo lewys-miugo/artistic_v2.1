@@ -10,6 +10,7 @@ use App\Http\Livewire\WishlistComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\ThemeComponent;
 use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\FaqComponent;
 use App\Http\Livewire\DeliveryComponent;
@@ -17,24 +18,37 @@ use App\Http\Livewire\ReturnPolicyComponent;
 
 
 use App\Http\Livewire\FeaturedProductsComponent;
+
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
+
+use App\Http\Livewire\Admin\AdminThemesComponent;
+use App\Http\Livewire\Admin\AdminAddThemeComponent;
+use App\Http\Livewire\Admin\AdminEditThemeComponent;
+
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
+
 use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminAddHomeSlideComponent;
 use App\Http\Livewire\Admin\AdminEditHomeSlideComponent;
+
 use App\Http\Livewire\Admin\AdminUsersComponent;
 use App\Http\Livewire\Admin\AdminEditUserComponent;
+
 use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
+
 use App\Http\Livewire\Admin\AdminFaqsComponent;
 use App\Http\Livewire\Admin\AdminAddFaqComponent;
 use App\Http\Livewire\Admin\AdminEditFaqComponent;
+
 use App\Http\Livewire\Admin\AdminEditDeliveryComponent;
+
 use App\Http\Livewire\Admin\AdminEditReturnPolicyComponent;
 
 
@@ -76,6 +90,8 @@ Route::get('/thank-you',ThankyouComponent::class)->name('thankyou');
 
 Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.category');
 
+Route::get('/product-theme/{slug}',ThemeComponent::class)->name('product.theme');
+
 Route::get('/search',SearchComponent::class)->name('product.search');
 
 Route::get('/featured/products',FeaturedProductsComponent::class)->name('featured.products');
@@ -98,9 +114,15 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+
     Route::get('/admin/categories',AdminCategoriesComponent::class)->name('admin.categories');
     Route::get('/admin/category/add',AdminAddCategoryComponent::class)->name('admin.categories.add');
     Route::get('/admin/category/edit/{category_id}',AdminEditCategoryComponent::class)->name('admin.category.edit');
+
+    Route::get('/admin/themes',AdminThemesComponent::class)->name('admin.themes');
+    Route::get('/admin/theme/add',AdminAddThemeComponent::class)->name('admin.themes.add');
+    Route::get('/admin/theme/edit/{theme_id}',AdminEditThemeComponent::class)->name('admin.theme.edit');
+
     Route::get('/admin/products',AdminProductComponent::class)->name('admin.products');
     Route::get('/admin/product/add',AdminAddProductComponent::class)->name('admin.product.add');
     Route::get('/admin/product/edit/{product_id}',AdminEditProductComponent::class)->name('admin.product.edit');
