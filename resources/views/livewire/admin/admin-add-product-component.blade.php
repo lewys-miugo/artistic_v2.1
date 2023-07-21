@@ -379,7 +379,7 @@
             <div class="mb-4">
                 <label for="category_id" class="block mb-1">select Category</label>
                 <select name="category_id" id="" wire:model="category_id">
-                    <!-- <option value="">Default category</option> -->
+                    <option value="">Choose Category</option>
                     @foreach($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
@@ -392,7 +392,7 @@
             <div class="mb-4">
                 <label for="theme_id" class="block mb-1">select Theme</label>
                 <select name="theme_id" id="" wire:model="theme_id">
-                    <!-- <option value="">Default theme</option> -->
+                    <option value="">Choose Theme</option>
                     @foreach($themes as $theme)
                         <option value="{{$theme->id}}">{{$theme->name}}</option>
                     @endforeach
