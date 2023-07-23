@@ -124,7 +124,7 @@
                         </li>
                         <li class="mx-4 my-6 md:my-0 cursor-pointer font-semibold text-gray-700 hover:text-[#C2B4D6] duration-500">
                             <!-- <a href="#" class="text-xl hover:text-cyan-500 duration-500">SERVICE</a> -->
-                            <a href="">Return Policy</a>
+                            <a href="{{route('return.policy')}}">Return Policy</a>
 
                         </li>
                         <li class="mx-4 my-6 md:my-0 ">
