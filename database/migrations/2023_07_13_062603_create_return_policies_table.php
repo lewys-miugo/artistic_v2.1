@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('return_policies', function (Blueprint $table) {
             $table->id();
-            $table->text('return_policy')->nullable()->default('return policy 101');
+            $table->text('return_policy')->nullable();
             $table->timestamps();
         });
     }
