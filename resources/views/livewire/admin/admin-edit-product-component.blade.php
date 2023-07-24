@@ -410,7 +410,7 @@
             <div class="mb-4">
                 <label for="theme_id" class="block mb-1">select theme</label>
                 <select name="theme_id" id="" wire:model="theme_id">
-                    <!-- <option value="">Default theme</option> -->
+                    <option value="">Default theme</option>
                     @foreach($themes as $theme)
                         <option value="{{$theme->id}}">{{$theme->name}}</option>
                     @endforeach
