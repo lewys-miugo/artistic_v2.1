@@ -151,12 +151,12 @@ class AdminEditProductComponent extends Component
         $product->description = $this->description;
         $product->regular_price = '4000';
 
-        $product->regular_price_A0 = $this->regular_price_A0;
-        $product->regular_price_A05 = $this->regular_price_A05;
-        $product->regular_price_A1 = $this->regular_price_A1;
-        $product->regular_price_A2 = $this->regular_price_A2;
-        $product->regular_price_A3 = $this->regular_price_A3;
-        $product->regular_price_A4 = $this->regular_price_A4;
+        $product->regular_price_A0 = 6000;
+        $product->regular_price_A05 = 5000;
+        $product->regular_price_A1 = 4000;
+        $product->regular_price_A2 = 3000;
+        $product->regular_price_A3 = 1800;
+        $product->regular_price_A4 = 1500;
         $product->regular_price_2p = $this->regular_price_2p;
         $product->regular_price_3p = $this->regular_price_3p;
         $product->regular_price_4p = $this->regular_price_4p;
