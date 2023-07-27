@@ -79,7 +79,7 @@ class AdminAddProductComponent extends Component
             'name'=>'required',
             'regular_price'=>'required', 
             'category_id'=>'required',
-            'theme_id'=>'required',
+            
 
 
         ]);
@@ -124,7 +124,7 @@ class AdminAddProductComponent extends Component
 
         $product->featured = $this->featured;
         $product->category_id = $this->category_id;
-        $product->theme_id = $this->theme_id;
+        $product->theme_id = 1;
 
 
         $product->unique_id = $uniqId;

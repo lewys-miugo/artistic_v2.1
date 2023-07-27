@@ -184,7 +184,7 @@ class AdminEditProductComponent extends Component
         // $product->quantity = $this->quantity;
         
         $product->category_id = $this->category_id;
-        $product->theme_id = $this->theme_id;
+        $product->theme_id = 1;
 
         
 
