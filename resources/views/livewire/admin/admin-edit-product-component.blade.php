@@ -407,14 +407,9 @@
                 @enderror
             </div>
 
-            <div class="mb-4">
-                <label for="theme_id" class="block mb-1">select theme</label>
-                <select name="theme_id" id="" wire:model="theme_id">
-                    <option value="">Default theme</option>
-                    @foreach($themes as $theme)
-                        <option value="{{$theme->id}}">{{$theme->name}}</option>
-                    @endforeach
-                </select>
+            <div class="mb-4 hidden">
+                <label for="theme_id" class="block mb-1">select Theme</label>
+                <input type="text" name="theme_id" id="" wire:model="theme_id">
                 @error('theme_id')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
