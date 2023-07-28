@@ -10,6 +10,8 @@ use App\Http\Livewire\WishlistComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\ColorsComponent;
+use App\Http\Livewire\ArtByColorComponent;
 use App\Http\Livewire\ThemeComponent;
 use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\FaqComponent;
@@ -24,6 +26,11 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
+
+use App\Http\Livewire\Admin\AdminColorComponent;
+use App\Http\Livewire\Admin\AdminAddColorComponent;
+use App\Http\Livewire\Admin\AdminEditColorComponent;
+
 
 use App\Http\Livewire\Admin\AdminThemesComponent;
 use App\Http\Livewire\Admin\AdminAddThemeComponent;
@@ -92,6 +99,10 @@ Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.c
 
 Route::get('/product-theme/{slug}',ThemeComponent::class)->name('product.theme');
 
+Route::get('/products-by-color',ColorsComponent::class)->name('colors.page');
+
+Route::get('/art-by-color/{slug}',ArtByColorComponent::class)->name('art.color');
+
 Route::get('/search',SearchComponent::class)->name('product.search');
 
 Route::get('/featured/products',FeaturedProductsComponent::class)->name('featured.products');
@@ -118,6 +129,11 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/categories',AdminCategoriesComponent::class)->name('admin.categories');
     Route::get('/admin/category/add',AdminAddCategoryComponent::class)->name('admin.categories.add');
     Route::get('/admin/category/edit/{category_id}',AdminEditCategoryComponent::class)->name('admin.category.edit');
+
+    Route::get('/admin/colors',AdminColorComponent::class)->name('admin.colors');
+    Route::get('/admin/colors/add',AdminAddColorComponent::class)->name('admin.color.add');
+    Route::get('/admin/color/edit/{color_id}',AdminEditColorComponent::class)->name('admin.color.edit');
+
 
     Route::get('/admin/themes',AdminThemesComponent::class)->name('admin.themes');
     Route::get('/admin/theme/add',AdminAddThemeComponent::class)->name('admin.themes.add');
