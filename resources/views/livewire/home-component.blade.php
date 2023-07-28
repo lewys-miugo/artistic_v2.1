@@ -141,22 +141,34 @@
     </div> -->
 
     <!-- Shop by colors -->
-    <!-- <div class="mt-12 mb-8 flex justify-center">
+    <div class="mt-12 mb-8 flex justify-center">
         <p class="text-3xl text-[#46555f]">Shop by Colors</p>
-    </div> -->
-
-    <!-- <div class="flex flex-row mb-10 ">
-        <div class="">
-            <a href="{{-- route('colors.page') --}}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right">
-                text-[#485760]
+    </div>
+    <div class="">
+            <a href="{{ route('colors.page') }}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right">
+                <!-- text-[#485760] -->
                 <p>To all colors</p>
             </a>
-        </div>
+    </div>
+    <div class="flex flex-row mb-10 ">
+        
         <ul class="flex flex-row text-[#46555f] text-xl flex-wrap">
-            
-            
+            @foreach ($colors as $color)
+                <a href="#">
+                    <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+                        <img src="{{asset('images/colors')}}/{{$color->image}}" class="h-32 w-auto"  alt="">
+                        <div class="flex justify-center">
+                            <p>
+                                <a href="{{route('art.color',['slug'=>$color->slug])}}">
+                                    {{$color->name}}
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                </a>
+            @endforeach
         </ul>
-    </div> -->
+    </div>
 
     <!-- Browse different -->
     <!-- <div class="mx-32 mt-20 text-[#46555f]">
