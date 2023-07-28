@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Theme;
-// use App\Models\Color;
+use App\Models\Color;
 use Cart;
 
 class HomeComponent extends Component
@@ -44,10 +44,10 @@ class HomeComponent extends Component
         $fproducts = Product::where('featured',1)->inRandomOrder()->get()->take(16);
         $categories = Category::orderBy('name','ASC')->get();
         $themes = Theme::orderBy('name','ASC')->get()->take(8);
-        // $colors = Color::orderBy('name','ASC')->get()->take(8);
-        // $colors = Color::all();,'colors'=>$colors
+        $colors = Color::orderBy('name','ASC')->get()->take(4);
+        // $colors = Color::all();
         $products = Product::paginate(12);            
 
-        return view('livewire.home-component',['lproducts'=>$lproducts,'products'=>$products,'fproducts'=>$fproducts,'categories'=>$categories, 'themes'=>$themes]);
+        return view('livewire.home-component',['lproducts'=>$lproducts,'products'=>$products,'fproducts'=>$fproducts,'categories'=>$categories, 'themes'=>$themes,'colors'=>$colors]);
     }
 }
