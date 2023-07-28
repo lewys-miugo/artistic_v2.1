@@ -169,3 +169,33 @@ $table->string('question')->nullable();
             // },
             // });
         // </script>
+
+        // theme input
+        // <div class="mb-4">
+        //         <label for="theme_id" class="block mb-1">select Theme</label>
+        //         <select name="theme_id" id="" wire:model="theme_id">
+        //             <option value="">Choose Theme</option>
+        //             @foreach($themes as $theme)
+        //                 <option value="{{$theme->id}}">{{$theme->name}}</option>
+        //             @endforeach
+        //         </select>
+        //         @error('theme_id')
+        //             <p class="text-white bg-red-300">{{$message}}</p>
+        //         @enderror
+        //     </div>
+
+        // @foreach ($colors as $color)
+        //         <a href="#">
+        //             <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
+        //                 <img src="" class="h-32 w-auto"  alt="">
+        //                 <div class="flex justify-center">
+        //                     <p>
+        //                         <a href="{{route('art.color',['slug'=>$color->slug])}}">
+        //                             {{$color->name}}
+        //                         </a>
+        //                     </p>
+        //                 </div>
+        //             </li>
+        //         </a>
+                
+        //     @endforeach
