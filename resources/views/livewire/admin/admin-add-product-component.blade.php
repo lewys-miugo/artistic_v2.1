@@ -389,6 +389,20 @@
                 @enderror
             </div>
 
+            <!-- Color input -->
+            <div class="mb-4">
+                <label for="color_id" class="block mb-1">select Color</label>
+                <select name="color_id" id="" wire:model="color_id">
+                    <option value="">Choose Color</option>
+                    @foreach($colors as $color)
+                        <option value="{{$color->id}}">{{$color->name}}</option>
+                    @endforeach
+                </select>
+                @error('color_id')
+                    <p class="text-white bg-red-300">{{$message}}</p>
+                @enderror
+            </div>
+
             <div class="mb-4 hidden">
                 <label for="theme_id" class="block mb-1">select Theme</label>
                 <input type="text" name="theme_id" id="" wire:model="theme_id">
