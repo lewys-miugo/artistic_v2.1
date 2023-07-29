@@ -19,6 +19,8 @@ class AdminEditColorComponent extends Component
     public $color_id;
     public $name;
     public $slug;
+    public $combination='0';
+
 
     public $image;
     public $newimage;
@@ -29,6 +31,7 @@ class AdminEditColorComponent extends Component
         $this->color_id = $color->id;
         $this->name = $color->name;
         $this->slug = $color->slug;
+        $this->combination = $color->combination;
         $this->image=$color->image;
 
 
@@ -57,12 +60,14 @@ class AdminEditColorComponent extends Component
         $color=Color::find($this->color_id);
         $color->name=$this->name;
         $color->slug =$this->slug;
+        $color->combination = $this->combination;
+
 
         if ($this->newimage) {
             unlink('images/colors/'.$color->image);
             $imageName = Carbon::now()->timestamp.'.'.$this->newimage->extension();
-            $this->newimage->storeAs('products', $imageName);
-            $product->image = $imageName;
+            $this->newimage->storeAs('colors', $imageName);
+            $color->image = $imageName;
         }
 
         $color->save();
