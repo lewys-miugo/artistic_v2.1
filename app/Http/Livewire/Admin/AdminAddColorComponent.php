@@ -19,6 +19,9 @@ class AdminAddColorComponent extends Component
     public $name;
     public $slug;
     public $image;
+    public $combination='0';
+
+
 
     public function generateSlug()
     {
@@ -43,6 +46,8 @@ class AdminAddColorComponent extends Component
         $color= new Color();
         $color->name = $this->name;
         $color->slug = $this->slug;
+        $color->combination = $this->combination;
+
 
 
         $imageName = Carbon::now()->timestamp.'.'.$this->image->extension();

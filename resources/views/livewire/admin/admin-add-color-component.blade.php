@@ -46,6 +46,18 @@
                 @enderror
             </div>
 
+            <!-- combination Product -->
+            <div class="mb-4">
+                <label for="combination" class="block mb-1" >Combination</label>
+                <select name="combination" wire:model="combination" id="">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                @error('combination')
+                    <p class="text-white bg-red-300">{{$message}}</p>
+                @enderror
+            </div>
+
             <div class="mb-4">
                 <label for="image" class="block mb-1">Image</label>
                 <input type="file" name="image" id="" wire:model="image">
