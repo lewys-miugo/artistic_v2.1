@@ -189,6 +189,8 @@ class AdminEditProductComponent extends Component
         // $product->quantity = $this->quantity;
         
         $product->category_id = $this->category_id;
+        $product->color_id = $this->color_id;
+
         $product->theme_id = 1;
 
         
@@ -251,7 +253,7 @@ class AdminEditProductComponent extends Component
         }
 
         $product->save();
-        session()->flash('message', 'Product image has been Updated!');
+        session()->flash('message', 'Product details have been Updated!');
     }
     public function render()
     {
@@ -263,6 +265,6 @@ class AdminEditProductComponent extends Component
         $productImages=ProductImages::where('product_id',$this->product_id)->get();
 
 
-        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories,'themes'=>$themes,'productImages'=>$productImages]);
+        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories,'themes'=>$themes,'productImages'=>$productImages,'colors'=>$colors]);
     }
 }
