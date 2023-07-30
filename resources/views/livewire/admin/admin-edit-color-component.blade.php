@@ -40,6 +40,18 @@
             </div>
 
             <div class="mb-4">
+                <label for="#" class="block mb-1">Parent Color</label>
+                <div>
+                    <select name="" id="" wire:model="color_id">
+                        <option value="">None</option>
+                        @foreach ($colors as $color)
+                            <option value="{{$color->id}}">{{$color->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-4">
                 <label for="combination" class="block mb-1" >Combination</label>
                 <select name="combination" wire:model="combination" id="">
                     <option value="0">No</option>
@@ -51,7 +63,7 @@
             </div>
 
             <div class="m-2 flex flex-col">
-                    <label for="image">Image 1</label>
+                    <label for="image">Image</label>
                     <input type="file" name="image" id="" wire:model="newimage">
                     @if($newimage)
                         <img src="{{$newimage->temporaryUrl()}}" class="m-2 w-32" alt="">
@@ -64,6 +76,14 @@
                 </div>
 
             <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Submit</button>
-        </form>      
+        </form>  
+        @if(Session::has('message'))
+            <div class="flex items-center my-4 justify-center bg-green-200 text-green-700 p-4 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="font-semibold">Success! | {{Session::get('message')}}</span>
+            </div>
+        @endif    
     </div>
 </div>
