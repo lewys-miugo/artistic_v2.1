@@ -392,13 +392,27 @@
             <!-- Color input -->
             <div class="mb-4">
                 <label for="color_id" class="block mb-1">select Color</label>
-                <select name="color_id" id="" wire:model="color_id">
+                <select name="color_id" id="" wire:model="color_id" wire:change="changeSubcolor">
                     <option value="">Choose Color</option>
                     @foreach($colors as $color)
                         <option value="{{$color->id}}">{{$color->name}}</option>
                     @endforeach
                 </select>
                 @error('color_id')
+                    <p class="text-white bg-red-300">{{$message}}</p>
+                @enderror
+            </div>
+            
+            <!-- Sub color  -->
+            <div class="mb-4">
+                <label for="" class="block mb-1">select SubColor</label>
+                <select name="scolor_id" id="" wire:model="scolor_id">
+                    <option value="0">Choose SubColor</option>
+                    @foreach($scolors as $scolor)
+                        <option value="{{$scolor->id}}">{{$scolor->name}}</option>
+                    @endforeach
+                </select>
+                @error('scolor_id')
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
             </div>

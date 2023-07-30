@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Models\Theme;
 use App\Models\Color;
+use App\Models\SubColor;
 use App\Models\Product;
 use App\Models\ProductImages;
 
@@ -69,6 +70,7 @@ class AdminAddProductComponent extends Component
     public $category_id;
     public $theme_id;
     public $color_id;
+    public $scolor_id;
 
     public function generateSlug()
     {
@@ -127,6 +129,9 @@ class AdminAddProductComponent extends Component
         $product->featured = $this->featured;
         $product->category_id = $this->category_id;
         $product->color_id = $this->color_id;
+        if ($this->scolor_id) {
+            $product->subcolor_id = $this->scolor_id;
+        }
         $product->theme_id = 1;
 
 
@@ -227,13 +232,19 @@ class AdminAddProductComponent extends Component
     //     # code...
     // }
 
+    public function changeSubcolor()
+    {
+        $this->scolor_id=0;
+    }
+
     public function render()
     {
         $categories=Category::orderBy('name','ASC')->get();
         $themes=Theme::orderBy('name','ASC')->get();
         $colors=Color::orderBy('name','ASC')->get();
+        $scolors=SubColor::where('color_id',$this->color_id)->get();
 
 
-        return view('livewire.admin.admin-add-product-component',['categories'=>$categories, 'themes'=>$themes, 'colors'=>$colors]);
+        return view('livewire.admin.admin-add-product-component',['categories'=>$categories, 'themes'=>$themes, 'colors'=>$colors,'scolors'=>$scolors]);
     }
 }
