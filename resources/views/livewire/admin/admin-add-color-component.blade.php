@@ -46,6 +46,18 @@
                 @enderror
             </div>
 
+            <div class="mb-4">
+                <label for="#" class="block mb-1">Parent Color</label>
+                <div>
+                    <select name="" id="" wire:model="color_id">
+                        <option value="">None</option>
+                        @foreach ($colors as $color)
+                            <option value="{{$color->id}}">{{$color->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
             <!-- combination Product -->
             <div class="mb-4">
                 <label for="combination" class="block mb-1" >Combination</label>
