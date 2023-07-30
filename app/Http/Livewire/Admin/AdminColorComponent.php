@@ -4,12 +4,15 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Color;
+use App\Models\SubColor;
 use Livewire\WithPagination;
 
 
 class AdminColorComponent extends Component
 {
     public $color_id;
+    public $scolor_id;
+
 
 
     use WithPagination;
@@ -18,6 +21,13 @@ class AdminColorComponent extends Component
     {
         $color= Color::find($this->color_id);
         $color->delete();
+        session()->flash('message','color has been deleted succesfully');
+    }
+
+    public function deleteSubColor()
+    {
+        $scolor= SubColor::find($this->scolor_id);
+        $scolor->delete();
         session()->flash('message','color has been deleted succesfully');
     }
 

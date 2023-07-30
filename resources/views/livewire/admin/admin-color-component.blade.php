@@ -26,6 +26,7 @@
                 <th class="py-2 px-4">#</th>
                 <th class="py-2 px-4">Name</th>
                 <th class="py-2 px-4">Slug</th>
+                <th class="py-2 px-4">Sub Colors</th>
                 <th class="py-2 px-4">Action</th>
                 </tr>
             </thead>
@@ -38,6 +39,18 @@
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{++$i}}</td>
                         <td class="py-2 px-4  text-center">{{$color->name}}</td>
                         <td class="py-2 px-4  text-center">{{$color->slug}}</td>
+                        <td class="py-2 px-4  text-center">
+                            <ul class="space-y-2">
+                                @foreach ($color->subColors as $scolor)
+                                    <li class="">
+                                        {{$scolor->name}} <span class="pl-2">
+                                        <a href="{{ route('admin.color.edit',['color_id'=>$color->id,'scolor_id'=>$scolor->id]) }}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded">Edit</a>
+                                        <button class="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded" onclick="deleteSubConfirmation({{$scolor->id}})">Delete</button>
+                                        </span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </td>
                         <td class="py-2 px-4 whitespace-nowrap text-center">
                             <a href="{{ route('admin.color.edit',['color_id'=>$color->id]) }}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded">Edit</a>
                             <button class="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded" onclick="deleteConfirmation({{$color->id}})">Delete</button>
@@ -56,10 +69,21 @@
     <div wire:ignore id="deleteConfirmation" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
       <div class="bg-white w-1/2 rounded-lg p-8">
         <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
-        <p class="mb-6">Are you sure you want to delete this item?</p>
+        <p class="mb-6">Are you sure you want to delete this Color?</p>
         <div class="flex justify-end">
           <button onclick="deleteColor()"  class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mr-4">Yes</button>
           <button onclick="cancelDelete()" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div wire:ignore id="deleteSubConfirmation" class="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+      <div class="bg-white w-1/2 rounded-lg p-8">
+        <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
+        <p class="mb-6">Are you sure you want to delete this sub Color?</p>
+        <div class="flex justify-end">
+          <button onclick="deleteSubColor()"  class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded mr-4">Yes</button>
+          <button onclick="cancelSubDelete()" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">Cancel</button>
         </div>
       </div>
     </div>
@@ -82,9 +106,29 @@
     document.getElementById('deleteConfirmation').classList.add('hidden');
   }
 
+  function deleteSubConfirmation(id) {
+    // Set the color ID
+    document.getElementById('deleteSubConfirmation').classList.remove('hidden');
+    // Simulate setting the color_id in a Laravel Livewire component
+    console.log("Deleting sub color with ID:", id);
+    @this.set('scolor_id', id);
+  }
+
+  function deleteSubColor() {
+    // Get the color ID
+    @this.call('deleteSubColor');
+    var scolorId = document.getElementById('deleteSubConfirmation').dataset.id;
+    document.getElementById('deleteSubConfirmation').classList.add('hidden');
+  }
+
   function cancelDelete() {
     document.getElementById('deleteConfirmation').classList.add('hidden');
     console.log("Canceling deleting color ");
+  }
+
+  function cancelSubDelete() {
+    document.getElementById('deleteSubConfirmation').classList.add('hidden');
+    console.log("Canceling deleting sub color ");
 
   }
 </script>
