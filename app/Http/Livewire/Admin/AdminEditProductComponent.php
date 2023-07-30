@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Models\Theme;
 use App\Models\Color;
+use App\Models\SubColor;
 use App\Models\Product;
 use App\Models\ProductImages;
 use Carbon\Carbon;
@@ -36,6 +37,8 @@ class AdminEditProductComponent extends Component
     public $category_id;
     public $theme_id;
     public $color_id;
+    public $scolor_id;
+    
 
 
     public $image;
@@ -94,6 +97,7 @@ class AdminEditProductComponent extends Component
         $this->category_id = $product->category_id;
         $this->theme_id = $product->theme_id;
         $this->color_id = $product->color_id;
+        $this->scolor_id = $product->subcolor_id;
 
 
         // Images
@@ -190,6 +194,9 @@ class AdminEditProductComponent extends Component
         
         $product->category_id = $this->category_id;
         $product->color_id = $this->color_id;
+        if ($this->scolor_id) {
+            $product->subcolor_id=$this->scolor_id;
+        }
 
         $product->theme_id = 1;
 
@@ -255,16 +262,23 @@ class AdminEditProductComponent extends Component
         $product->save();
         session()->flash('message', 'Product details have been Updated!');
     }
+
+    public function changeSubcolor()
+    {
+        $this->scolor_id=0;
+    }
+
     public function render()
     {
         $categories=Category::orderBy('name','ASC')->get();
         $themes=Theme::orderBy('name','ASC')->get();
         $colors=Color::orderBy('name','ASC')->get();
+        $scolors=SubColor::where('color_id',$this->color_id)->get();
 
 
         $productImages=ProductImages::where('product_id',$this->product_id)->get();
 
 
-        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories,'themes'=>$themes,'productImages'=>$productImages,'colors'=>$colors]);
+        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories,'themes'=>$themes,'productImages'=>$productImages,'colors'=>$colors,'scolors'=>$scolors]);
     }
 }
