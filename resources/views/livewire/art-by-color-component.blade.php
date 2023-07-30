@@ -19,6 +19,35 @@
                 <p class="text-left text-xs text-[#6a767e]"><a href="/" class="uppercase">Home</a> > All Pieces > By {{$color_name}}</p>
             </div>
 
+            <div class="flex flex-row pt-8">
+                <img src="{{asset('images/colors')}}/{{$color->image}}" alt="" class="w-32 h-auto">
+                
+                <p class="m-4 justify-center text-[#46555f] uppercase">
+                    {{$color_name}} <span> | Wall Art</span> 
+                </p>
+                
+            </div>
+            <!-- subcolor -->
+            <div class="bg-[#f2f3f4] flex flex-col-12">
+                <div class="flex justify-left text-[#46555f] m-2">
+                    <!-- border-b-4 border-[#B76573] -->
+                    @if (count($color->subColors)>0)
+                        <ul class="flex flex-row">
+                            @foreach ($color->subColors as $scolor)
+                                <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row">
+                                    <img src="{{asset('images/colors')}}/{{$scolor->image}}" alt="" class="h-4 w-8">
+                                    <li class="mx-2 font-bold uppercase text-sm ">
+                                        {{$scolor->name}}
+                                    </li>
+                                </a>
+                            @endforeach
+                        </ul>
+                    @endif
+                    
+                    <!-- <a href="" class="mx-2 font-bold uppercase text-sm ">Default</a> -->
+                </div>
+            </div>
+
             <!-- Navbar 2 -->
 
             <div class="bg-[#f2f3f4] flex flex-col-12">
@@ -31,6 +60,8 @@
 
                 </div>
             </div>
+
+
 
             <!-- Number of pieces -->
             <div class="flex justify-end my-4">
@@ -126,9 +157,6 @@
                         @endforeach
 
                     </div>
-
-                    
-
                     <div>
 
                     </div>
