@@ -101,7 +101,7 @@ Route::get('/product-theme/{slug}',ThemeComponent::class)->name('product.theme')
 
 Route::get('/products-by-color',ColorsComponent::class)->name('colors.page');
 
-Route::get('/art-by-color/{slug}',ArtByColorComponent::class)->name('art.color');
+Route::get('/art-by-color/{slug}/{scolor_slug?}',ArtByColorComponent::class)->name('art.color');
 
 Route::get('/search',SearchComponent::class)->name('product.search');
 
@@ -132,7 +132,7 @@ Route::middleware(['auth','authadmin'])->group(function(){
 
     Route::get('/admin/colors',AdminColorComponent::class)->name('admin.colors');
     Route::get('/admin/colors/add',AdminAddColorComponent::class)->name('admin.color.add');
-    Route::get('/admin/color/edit/{color_id}',AdminEditColorComponent::class)->name('admin.color.edit');
+    Route::get('/admin/color/edit/{color_id}/{scolor_id?}',AdminEditColorComponent::class)->name('admin.color.edit');
 
 
     Route::get('/admin/themes',AdminThemesComponent::class)->name('admin.themes');
