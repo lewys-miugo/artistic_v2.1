@@ -4,13 +4,30 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Color;
+use App\Models\SubColor;
+
 
 class ColorsComponent extends Component
 {
+    // public $scolor_slug;
+
+    // public function mount($slug,$scolor_slug=null)
+    // {
+    //     $this->slug=$slug;
+    //     $this->scolor_slug =$scolor_slug;
+    // }
+
+
     public function render()
     {
         $colors=Color::all();
+        $scolor=SubColor::all();
+        // $scolor = SubColor::where('slug',$this->scolor_slug)->first();
+        // $scolor_slug=optional($scolor)->id;
+        // $scolor
 
-        return view('livewire.colors-component',['colors'=>$colors]);
+        // ,'scolor'=>$scolor
+
+        return view('livewire.colors-component',['colors'=>$colors,'scolor'=>$scolor]);
     }
 }
