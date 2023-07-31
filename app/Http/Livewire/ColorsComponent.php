@@ -20,6 +20,9 @@ class ColorsComponent extends Component
 
     public function render()
     {
+        $combinationColors = Color::where('combination', 1)->get();
+        $singleColors = Color::where('combination', 0)->get();
+
         $colors=Color::all();
         $scolor=SubColor::all();
         // $scolor = SubColor::where('slug',$this->scolor_slug)->first();
@@ -28,6 +31,7 @@ class ColorsComponent extends Component
 
         // ,'scolor'=>$scolor
 
-        return view('livewire.colors-component',['colors'=>$colors,'scolor'=>$scolor]);
+        return view('livewire.colors-component',['colors'=>$colors,'scolor'=>$scolor,'combinationColors' => $combinationColors,
+        'singleColors' => $singleColors,]);
     }
 }
