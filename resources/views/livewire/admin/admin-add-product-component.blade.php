@@ -395,7 +395,9 @@
                 <select name="color_id" id="" wire:model="color_id" wire:change="changeSubcolor">
                     <option value="">Choose Color</option>
                     @foreach($colors as $color)
-                        <option value="{{$color->id}}">{{$color->name}}</option>
+                        <option value="{{$color->id}}">
+                            {{$color->name}}
+                        </option>
                     @endforeach
                 </select>
                 @error('color_id')
