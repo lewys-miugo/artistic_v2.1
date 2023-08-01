@@ -44,7 +44,7 @@ class HomeComponent extends Component
         $fproducts = Product::where('featured',1)->inRandomOrder()->get()->take(16);
         $categories = Category::orderBy('name','ASC')->get();
         $themes = Theme::orderBy('name','ASC')->get()->take(8);
-        $colors = Color::orderBy('name','ASC')->get()->take(4);
+        $colors = Color::orderBy('name','ASC')->get()->take(8);
         // $colors = Color::all();
         $products = Product::paginate(12);            
 
