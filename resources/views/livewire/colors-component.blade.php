@@ -4,17 +4,17 @@
         <div class="bg-white" >
             <div class="flex justify-center">
                 <p class="my-8 text-xs text-[#6a767e] uppercase">
-                    <a href="/" class="uppercase">Home</a> <span class="font-bold">> By Color</span>
+                    <a href="/" class="uppercase">Home</a> <span class="font-bold">> By thematic Colors</span>
                 </p>
             </div>
 
             <!-- <p class="text-[#6a767e]">text-[#46555F]</p> -->
             <div class="flex flex-row justify-center text-[#46555f]">
                 <p class=" font-extrabold text-5xl font-serif">
-                    By Color
+                    By Thematic Color
                 </p>
                 <p class="text-3xl font-light ml-8 text-center flex justify-center mt-2">
-                    Wall Art
+                    Wall Arts
                 </p>
             </div>
 
@@ -26,16 +26,16 @@
         <div class="bg-[EFF0F2]">
             <div class="flex flex-row justify-center space-x-8 my-8">
                 <div class="border-2">
-                    <a href="#allColors" class="text-[#46555f] p-8">All Colors</a>
+                    <a href="#allColors" class="text-[#46555f] p-8">Single Thematic Colors</a>
                 </div>
                 
                 <div class="border-2 text-[#596c8a] hover:bg-[#46555f] hover:text-[#ffffff]">
-                    <a href="#combinationColors" class=" p-4 text-[#46555f]">Color Combinations</a>
+                    <a href="#combinationColors" class=" p-4 text-[#46555f]">Thematic Color Combinations</a>
                 </div>
             </div>
 
             <div>
-                <p class="uppercase text-center " id="allColors">All Colors</p>
+                <p class="uppercase text-center " id="allColors">Single Thematic Colors</p>
                 <hr class="mx-12 my-4">
                 <div>
                     <div class="p-8 flex flex-row flex-wrap space-x-8 space-y-8">
@@ -96,7 +96,7 @@
             </div>
 
             <div id="combinationColors">
-                <p class="uppercase text-center" >combination Colors</p>
+                <p class="uppercase text-center" >Combination Thematic Colors</p>
                 <hr class="px-12 my-4">
                 <div>
                     <div class="p-8 flex flex-row flex-wrap space-x-8 space-y-8">
@@ -158,7 +158,7 @@
         </div>
         <div class="flex flex-row mx-8 text-[#6a767e]">
             <div class="w-1/3 text-right px-8 text-4xl">
-                By Color
+                By Thematic Color
             </div>
 
             <div class="w-2/3 text-lg">
