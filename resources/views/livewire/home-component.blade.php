@@ -142,12 +142,12 @@
 
     <!-- Shop by colors -->
     <div class="mt-12 mb-8 flex justify-center">
-        <p class="text-3xl text-[#46555f]">Shop by Colors</p>
+        <p class="text-3xl text-[#46555f]">Shop by Thematic Colors</p>
     </div>
     <div class="">
             <a href="{{ route('colors.page') }}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right">
                 <!-- text-[#485760] -->
-                <p>To all colors</p>
+                <p>To all thematic colors</p>
             </a>
     </div>
     <div class="flex flex-row mb-10 ">
@@ -168,6 +168,13 @@
                 </a>
             @endforeach
         </ul>
+    </div>
+
+    <div class="">
+            <a href="{{ route('colors.page') }}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right">
+                <!-- text-[#485760] -->
+                <p>To all thematic colors</p>
+            </a>
     </div>
 
     <!-- Browse different -->
