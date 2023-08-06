@@ -160,7 +160,7 @@ class AdminEditProductComponent extends Component
         $product->description = $this->description;
         $product->regular_price = '4000';
 
-        $product->regular_price_A0 = 6000;
+        $product->regular_price_A0 = 5500; //$this->regular_price_A0;
         $product->regular_price_A05 = 5000;
         $product->regular_price_A1 = 4000;
         $product->regular_price_A2 = 3000;
@@ -173,17 +173,30 @@ class AdminEditProductComponent extends Component
         $product->regular_price_pa = $this->regular_price_pa;
 
         // Framed print
-        $product->regular_price_A0f = $this->regular_price_A0f;
-        $product->regular_price_A05f=$this->regular_price_A05f;
-        $product->regular_price_A1f = $this->regular_price_A1f;
-        $product->regular_price_A2f = $this->regular_price_A2f;
-        $product->regular_price_A3f = $this->regular_price_A3f;
+        $product->regular_price_A0f = 6500; //$this->regular_price_A0f;
+        $product->regular_price_A05f= 5500; //$this->regular_price_A05f;
+        $product->regular_price_A1f = 4500; //$this->regular_price_A05f;
+        $product->regular_price_A2f = 3500; //$this->regular_price_A2f;
+        $product->regular_price_A3f = 2500; //$this->regular_price_A3f;
         $product->regular_price_A4f = $this->regular_price_A4f;
-        $product->regular_price_2pf = $this->regular_price_2pf;
-        $product->regular_price_3pf = $this->regular_price_3pf;
-        $product->regular_price_4pf = $this->regular_price_4pf;
-        $product->regular_price_5pf = $this->regular_price_5pf;
+        $product->regular_price_2pf = 7500; //$this->regular_price_2pf;
+        $product->regular_price_3pf = 6000; //$this->regular_price_3pf;
+        $product->regular_price_4pf = 7000; //$this->regular_price_3pf;
+        $product->regular_price_5pf = 7500; //$this->regular_price_3pf;
         $product->regular_price_paf = $this->regular_price_paf;
+
+        // Floating Frames;
+        $product->regular_price_A0ff = 6500;
+       $product->regular_price_A05ff = 5500;
+        $product->regular_price_A1ff = 4500;
+        $product->regular_price_A2ff = 3500;
+        $product->regular_price_A3ff = 2500;
+        // $product->regular_price_A4ff = $this->regular_price_A4ff;
+        $product->regular_price_2pff = 8500;
+        $product->regular_price_3pff = 7000;
+        // $product->regular_price_4pff = $this->regular_price_4pff;
+        // $product->regular_price_5pff = $this->regular_price_5pff;
+        // $product->regular_price_paff = $this->regular_price_paff;
 
 
         // $product->sale_price = $this->sale_price;

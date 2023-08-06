@@ -120,11 +120,24 @@ class AdminAddProductComponent extends Component
         $product->regular_price_A2f = 4500;
         $product->regular_price_A3f = 3500;
         $product->regular_price_A4f = 2000;
-        $product->regular_price_2pf = 10000;
-        $product->regular_price_3pf = 7500;
-        $product->regular_price_4pf = 5200;
-        $product->regular_price_5pf = 6000;
+        $product->regular_price_2pf = 7500;
+        $product->regular_price_3pf = 6000;
+        $product->regular_price_4pf = 7000;
+        $product->regular_price_5pf = 7500;
         $product->regular_price_paf = 5500;
+
+        // Floating Frames
+        $product->regular_price_A0ff = 6500;
+        $product->regular_price_A05ff =5500;
+        $product->regular_price_A1ff = 4500;
+        $product->regular_price_A2ff = 3500;
+        $product->regular_price_A3ff = 2500;
+        $product->regular_price_A4ff = 2000; //
+        $product->regular_price_2pff = 8500;
+        $product->regular_price_3pff = 7000;
+        $product->regular_price_4pff = 5200; //
+        $product->regular_price_5pff = 6000; //
+        $product->regular_price_paff = 5500; //
 
         $product->featured = $this->featured;
         $product->category_id = $this->category_id;
