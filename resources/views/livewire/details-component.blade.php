@@ -201,7 +201,7 @@
 
                                 <div class="flex flex-col">
                                     <label class="flex items-center">
-                                        <input type="radio" name="options" value="option7" checked class="mr-1">
+                                        <input type="radio" name="options" value="option6" checked class="mr-1">
                                         <p>2 pieces</p>
 
                                     </label>
@@ -216,7 +216,7 @@
 
                                 <div class="flex flex-col">
                                     <label class="flex items-center">
-                                        <input type="radio" name="options" value="option8" checked class="mr-1">
+                                        <input type="radio" name="options" value="option7" checked class="mr-1">
                                         <p>3 pieces</p>
 
                                     </label>
@@ -231,7 +231,7 @@
 
                                 <div class="flex flex-col">
                                     <label class="flex items-center">
-                                        <input type="radio" name="options" value="option9" checked class="mr-1">
+                                        <input type="radio" name="options" value="option8" checked class="mr-1">
                                         <p>4 pieces</p>
 
                                     </label>
@@ -246,7 +246,7 @@
 
                                 <div class="flex flex-col">
                                     <label class="flex items-center">
-                                        <input type="radio" name="options" value="option10" checked class="mr-1">
+                                        <input type="radio" name="options" value="option9" checked class="mr-1">
                                         <p>5 pieces</p>
                                     
                                     </label>
@@ -292,7 +292,7 @@
                                 <div id="frame-prices" class="space-x-2 hidden flex flex-row flex-wrap">
                                     <div class="flex flex-col ml-2 ">
                                         <label class="flex items-center">
-                                            <input type="radio" name="options" value="option12" checked class="mr-1">
+                                            <input type="radio" name="options" value="option10" checked class="mr-1">
                                             <p>A0</p>
                                         </label>
                                         <div class="option-paragraph hidden">
@@ -307,7 +307,7 @@
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
-                                            <input type="radio" name="options" value="option13" checked class="mr-1">
+                                            <input type="radio" name="options" value="option11" checked class="mr-1">
                                             <p>A0.5</p>
                                         </label>
                                         <div class="option-paragraph hidden">
@@ -322,7 +322,7 @@
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
-                                            <input type="radio" name="options" value="option14" checked class="mr-1">
+                                            <input type="radio" name="options" value="option12" checked class="mr-1">
                                             <p>A1</p>
                                         </label>
                                         <div class="option-paragraph hidden">
@@ -336,7 +336,7 @@
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
-                                            <input type="radio" name="options" value="option15" checked class="mr-1">
+                                            <input type="radio" name="options" value="option13" checked class="mr-1">
                                             <p>A2</p>
                                         
                                         </label>
@@ -351,7 +351,7 @@
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
-                                            <input type="radio" name="options" value="option16" checked class="mr-1">
+                                            <input type="radio" name="options" value="option14" checked class="mr-1">
                                             <p>A3</p>
                                         
                                         </label>
@@ -381,7 +381,7 @@
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
-                                            <input type="radio" name="options" value="option18" checked class="mr-1">
+                                            <input type="radio" name="options" value="option15" checked class="mr-1">
                                             <p>2 pieces</p>
 
                                         </label>
@@ -396,7 +396,7 @@
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
-                                            <input type="radio" name="options" value="option19" checked class="mr-1">
+                                            <input type="radio" name="options" value="option16" checked class="mr-1">
                                             <p>3 pieces</p>
 
                                         </label>
