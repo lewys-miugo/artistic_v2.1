@@ -364,7 +364,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="flex flex-col">
+                                    <!-- <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option17" checked class="mr-1">
                                             <p>A4</p>
@@ -377,7 +377,7 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
@@ -452,6 +452,189 @@
                                             </button>
                                         </div>
                                     </div>
+
+                                    <!-- Repeat the pattern for the remaining options -->
+                                    <!-- Option 3 -->
+                                    <!-- Option 4 -->
+                                    <!-- Option 5 -->
+                                    <!-- Option 6 -->
+                                    <!-- Option 7 -->
+                                </div>
+                            </div>
+
+                            <!-- Floating frames -->
+                            <div>
+                                <div onclick="toggleFloating()" class="flex items-center  cursor-pointer">
+                                    <h1 class="text-2xl font-bold mb-4">Floating Frames Option Prices</h1>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-8 -mt-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+
+                                </div>
+                                <div id="floating-prices" class="space-x-2 hidden flex flex-row flex-wrap">
+                                    <div class="flex flex-col ml-2 ">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option23" checked class="mr-1">
+                                            <p>A0</p>
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A0ff}}</p>
+                                            
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A0ff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option24" checked class="mr-1">
+                                            <p>A0.5</p>
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A05ff}}</p>
+                                            
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A05ff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option25" checked class="mr-1">
+                                            <p>A1</p>
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A1ff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A1ff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option26" checked class="mr-1">
+                                            <p>A2</p>
+                                        
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A2ff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A2ff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option27" checked class="mr-1">
+                                            <p>A3</p>
+                                        
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A3ff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A3ff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option28" checked class="mr-1">
+                                            <p>A4</p>
+                                        
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_A4ff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_A4ff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option29" checked class="mr-1">
+                                            <p>2 pieces</p>
+
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_2pff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_2pff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option30" checked class="mr-1">
+                                            <p>3 pieces</p>
+
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_3pff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_3pff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option31" checked class="mr-1">
+                                            <p>4 pieces</p>
+
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_4pff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_4pff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option32" checked class="mr-1">
+                                            <p>5 pieces</p>
+                                        
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_5pff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_5pff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="flex flex-col">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="options" value="option33" checked class="mr-1">
+                                            <p>Panorama</p>
+                                        
+                                        </label>
+                                        <div class="option-paragraph hidden">
+                                            <p class="text-gray-700 text-xl mb-4">Ksh.{{$product->regular_price_paff}}</p>
+                                            <button type="button"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" wire:click.prevent="store({{$product->id}}, '{{$product->name}}',{{$product->regular_price_paff}})">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div> -->
 
                                     <!-- Repeat the pattern for the remaining options -->
                                     <!-- Option 3 -->
@@ -627,6 +810,11 @@
 
             function toggleFrame() {
                 const content2 = document.getElementById('frame-prices');
+                content2.classList.toggle('hidden');
+            }
+
+            function toggleFloating() {
+                const content2 = document.getElementById('floating-prices');
                 content2.classList.toggle('hidden');
             }
         </script>
