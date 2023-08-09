@@ -114,11 +114,11 @@ class AdminAddProductComponent extends Component
         
 
         // Framed print
-        $product->regular_price_A0f = 7500;
-        $product->regular_price_A05f=7000;
-        $product->regular_price_A1f = 6500;
-        $product->regular_price_A2f = 4500;
-        $product->regular_price_A3f = 3500;
+        $product->regular_price_A0f = 6500;
+        $product->regular_price_A05f= 5500;
+        $product->regular_price_A1f = 4500;
+        $product->regular_price_A2f = 3500;
+        $product->regular_price_A3f = 2500;
         $product->regular_price_A4f = 2000;
         $product->regular_price_2pf = 7500;
         $product->regular_price_3pf = 6000;
