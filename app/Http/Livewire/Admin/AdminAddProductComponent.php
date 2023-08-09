@@ -99,16 +99,16 @@ class AdminAddProductComponent extends Component
         $product->description = $this->description;
         $product->regular_price = '4000';
 
-        $product->regular_price_A0 = 7000;
-        $product->regular_price_A05 = 6000;
-        $product->regular_price_A1 = 5000;
-        $product->regular_price_A2 = 3500;
-        $product->regular_price_A3 = 2000;
+        $product->regular_price_A0 = 5500;
+        $product->regular_price_A05 = 5000;
+        $product->regular_price_A1 = 4000;
+        $product->regular_price_A2 = 3000;
+        $product->regular_price_A3 = 1800;
         $product->regular_price_A4 = 2000;
-        $product->regular_price_2p = 9000;
-        $product->regular_price_3p = 8500;
-        $product->regular_price_4p = 7500;
-        $product->regular_price_5p = 8000;
+        $product->regular_price_2p = 7500;
+        $product->regular_price_3p = 6000;
+        $product->regular_price_4p = 7000;
+        $product->regular_price_5p = 7500;
         $product->regular_price_pa = 6000;
         // $product->regular_price_pa = $this->regular_price_pa;
         
@@ -120,8 +120,8 @@ class AdminAddProductComponent extends Component
         $product->regular_price_A2f = 3500;
         $product->regular_price_A3f = 2500;
         $product->regular_price_A4f = 2000;
-        $product->regular_price_2pf = 7500;
-        $product->regular_price_3pf = 6000;
+        $product->regular_price_2pf = 8500;
+        $product->regular_price_3pf = 7000;
         $product->regular_price_4pf = 7000;
         $product->regular_price_5pf = 7500;
         $product->regular_price_paf = 5500;

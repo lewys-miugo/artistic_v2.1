@@ -166,10 +166,10 @@ class AdminEditProductComponent extends Component
         $product->regular_price_A2 = 3000;
         $product->regular_price_A3 = 1800;
         $product->regular_price_A4 = 1500;
-        $product->regular_price_2p = $this->regular_price_2p;
-        $product->regular_price_3p = $this->regular_price_3p;
-        $product->regular_price_4p = $this->regular_price_4p;
-        $product->regular_price_5p = $this->regular_price_5p;
+        $product->regular_price_2p =7500;
+        $product->regular_price_3p = 6000;
+        $product->regular_price_4p = 7000;
+        $product->regular_price_5p = 7500;
         $product->regular_price_pa = $this->regular_price_pa;
 
         // Framed print
@@ -179,8 +179,8 @@ class AdminEditProductComponent extends Component
         $product->regular_price_A2f = 3500; //$this->regular_price_A2f;
         $product->regular_price_A3f = 2500; //$this->regular_price_A3f;
         $product->regular_price_A4f = $this->regular_price_A4f;
-        $product->regular_price_2pf = 7500; //$this->regular_price_2pf;
-        $product->regular_price_3pf = 6000; //$this->regular_price_3pf;
+        $product->regular_price_2pf = 8500; //$this->regular_price_2pf;
+        $product->regular_price_3pf = 7000; //$this->regular_price_3pf;
         $product->regular_price_4pf = 7000; //$this->regular_price_3pf;
         $product->regular_price_5pf = 7500; //$this->regular_price_3pf;
         $product->regular_price_paf = $this->regular_price_paf;
