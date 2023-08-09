@@ -184,7 +184,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex flex-col">
+                                <!-- <div class="flex flex-col">
                                     <label class="flex items-center">
                                         <input type="radio" name="options" value="option6" checked class="mr-1">
                                         <p>A4</p>
@@ -197,7 +197,7 @@
                                             Add to Cart
                                         </button>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="flex flex-col">
                                     <label class="flex items-center">
@@ -258,7 +258,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="flex flex-col">
+                                <!-- <div class="flex flex-col">
                                     <label class="flex items-center">
                                         <input type="radio" name="options" value="option11" checked class="mr-1">
                                         <p>Panorama</p>
@@ -271,7 +271,7 @@
                                             Add to Cart
                                         </button>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Repeat the pattern for the remaining options -->
                                 <!-- Option 3 -->
@@ -409,7 +409,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="flex flex-col">
+                                    <!-- <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option20" checked class="mr-1">
                                             <p>4 pieces</p>
@@ -422,9 +422,9 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="flex flex-col">
+                                    <!-- <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option21" checked class="mr-1">
                                             <p>5 pieces</p>
@@ -437,8 +437,8 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div>
-                                    <div class="flex flex-col">
+                                    </div> -->
+                                    <!-- <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option22" checked class="mr-1">
                                             <p>Panorama</p>
@@ -451,7 +451,7 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- Repeat the pattern for the remaining options -->
                                     <!-- Option 3 -->
@@ -463,7 +463,7 @@
                             </div>
 
                             <!-- Floating frames -->
-                            <div>
+                            <!-- <div>
                                 <div onclick="toggleFloating()" class="flex items-center  cursor-pointer">
                                     <h1 class="text-2xl font-bold mb-4">Floating Frames Option Prices</h1>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-8 -mt-2">
@@ -546,7 +546,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- <div class="flex flex-col">
+                                    <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option28" checked class="mr-1">
                                             <p>A4</p>
@@ -559,7 +559,7 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div> -->
+                                    </div>
 
                                     <div class="flex flex-col">
                                         <label class="flex items-center">
@@ -591,7 +591,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- <div class="flex flex-col">
+                                    <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option31" checked class="mr-1">
                                             <p>4 pieces</p>
@@ -604,9 +604,9 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div> -->
+                                    </div>
 
-                                    <!-- <div class="flex flex-col">
+                                    <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option32" checked class="mr-1">
                                             <p>5 pieces</p>
@@ -619,9 +619,9 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div> -->
+                                    </div>
 
-                                    <!-- <div class="flex flex-col">
+                                    <div class="flex flex-col">
                                         <label class="flex items-center">
                                             <input type="radio" name="options" value="option33" checked class="mr-1">
                                             <p>Panorama</p>
@@ -634,16 +634,9 @@
                                                 Add to Cart
                                             </button>
                                         </div>
-                                    </div> -->
-
-                                    <!-- Repeat the pattern for the remaining options -->
-                                    <!-- Option 3 -->
-                                    <!-- Option 4 -->
-                                    <!-- Option 5 -->
-                                    <!-- Option 6 -->
-                                    <!-- Option 7 -->
+                                    </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
 
