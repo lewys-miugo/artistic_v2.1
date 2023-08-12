@@ -124,10 +124,6 @@ class AdminEditProductComponent extends Component
 
         // $this->image = $product->image;
         // $this->productImages=ProductImages::where('product_unique_id',$product->unique_id)->get();
-
-
-
-
     }
 
     public function deleteImage($id)
@@ -153,6 +149,8 @@ class AdminEditProductComponent extends Component
             'category_id'=>'required',
 
         ]);
+
+        
         $product = Product::find($this->product_id);
         $product->name = $this->name;
         $product->slug = $this->slug;
