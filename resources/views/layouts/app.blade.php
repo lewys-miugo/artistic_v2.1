@@ -142,6 +142,7 @@
                                                 <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{ route('admin.colors') }} ">Colors</a></li>
                                                 <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.order')}}">Orders</a></li>
                                                 <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.faqs')}}">FAQs</a></li>
+                                                <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.about.us.edit')}}">About Us</a></li>
                                                 <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.delivery.edit')}}">Delivery Policy</a></li>
                                                 <li class=" px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{route('admin.return.policy.edit')}}">Return Policy</a></li>
                                                 <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm"><a href="{{-- route('admin.home.slider') --}}">Manage Slider</a></li> -->
@@ -296,6 +297,7 @@
                             <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('delivery.policy')}}">Delivery</a>
                             <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('return.policy')}}">Return Policy</a>
                             <a class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('faq')}}">FAQs</a>
+                            <a class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('about.us')}}">About Us</a>
                             <!-- <a rel="noopener noreferrer" href="#">Accessibility Statement</a> -->
                         </div>
                     </div>

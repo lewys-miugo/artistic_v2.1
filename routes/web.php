@@ -17,6 +17,7 @@ use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\FaqComponent;
 use App\Http\Livewire\DeliveryComponent;
 use App\Http\Livewire\ReturnPolicyComponent;
+use App\Http\Livewire\AboutUsComponent;
 
 
 use App\Http\Livewire\FeaturedProductsComponent;
@@ -57,6 +58,9 @@ use App\Http\Livewire\Admin\AdminEditFaqComponent;
 use App\Http\Livewire\Admin\AdminEditDeliveryComponent;
 
 use App\Http\Livewire\Admin\AdminEditReturnPolicyComponent;
+
+use App\Http\Livewire\Admin\EditAboutUsComponent;
+
 
 
 
@@ -110,6 +114,8 @@ Route::get('/featured/products',FeaturedProductsComponent::class)->name('feature
 Route::get('/faqs',FaqComponent::class)->name('faq');
 Route::get('/delivery-policy',DeliveryComponent::class)->name('delivery.policy');
 Route::get('/return-policy',ReturnPolicyComponent::class)->name('return.policy');
+Route::get('/about-us',AboutUsComponent::class)->name('about.us');
+
 
 
 // Route::get('/', function () {
@@ -160,6 +166,8 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/delivery/edit',AdminEditDeliveryComponent::class)->name('admin.delivery.edit');
 
     Route::get('/admin/return-policy/edit',AdminEditReturnPolicyComponent::class)->name('admin.return.policy.edit');
+
+    Route::get('/admin/about-us/edit',EditAboutUsComponent::class)->name('admin.about.us.edit');
 });
 
 // Route::get('/dashboard', function () {
