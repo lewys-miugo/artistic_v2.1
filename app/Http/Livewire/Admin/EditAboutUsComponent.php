@@ -77,28 +77,28 @@ class EditAboutUsComponent extends Component
         $aboutUs->our_art=      $this->our_art;
 
         if ($this->new_general_image) {
-            // unlink('images/aboutus/'.$aboutUs->general_image);
+            unlink('images/aboutus/'.$aboutUs->general_image);
             $generalimageName = Carbon::now()->timestamp.'.'.'general'.'.'.$this->new_general_image->extension();
             $this->new_general_image->storeAs('aboutus', $generalimageName);
             $aboutUs->general_image = $generalimageName;
         }
 
         if ($this->new_vision_image) {
-            // unlink('images/aboutus/'.$aboutUs->vision_image);
+            unlink('images/aboutus/'.$aboutUs->vision_image);
             $visionimageName = Carbon::now()->timestamp.'.'.'vision'.'.'.$this->new_vision_image->extension();
             $this->new_vision_image->storeAs('aboutus', $visionimageName);
             $aboutUs->vision_image = $visionimageName;
         }
 
         if ($this->new_objective_image) {
-            // unlink('images/aboutus/'.$aboutUs->objective_image);
+            unlink('images/aboutus/'.$aboutUs->objective_image);
             $objectiveimageName = Carbon::now()->timestamp.'.'.'objective'.'.'.$this->new_objective_image->extension();
             $this->new_objective_image->storeAs('aboutus', $objectiveimageName);
             $aboutUs->objective_image = $objectiveimageName;
         }
 
         if ($this->new_art_image) {
-            // unlink('images/aboutus/'.$aboutUs->art_image);
+            unlink('images/aboutus/'.$aboutUs->art_image);
             $artimageName = Carbon::now()->timestamp.'.'.'art'.'.'.$this->new_art_image->extension();
             $this->new_art_image->storeAs('aboutus', $artimageName);
             $aboutUs->art_image = $artimageName;
