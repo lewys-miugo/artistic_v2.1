@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('about_us', function (Blueprint $table) {
             $table->id();
-            $table->text('general')->nullable();
-            $table->string('general_image')->nullable();
-            $table->text('our_vision')->nullable();
-            $table->string('vision_image')->nullable();
-            $table->text('our_objective')->nullable();
-            $table->string('objective_image')->nullable();
-            $table->text('our_art')->nullable();
-            $table->string('art_image')->nullable();
+            $table->text('general')->nullable()->default('general');
+            $table->string('general_image')->nullable()->default('general');
+            $table->text('our_vision')->nullable()->default('general');
+            $table->string('vision_image')->nullable()->default('general');
+            $table->text('our_objective')->nullable()->default('general');
+            $table->string('objective_image')->nullable()->default('general');
+            $table->text('our_art')->nullable()->default('general');
+            $table->string('art_image')->nullable()->default('general');
             $table->timestamps();
         });
     }
