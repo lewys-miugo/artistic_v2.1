@@ -34,15 +34,15 @@ class EditAboutUsComponent extends Component
         $aboutUs= AboutUs::first();
         
         $this->general=         $aboutUs->general ?? 'Default general';
-        $this->our_vision=      $aboutUs->our_vision;
-        $this->our_objective=   $aboutUs->our_objective;
-        $this->our_art=         $aboutUs->our_art;
-        $this->general=         $aboutUs->general;
+        $this->our_vision=      $aboutUs->our_vision ?? 'Default vision';
+        $this->our_objective=   $aboutUs->our_objective ?? 'Default objective';
+        $this->our_art=         $aboutUs->our_art ?? 'Default art';
+        // $this->general=         $aboutUs->general;
 
-        $this->general_image=$aboutUs->general_image;
-        $this->vision_image=$aboutUs->vision_image;
-        $this->objective_image=$aboutUs->objective_image;
-        $this->art_image=$aboutUs->art_image;
+        $this->general_image=$aboutUs->general_image ?? 'Default general';
+        $this->vision_image=$aboutUs->vision_image ?? 'Default general';
+        $this->objective_image=$aboutUs->objective_image ?? 'Default general';
+        $this->art_image=$aboutUs->art_image ?? 'Default general';
     }
 
     public function updateAboutus()
