@@ -49,10 +49,10 @@ class EditAboutUsComponent extends Component
     {
         $aboutUs= AboutUs::first();
 
-        $aboutUs->general=      $this->general;
-        $aboutUs->our_vision=   $this->our_vision;
-        $aboutUs->our_objective=$this->our_objective;
-        $aboutUs->our_art=      $this->our_art;
+        $aboutUs->general=      $this->general ?? 'Default general';
+        $aboutUs->our_vision=   $this->our_vision ?? 'Default vision';
+        $aboutUs->our_objective=$this->our_objective ?? 'Default objective';
+        $aboutUs->our_art=      $this->our_art ?? 'Default art';
 
         if ($this->new_general_image) {
             // unlink('images/aboutus/'.$aboutUs->general_image);
