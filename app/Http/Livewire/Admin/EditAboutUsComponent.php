@@ -33,7 +33,7 @@ class EditAboutUsComponent extends Component
     {
         $aboutUs= AboutUs::first();
         
-        $this->general=         $aboutUs->general;
+        $this->general=         $aboutUs->general ?? 'Default general';
         $this->our_vision=      $aboutUs->our_vision;
         $this->our_objective=   $aboutUs->our_objective;
         $this->our_art=         $aboutUs->our_art;
@@ -62,7 +62,7 @@ class EditAboutUsComponent extends Component
         }
 
         if ($this->new_vision_image) {
-            unlink('images/aboutus/'.$aboutUs->vision_image);
+            // unlink('images/aboutus/'.$aboutUs->vision_image);
             $visionimageName = Carbon::now()->timestamp.'.'.'vision'.'.'.$this->new_vision_image->extension();
             $this->new_vision_image->storeAs('aboutus', $visionimageName);
             $aboutUs->vision_image = $visionimageName;
