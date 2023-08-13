@@ -49,6 +49,19 @@ class EditAboutUsComponent extends Component
     {
         $aboutUs= AboutUs::first();
 
+        if (!$aboutUs) {
+            // Handle the null case here. For instance, you can set default values for properties.
+            $this->general = 'Default general';
+            $this->our_vision = 'Default vision';
+            $this->our_objective = 'Default objective';
+            $this->our_art = 'Default art';
+            $this->general_image = 'Default general';
+            $this->vision_image = 'Default general';
+            $this->objective_image = 'Default general';
+            $this->art_image = 'Default general';
+            return;
+        }
+
         $aboutUs->general=      $this->general;
         $aboutUs->our_vision=   $this->our_vision;
         $aboutUs->our_objective=$this->our_objective;
