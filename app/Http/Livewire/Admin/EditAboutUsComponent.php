@@ -47,20 +47,29 @@ class EditAboutUsComponent extends Component
 
     public function updateAboutus()
     {
-        $aboutUs= AboutUs::first();
+        $aboutUs= AboutUs::firstOrNew([
+            'general' => 'Default general',
+            'our_vision' => 'Default general',
+            'our_objective' => 'Default general',
+            'our_art' => 'Default general',
+            'general_image' => 'Default general',
+            'vision_image' => 'Default general',
+            'objective_image' => 'Default general',
+            'art_image' => 'Default general',
+        ]);
 
-        if (!$aboutUs) {
-            // Handle the null case here. For instance, you can set default values for properties.
-            $this->general = 'Default general';
-            $this->our_vision = 'Default vision';
-            $this->our_objective = 'Default objective';
-            $this->our_art = 'Default art';
-            $this->general_image = 'Default general';
-            $this->vision_image = 'Default general';
-            $this->objective_image = 'Default general';
-            $this->art_image = 'Default general';
-            return;
-        }
+        // if (!$aboutUs) {
+        //     Handle the null case here. For instance, you can set default values for properties.
+        //     $this->general = 'Default general';
+        //     $this->our_vision = 'Default vision';
+        //     $this->our_objective = 'Default objective';
+        //     $this->our_art = 'Default art';
+        //     $this->general_image = 'Default general';
+        //     $this->vision_image = 'Default general';
+        //     $this->objective_image = 'Default general';
+        //     $this->art_image = 'Default general';
+        //     return;
+        // }
 
         $aboutUs->general=      $this->general;
         $aboutUs->our_vision=   $this->our_vision;
