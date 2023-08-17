@@ -47,16 +47,18 @@ class EditAboutUsComponent extends Component
 
     public function updateAboutus()
     {
-        $aboutUs= AboutUs::firstOrNew([
-            'general' => 'Default general',
-            'our_vision' => 'Default general',
-            'our_objective' => 'Default general',
-            'our_art' => 'Default general',
-            'general_image' => 'Default general',
-            'vision_image' => 'Default general',
-            'objective_image' => 'Default general',
-            'art_image' => 'Default general',
-        ]);
+        // $aboutUs= AboutUs::firstornew([
+        //     // 'general' => 'Default general',
+        //     // 'our_vision' => 'Default general',
+        //     // 'our_objective' => 'Default general',
+        //     // 'our_art' => 'Default general',
+        //     // 'general_image' => 'Default general',
+        //     // 'vision_image' => 'Default general',
+        //     // 'objective_image' => 'Default general',
+        //     // 'art_image' => 'Default general',
+        // ]);
+
+        $aboutUs= AboutUs::first();
 
         // if (!$aboutUs) {
         //     Handle the null case here. For instance, you can set default values for properties.
@@ -71,10 +73,10 @@ class EditAboutUsComponent extends Component
         //     return;
         // }
 
-        $aboutUs->general=      $this->general;
-        $aboutUs->our_vision=   $this->our_vision;
+        $aboutUs->general=$this->general;
+        $aboutUs->our_vision=$this->our_vision;
         $aboutUs->our_objective=$this->our_objective;
-        $aboutUs->our_art=      $this->our_art;
+        $aboutUs->our_art=$this->our_art;
 
         if ($this->new_general_image) {
             unlink('images/aboutus/'.$aboutUs->general_image);
