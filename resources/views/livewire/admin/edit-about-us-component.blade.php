@@ -60,7 +60,7 @@
         </div>
 
         <!-- Objective -->
-        <div class="flex flex-row">
+        <!-- <div class="flex flex-row">
             <div class="m-2">
                 <label for="our_objective" class="block mb-1">Our Objective</label>
                 <textarea name="our_objective" id="" cols="50" rows="3" placeholder="Enter our_objective " wire:model="our_objective"></textarea>
@@ -81,7 +81,7 @@
                     <p class="text-white bg-red-300">{{$message}}</p>
                 @enderror
             </div>
-        </div>
+        </div> -->
 
         <!-- ART -->
         <div class="flex flex-row">
