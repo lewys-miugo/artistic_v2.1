@@ -7,6 +7,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\PublicPolicyComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CartComponent;
@@ -101,6 +102,10 @@ use App\Http\Livewire\User\UserOrderDetailComponent;
 
 
 Route::get('/',HomeComponent::class)->name('home.index');
+
+Route::get('/public-policy',PublicPolicyComponent::class)->name('public.policy');
+
+
 
 Route::get('/shop',ShopComponent::class)->name('shop');
 
