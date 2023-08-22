@@ -298,6 +298,7 @@
                             <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('return.policy')}}">Return Policy</a>
                             <a class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('faq')}}">FAQs</a>
                             <a class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('about.us')}}">About Us</a>
+                            <a class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('public.policy')}}">Public Policy</a>
                             <!-- <a rel="noopener noreferrer" href="#">Accessibility Statement</a> -->
                         </div>
                     </div>
