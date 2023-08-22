@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\AuthController;
+
+use Laravel\Socialite\Facades\Socialite;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
@@ -84,6 +88,17 @@ use App\Http\Livewire\User\UserOrderDetailComponent;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Route::get('/auth/redirect', function () {
+//     return Socialite::driver('github')->redirect();
+// });
+ 
+// Route::get('/auth/callback', function () {
+//     $user = Socialite::driver('github')->user();
+ 
+//     // $user->token
+// });
+
 
 Route::get('/',HomeComponent::class)->name('home.index');
 
@@ -169,6 +184,14 @@ Route::middleware(['auth','authadmin'])->group(function(){
 
     Route::get('/admin/about-us/edit',EditAboutUsComponent::class)->name('admin.about.us.edit');
 });
+
+Route::get('/auth/github/redirect',[AuthController::class, 'githubredirect'])->name('auth.github.redirect');
+
+Route::get('/auth/github/callback',[AuthController::class, 'githubcallback'])->name('auth.github.callback');
+
+Route::get('/auth/google/redirect',[AuthController::class, 'googleredirect'])->name('auth.google.redirect');
+
+Route::get('/auth/google/callback',[AuthController::class, 'googlecallback'])->name('auth.google.callback');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
