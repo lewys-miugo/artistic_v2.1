@@ -1,5 +1,24 @@
 <div >
     <!-- class="bg-[#E5E5E5]" -->
+    <!-- about us -->
+    <div class="mx-8 text-center">
+        @php
+            $paragraph = $aboutUsgeneral->general;
+
+            function getFirstTwoSentences($paragraph) {
+                $sentences = preg_split('/(?<=[.!?])\s+/', $paragraph, -1, PREG_SPLIT_NO_EMPTY);
+                $firstTwoSentences = array_slice($sentences, 0, 2);
+                return implode(' ', $firstTwoSentences);
+            }
+
+            getFirstTwoSentences($paragraph);
+        @endphp
+        <p>
+        Welcome to Artistic Excursions, where creativity meets technology. Our journey began when we recognized ... <span><a href="{{route('about.us')}}" class="text-blue-300">read more</a></span>
+            {{-- $firstTwoSentences --}}
+            {{-- $paragraph --}}
+        </p>
+    </div>
     <div class="category-scroll">
         <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-2 mx-2 text-[#46555f]">
             <li class=" grow border-y-2 transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]">
