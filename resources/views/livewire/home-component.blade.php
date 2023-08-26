@@ -79,7 +79,7 @@
         <div class="absolute top-0 lg:mx-32  text-white">
             <!-- text-[#46555f] -->
         
-            <div class="mt-4 md:mt-32 lg:mt-48">
+            <div class=" md:mt-32 lg:mt-48">
                 <h1 class="text-4xl flex justify-center text-center md:mb-8 ">Stunning Wall Art at Affordable Prices</h1>
 
                 <h5 class="text-lg hidden md:block lg:block lg:px-36 flex justify-center text-center">We’ve curated an accessible, extensive selection of wall art for you. Discover top-trending designs and create your dream interior in the blink of an eye!</h5>
