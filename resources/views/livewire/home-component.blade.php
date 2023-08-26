@@ -75,7 +75,7 @@
     <!-- stunning wall art -->
 
     <div class="relative">
-        <img src="{{asset('images/bg.jpeg')}}" loading="lazy" alt="">
+        <img src="{{asset('svg/bg.jpeg')}}" loading="lazy" alt="">
         <div class="absolute top-0 lg:mx-32  text-white">
             <!-- text-[#46555f] -->
         
