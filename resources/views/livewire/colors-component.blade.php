@@ -43,7 +43,7 @@
                             <div class="{{count($color->subColors) > 0 ? 'has-child-subcolor':''}} flex flex-row mt-8 ">
                                 <a href="{{route('art.color',['slug'=>$color->slug])}}">
                                     <div>
-                                        <img src="{{asset('images/colors')}}/{{$color->image}}" alt="" class="h-52 max-w-52 ">
+                                        <img src="{{asset('images/colors')}}/{{$color->image}}" alt="" loading="lazy" class="h-52 max-w-52 ">
                                         <p class="text-center">{{$color->name}}</p>
                                     </div>
                                 </a>
@@ -54,7 +54,7 @@
                                     <div class="m-2">
                                         @foreach ($color->subColors as $scolor)
                                             <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row">
-                                                <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" alt="">
+                                                <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" loading="lazy" alt="">
                                                 <div class="pl-2 text-center pb-2">
                                                     {{$scolor->name}}
                                                 </div>
@@ -104,7 +104,7 @@
                             <div class="{{count($color->subColors) > 0 ? 'has-child-subcolor':''}} flex flex-row mt-8 ">
                                 <a href="{{route('art.color',['slug'=>$color->slug])}}">
                                     <div>
-                                        <img src="{{asset('images/colors')}}/{{$color->image}}" alt="" class="h-52 max-w-52 ">
+                                        <img src="{{asset('images/colors')}}/{{$color->image}}" alt="" loading="lazy" class="h-52 max-w-52 ">
                                         <p class="text-center">{{$color->name}}</p>
                                     </div>
                                 </a>
@@ -115,7 +115,7 @@
                                     <div class="m-2">
                                         @foreach ($color->subColors as $scolor)
                                             <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row">
-                                                <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" alt="">
+                                                <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" loading="lazy" alt="">
                                                 <div class="pl-2 text-center pb-2">
                                                     {{$scolor->name}}
                                                 </div>

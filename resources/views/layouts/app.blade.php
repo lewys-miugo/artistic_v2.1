@@ -107,7 +107,7 @@
                     <div class="flex justify-between items-center ">
                         <span class="text-2xl font-[Poppins] cursor-pointer">
                            <a href="/">
-                                <img src="{{asset('Logo.jpeg')}}" alt="Artistc Excursion Logo" class=" w-36 md:w-40 lg:w-52">
+                                <img src="{{asset('Logo.jpeg')}}" alt="Artistc Excursion Logo" loading="lazy" class=" w-36 md:w-40 lg:w-52">
                            </a>
 
                         </span>

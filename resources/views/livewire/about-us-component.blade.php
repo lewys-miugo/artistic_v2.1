@@ -9,7 +9,7 @@
     </style>
     <div class=" ">
         <h2 class="text-[#46555f] text-center text-4xl pb-4">Welcome to Artistic Excursions</h2>
-        <img src="{{asset('images/aboutus')}}/{{$aboutus->general_image}}" class="mx-auto max-h-[600px]" alt="">
+        <img src="{{asset('images/aboutus')}}/{{$aboutus->general_image}}" class="mx-auto max-h-[600px]" loading="lazy" alt="">
     </div>
 
     <div class="text-[#46555f]">
@@ -45,7 +45,7 @@
 
     <div class="flex flex-col md:flex-row text-[#46555f]">
         <div class="md:w-3/5">
-            <img src="{{asset('images/aboutus')}}/{{$aboutus->vision_image}}" class="max-h-[600px]" alt="">
+            <img src="{{asset('images/aboutus')}}/{{$aboutus->vision_image}}" class="max-h-[600px]" loading="lazy" alt="">
         </div>
         <div class="md:w-2/5 m-4">
             <div>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="md:w-3/5 flex justify-center">
-            <img src="{{asset('images/aboutus')}}/{{$aboutus->art_image}}" class="max-h-[600px]" alt="">
+            <img src="{{asset('images/aboutus')}}/{{$aboutus->art_image}}" class="max-h-[600px]" loading="lazy" alt="">
         </div>
     </div>
 </div>

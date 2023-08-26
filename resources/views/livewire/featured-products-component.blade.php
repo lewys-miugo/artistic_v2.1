@@ -30,7 +30,7 @@
 
                     <div class="flex flex-col m-2">
                         <a href="{{route('product.details',['slug'=>$fproduct->slug])}}">
-                            <img src="{{asset('images/products')}}/{{$fproduct->image}}" alt="{{$fproduct->name}}" class="h-64">
+                            <img src="{{asset('images/products')}}/{{$fproduct->image}}" loading="lazy" alt="{{$fproduct->name}}" class="h-64">
 
 
                             <ul class="flex flex-row text-[#46555f] text-base pl-2">

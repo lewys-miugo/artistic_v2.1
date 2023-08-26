@@ -249,43 +249,43 @@
                                         <div class="swiper-wrapper ">
                                                 @if($product->image)
                                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                        <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" class="h-64">
+                                                        <img src="{{asset('images/products')}}/{{$product->image}}" loading="lazy" alt="{{$product->name}}" class="h-64">
                                                     </div>
                                                 @endif
 
                                                 @if($product->image2)
                                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                        <img src="{{asset('images/products')}}/{{$product->image2}}" alt="{{$product->name}}" class="h-64">
+                                                        <img src="{{asset('images/products')}}/{{$product->image2}}" loading="lazy" alt="{{$product->name}}" class="h-64">
                                                     </div>
                                                 @endif
 
                                                 @if($product->image3)
                                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                        <img src="{{asset('images/products')}}/{{$product->image3}}" alt="{{$product->name}}" class="h-64">
+                                                        <img src="{{asset('images/products')}}/{{$product->image3}}" loading="lazy" alt="{{$product->name}}" class="h-64">
                                                     </div>
                                                 @endif
 
                                                 @if($product->image4)
                                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                        <img src="{{asset('images/products')}}/{{$product->image4}}" alt="{{$product->name}}" class="h-64">
+                                                        <img src="{{asset('images/products')}}/{{$product->image4}}" loading="lazy" alt="{{$product->name}}" class="h-64">
                                                     </div>
                                                 @endif
 
                                                 @if($product->image5)
                                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                        <img src="{{asset('images/products')}}/{{$product->image5}}" alt="{{$product->name}}" class="h-64">
+                                                        <img src="{{asset('images/products')}}/{{$product->image5}}" loading="lazy" alt="{{$product->name}}" class="h-64">
                                                     </div>
                                                 @endif
 
                                                 @if($product->image6)
                                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                        <img src="{{asset('images/products')}}/{{$product->image6}}" alt="{{$product->name}}" class="h-64">
+                                                        <img src="{{asset('images/products')}}/{{$product->image6}}" loading="lazy" alt="{{$product->name}}" class="h-64">
                                                     </div>
                                                 @endif
 
                                                 @if($product->image7)
                                                     <div class="swiper-slide flex justify-center content-center m-auto"> 
-                                                        <img src="{{asset('images/products')}}/{{$product->image7}}" alt="{{$product->name}}" class="h-64">
+                                                        <img src="{{asset('images/products')}}/{{$product->image7}}" loading="lazy" alt="{{$product->name}}" class="h-64">
                                                     </div>
                                                 @endif
                                         </div>
