@@ -1,7 +1,7 @@
 <div >
     <!-- class="bg-[#E5E5E5]" -->
     <!-- about us -->
-    <div class="mx-8 text-center">
+    <!-- <div class="mx-8 text-center">
         @php
             $paragraph = $aboutUsgeneral->general;
 
@@ -18,7 +18,7 @@
             {{-- $firstTwoSentences --}}
             {{-- $paragraph --}}
         </p>
-    </div>
+    </div> -->
     <div class="category-scroll">
         <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-2 mx-2 text-[#46555f]">
             <li class=" grow border-y-2 transition ease-in-out text-center justify-center	delay-200 duration-100 hover:border-t-[#c45472]">
@@ -73,12 +73,35 @@
     </div> -->
 
     <!-- stunning wall art -->
-    <div class="lg:mx-32 mt-20 text-[#46555f]">
+
+    <div class="relative">
+        <img src="{{asset('images/bg.jpeg')}}" alt="">
+        <div class="absolute top-0 lg:mx-32  text-white">
+            <!-- text-[#46555f] -->
         
-        <h1 class="text-4xl flex justify-center text-center mb-8 ">Stunning Wall Art at Affordable Prices</h1>
-        <h5 class="text-lg lg:px-36 flex justify-center text-center">We’ve curated an accessible, extensive selection of wall art for you. Discover top-trending designs and create your dream interior in the blink of an eye!</h5>
+            <div class="mt-12 md:mt-32 lg:mt-48">
+                <h1 class="text-4xl flex justify-center text-center md:mb-8 ">Stunning Wall Art at Affordable Prices</h1>
+
+                <h5 class="text-lg hidden md:block lg:block lg:px-36 flex justify-center text-center">We’ve curated an accessible, extensive selection of wall art for you. Discover top-trending designs and create your dream interior in the blink of an eye!</h5>
+            </div>
+
+            <div class="flex justify-center text-center md:mt-4 mx-2">
+
+                <p>
+                    Welcome to Artistic Excursions, where creativity meets technology. Our journey began when we recognized ... 
+                    <span>
+                        <a href="{{route('about.us')}}" class="text-blue-300 ">read-more</a>
+                    </span>
+                </p>
+                    
+            </div>
+
+            {{-- $firstTwoSentences --}}
+                    {{-- $paragraph --}}
         
+        </div>
     </div>
+    
 
     <!-- <div class="mx-20 my-8">
         <ul class="flex flex-row justify-center text-[#58656E]">
