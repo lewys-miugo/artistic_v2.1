@@ -29,6 +29,8 @@ use App\Http\Livewire\FeaturedProductsComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 
+use App\Http\Livewire\Admin\ArComponent;
+
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
@@ -151,6 +153,8 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+
+    Route::get('/admin/augmented-reality',ArComponent::class)->name('admin.ar');
 
     Route::get('/admin/categories',AdminCategoriesComponent::class)->name('admin.categories');
     Route::get('/admin/category/add',AdminAddCategoryComponent::class)->name('admin.categories.add');
