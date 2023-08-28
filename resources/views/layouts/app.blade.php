@@ -359,9 +359,9 @@
                         <h2 class="font-medium">COMPANY CONTACT</h2>
                         <div class="flex flex-col space-y-2 text-sm ">
                             <a rel="noopener noreferrer"class="hover:text-[#c45472] hover:underline-offset-4 truncate" href="https://www.facebook.com/artisticexcursions/">Facebook: Artistic Excursions</a>
-                            <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4" class="truncate" href="https://www.instagram.com/Artistic_Excursions/">Instagram:@Artistic_Excursions</a>
-                            <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4" href="mailto:artisticexcursions@gmail.com" class="truncate">Email: artisticexcursions@gmail.com</a>
-                            <a href="tel:+254716340285" class="hover:text-[#c45472] hover:underline-offset-4">Phone no: +254708016072</a>
+                            <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4 truncate" href="https://www.instagram.com/Artistic_Excursions/">Instagram:@Artistic_Excursions</a>
+                            <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4 truncate" href="mailto:artisticexcursions@gmail.com">Email: artisticexcursions@gmail.com</a>
+                            <a href="tel:+254716340285" class="hover:text-[#c45472] hover:underline-offset-4 ">Phone no: +254708016072</a>
                             <a href="tel:+254716340285" class="hover:text-[#c45472] hover:underline-offset-4">Phone no: +254716340285</a>
 
                             <!-- <a rel="noopener noreferrer" href="#">By Shape</a>
