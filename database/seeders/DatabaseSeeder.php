@@ -21,14 +21,14 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(1)->create([
             'name'=>'Anthony Wahome',
             'email'=>'artisticexcursions@gmail.com',
-            'password'=>bcrypt('PLMzaq&4321x'),
+            'password'=>bcrypt('PLMzaq4321x'),
             'utype'=>'ADM',
         ]);
 
         \App\Models\User::factory(1)->create([
             'name'=>'lewis Miugo',
             'email'=>'lewiswambugu01@gmail.com',
-            'password'=>bcrypt('PLMzaq&4321x'),
+            'password'=>bcrypt('PLMzaq4321x'),
             'utype'=>'ADM',
         ]);
 
