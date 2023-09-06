@@ -643,6 +643,8 @@
                     <!-- End of price trial -->
                 </div>
             </div>
+
+            @livewire('details-description-component')
             <!-- <div class="mt-8">
                 <h2 class="text-2xl font-bold mb-4">Product Details</h2>
                 <ul class="list-disc list-inside">
