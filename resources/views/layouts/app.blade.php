@@ -260,7 +260,7 @@
             <main>
                 {{ $slot }}
             </main>
-
+            
             <footer class="p-6 relative z-100 top-0 mt-16 bg-[#556E7B] text-white">
 
                 <!-- <div class="my-8">
