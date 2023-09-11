@@ -37,7 +37,7 @@
 
             // Load the GLB model
             const loader = new GLTFLoader();
-            loader.load('{{asset('ar/cuboid0.glb.glb')}}', (gltf) => {
+            loader.load('{{asset('ar/trial_1.glb')}}', (gltf) => {
                 // This code will be executed when the model is loaded
                 mesh = gltf.scene;
                 mesh.position.set(0, -0.5, -2.5);
