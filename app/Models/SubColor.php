@@ -11,6 +11,11 @@ class SubColor extends Model
 
     public function color()
     {
-        $this->belongsTo(Color::class);
+        $this->belongsTo(Color::class,'color_id');
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class,'subcolor_id');
     }
 }

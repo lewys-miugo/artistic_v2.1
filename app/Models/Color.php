@@ -15,4 +15,9 @@ class Color extends Model
     {
         return $this->hasMany(SubColor::class,'color_id');
     }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class,'color_id');
+    }
 }
