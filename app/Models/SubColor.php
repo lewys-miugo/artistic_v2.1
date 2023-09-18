@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class SubColor extends Model
 {
     use HasFactory;
+    protected $table = "colors";
 
     public function color()
     {
