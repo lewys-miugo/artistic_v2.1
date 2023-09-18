@@ -144,11 +144,11 @@
                                                     <p class="text-red-400">Error</p>
                                                 @endif
 
-                                                @if ($product->subcolor)
+                                                <!-- @if ($product->subcolor)
                                                     <p>{{$product->subcolor->name}}</p>
                                                 @else
                                                     <p class="text-red-600">Error</p>
-                                                @endif
+                                                @endif -->
 
                                                 <a href="{{route('admin.product.edit',['product_id'=>$product->id])}}" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded">Edit</a>
                                             </div>
