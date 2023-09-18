@@ -75,11 +75,11 @@ class ArtByColorComponent extends Component
 
         if($this->orderBy == 'Latest')
         {
-            $products = Product::where('color_id',$color_id)->orderBy('created_at','DESC')->paginate(12);
+            $products = Product::where('color_id',$color_id)->orderBy('created_at','DESC')->paginate(18);
 
         }
         else{
-            $products = Product::where('color_id',$color_id)->paginate(12);            
+            $products = Product::where('color_id',$color_id)->paginate(18);            
         }
 
         $colors = Color::orderBy('name','ASC')->get();
