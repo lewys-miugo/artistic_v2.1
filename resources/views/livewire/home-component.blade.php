@@ -196,7 +196,8 @@
         
         <ul class="flex flex-row text-[#46555f] text-xl flex-wrap">
             @foreach ($colors as $color)
-                <a href="{{route('art.color',['slug'=>$color->slug])}}">
+                <!-- <a href="{{route('art.color',['slug'=>$color->slug])}}"> -->
+                <a href="{{ route('colors.page') }}">
                     <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
                         <img src="{{asset('images/colors')}}/{{$color->image}}" class="h-32 w-auto" loading="lazy"  alt="">
                         <div class="flex justify-center">
