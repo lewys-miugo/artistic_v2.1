@@ -24,6 +24,8 @@ use App\Http\Livewire\DeliveryComponent;
 use App\Http\Livewire\ReturnPolicyComponent;
 use App\Http\Livewire\AboutUsComponent;
 
+use App\Http\Livewire\SiteUnderMaintenanceComponent;
+
 use App\Http\Livewire\Ar\A0Component;
 use App\Http\Livewire\Ar\A1Component;
 use App\Http\Livewire\Ar\A2Component;
@@ -143,6 +145,8 @@ Route::get('/faqs',FaqComponent::class)->name('faq');
 Route::get('/delivery-policy',DeliveryComponent::class)->name('delivery.policy');
 Route::get('/return-policy',ReturnPolicyComponent::class)->name('return.policy');
 Route::get('/about-us',AboutUsComponent::class)->name('about.us');
+
+Route::get('/site-under-maintenance',SiteUnderMaintenanceComponent::class)->name('maintenance');
 
 Route::get('/A0-augmented-reality-view',A0Component::class)->name('A0.ar');
 Route::get('/A1-augmented-reality-view',A1Component::class)->name('A1.ar');

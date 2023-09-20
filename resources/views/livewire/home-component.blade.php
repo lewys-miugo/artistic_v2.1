@@ -187,7 +187,8 @@
         <p class="text-3xl text-[#46555f]">Shop by Thematic Colors</p>
     </div>
     <div class="">
-            <a href="{{ route('colors.page') }}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right">
+            <!-- <a href="{{ route('colors.page') }}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right"> -->
+            <a href="{{ route('maintenance') }}" class="uppercase underline font-bold  underline-offset-2 text-[#57648C] text-right">
                 <!-- text-[#485760] -->
                 <p>To all thematic colors</p>
             </a>
@@ -197,7 +198,7 @@
         <ul class="flex flex-row text-[#46555f] text-xl flex-wrap">
             @foreach ($colors as $color)
                 <!-- <a href="{{route('art.color',['slug'=>$color->slug])}}"> -->
-                <a href="{{ route('colors.page') }}">
+                <a href="{{ route('maintenance') }}">
                     <li class="mx-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 hover:underline hover:decoration-solid underline-offset-2">
                         <img src="{{asset('images/colors')}}/{{$color->image}}" class="h-32 w-auto" loading="lazy"  alt="">
                         <div class="flex justify-center">
