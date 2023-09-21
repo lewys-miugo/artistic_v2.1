@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class SubColor extends Model
 {
     use HasFactory;
-    protected $table = "colors";
+    // protected $table = "colors";
 
     public function color()
     {
-        $this->belongsTo(Color::class,'color_id');
+        return $this->belongsTo(Color::class,'color_id');
     }
 
     public function products()
