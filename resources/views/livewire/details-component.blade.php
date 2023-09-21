@@ -674,11 +674,149 @@
                 </ul>
             </div> -->
 
-            <!-- Related Products -->
+            <!-- Related Products By Category -->
             <div class="mt-8">
-                <h2 class="text-2xl font-bold mb-4">Related Products</h2>
+                <h2 class="text-2xl font-bold mb-4">Related Products By {{$product->category->name}} Category</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     @foreach($rproducts as $rproduct)
+                        <div class="bg-white shadow-lg rounded-lg p-4">
+                            <a href="{{route('product.details',['slug'=>$rproduct->slug])}}">
+                                <!-- <img src="{{asset('images/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}} 3" class="w-full mb-4"> -->
+                                
+                                    <div>
+                                        <div class=" swiper mySwiper ">
+                                        <div class="swiper-wrapper ">
+                                                @if($rproduct->image)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image}}" loading="lazy" alt="{{$product->name}}" class="">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image2)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image2}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image3)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image3}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image4)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image4}}" loading="lazy" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image5)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image5}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image6)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image6}}" loading="lazy" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image7)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image7}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <h3 class="text-lg font-bold w-full">{{$rproduct->name}}</h3>
+                                    </div>
+
+                            </a>
+                            <!-- <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                            <!-- <p class="text-gray-700">${{$rproduct->regular_price}}</p> -->
+                            <!-- <p class="text-gray-700">${{$rproduct->sale_price}}</p> -->
+
+                        </div>
+                    @endforeach
+                </div>    
+            </div>
+
+            <!-- Related Products By Color -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold mb-4">Related Products By {{$product->color->name}} Color</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    @foreach($rcproducts as $rproduct)
+                        <div class="bg-white shadow-lg rounded-lg p-4">
+                            <a href="{{route('product.details',['slug'=>$rproduct->slug])}}">
+                                <!-- <img src="{{asset('images/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}} 3" class="w-full mb-4"> -->
+                                
+                                    <div>
+                                        <div class=" swiper mySwiper ">
+                                        <div class="swiper-wrapper ">
+                                                @if($rproduct->image)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image}}" loading="lazy" alt="{{$product->name}}" class="">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image2)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image2}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image3)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image3}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image4)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image4}}" loading="lazy" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image5)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image5}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image6)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image6}}" loading="lazy" alt="{{$product->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+
+                                                @if($rproduct->image7)
+                                                    <div class="swiper-slide flex justify-center content-center m-auto"> 
+                                                        <img src="{{asset('images/products')}}/{{$rproduct->image7}}" loading="lazy" alt="{{$rproduct->name}}" class="h-64">
+                                                    </div>
+                                                @endif
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <h3 class="text-lg font-bold w-full">{{$rproduct->name}}</h3>
+                                    </div>
+
+                            </a>
+                            <!-- <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                            <!-- <p class="text-gray-700">${{$rproduct->regular_price}}</p> -->
+                            <!-- <p class="text-gray-700">${{$rproduct->sale_price}}</p> -->
+
+                        </div>
+                    @endforeach
+                </div>    
+            </div>
+
+            <!-- Related Products By Color -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold mb-4">Related Products By {{$product->subColor->name}} SubColor</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    @foreach($rscproducts as $rproduct)
                         <div class="bg-white shadow-lg rounded-lg p-4">
                             <a href="{{route('product.details',['slug'=>$rproduct->slug])}}">
                                 <!-- <img src="{{asset('images/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}} 3" class="w-full mb-4"> -->
