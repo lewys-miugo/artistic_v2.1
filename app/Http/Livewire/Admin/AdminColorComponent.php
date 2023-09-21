@@ -33,7 +33,7 @@ class AdminColorComponent extends Component
 
     public function render()
     {
-        $colors=Color::orderBy('name','ASC')->paginate(10);
+        $colors=Color::orderBy('name','ASC')->paginate(25);
         return view('livewire.admin.admin-color-component',['colors'=>$colors]);
     }
 }
