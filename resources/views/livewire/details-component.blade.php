@@ -648,8 +648,8 @@
                                     <p class="text-red-400">Error</p>
                                 @endif
 
-                                @if ($product->subcolor)
-                                    <p>{{$product->subcolor->name}}</p>
+                                @if ($product->subColor)
+                                    <p>{{$product->subColor->name}}</p>
                                 @else
                                     <p class="text-red-600">Error</p>
                                 @endif
