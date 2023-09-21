@@ -89,15 +89,19 @@
                                 </a>
 
                                 <!-- ,'scolor_slug'=>$scolor->slug -->
-                                @foreach ($color->subColors as $scolor)
-                                    <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row m-2">
-                                        <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" loading="lazy" alt="">
-                                        <!-- <img src="{{asset('images/colors')}}/{{$scolor->image}}.jpeg" class="h-4 w-8" loading="lazy" alt=""> -->
-                                        <div class="pl-2 text-center pb-2">
-                                            {{$scolor->name}}
-                                        </div>
-                                    </a>
-                                @endforeach
+                                <div class="flex flex-col">
+
+                                    @foreach ($color->subColors as $scolor)
+                                        <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row m-2">
+                                            <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" loading="lazy" alt="">
+                                            <!-- <img src="{{asset('images/colors')}}/{{$scolor->image}}.jpeg" class="h-4 w-8" loading="lazy" alt=""> -->
+                                            <div class="pl-2 text-center pb-2">
+                                                {{$scolor->name}}
+                                            </div>
+                                        </a>
+                                    @endforeach
+                                </div>
+
                                 
                                     <!-- @foreach ($color->subColors as $subColor)
                                         <div class="m-2">
