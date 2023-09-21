@@ -813,7 +813,7 @@
             </div>
 
             <!-- Related Products By Color -->
-            @if ($product->subColor->name)
+            @if ($product->subColor)
             <div class="mt-8">
                 <h2 class="text-2xl font-bold mb-4">Related Products By {{$product->subColor->name}} SubColor</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
