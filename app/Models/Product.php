@@ -28,7 +28,7 @@ class Product extends Model
         return $this->belongsTo(Color::class,'color_id');
     }
 
-    public function subColors()
+    public function subColor()
     {
         return $this->belongsTo(SubColor::class,'subcolor_id');
     }
