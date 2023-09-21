@@ -41,7 +41,9 @@
                     <div class="p-8 flex flex-row flex-wrap space-x-8 space-y-8">
                         @foreach ($singleColors as $color)
                             <div class="flex flex-row mt-8 ">
-                                <a href="{{route('art.color',['slug'=>$color->slug])}}">
+                                <!-- <a href="{{route('art.color',['slug'=>$color->slug])}}"> -->
+                                <a href="{{ route('art.with.color', ['slug' => $color->slug]) }}">
+
                                     <div>
                                         <img src="{{asset('images/colors')}}/{{$color->image}}" alt="" loading="lazy" class="h-52 max-w-52 ">
                                         <!-- <img src="{{asset('images/colors')}}/{{$color->image}}.jpeg" alt="" class="h-52 max-w-52"> -->
@@ -67,11 +69,13 @@
                     </div>
                 </div>
             </div>
+
             <!-- @foreach ($subcolors as $subcolor)
-                                        <div class="m-2">
-                                            <p>{{ $subcolor->name }}</p>
-                                        </div>
-                                    @endforeach -->
+                <div class="m-2">
+                    <p>{{ $subcolor->name }}</p>
+                </div>
+            @endforeach -->
+
             <div id="combinationColors">
                 <p class="uppercase text-center" >Combination Thematic Colors</p>
                 <hr class="px-12 my-4">
@@ -80,7 +84,10 @@
                         @foreach ($combinationColors as $color)
                             
                             <div class="{{count($color->subColors) > 0 ? 'has-child-subcolor':''}} flex flex-row mt-8 ">
-                                <a href="{{route('art.color',['slug'=>$color->slug])}}">
+                                <!-- <a href="{{route('art.color',['slug'=>$color->slug])}}"> -->
+                                <a href="{{ route('art.with.color', ['slug' => $color->slug]) }}">
+
+                                
                                     <div>
                                         <img src="{{asset('images/colors')}}/{{$color->image}}" alt="art by {{$color->name}}" loading="lazy" class="h-52 max-w-52 ">
                                         <!-- <img src="{{asset('images/colors')}}/{{$color->image}}.jpeg" alt="" class="h-52 max-w-52"> -->
@@ -90,9 +97,9 @@
 
                                 <!-- ,'scolor_slug'=>$scolor->slug -->
                                 <div class="flex flex-col">
-
                                     @foreach ($color->subColors as $scolor)
                                         <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row m-2">
+
                                             <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" loading="lazy" alt="">
                                             <!-- <img src="{{asset('images/colors')}}/{{$scolor->image}}.jpeg" class="h-4 w-8" loading="lazy" alt=""> -->
                                             <div class="pl-2 text-center pb-2">
@@ -103,11 +110,11 @@
                                 </div>
 
                                 
-                                    <!-- @foreach ($color->subColors as $subColor)
-                                        <div class="m-2">
-                                            <p>{{ $subColor->name }}</p>
-                                        </div>
-                                    @endforeach -->
+                                <!-- @foreach ($color->subColors as $subColor)
+                                    <div class="m-2">
+                                        <p>{{ $subColor->name }}</p>
+                                    </div>
+                                @endforeach -->
                             </div>
                         @endforeach
 
