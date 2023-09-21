@@ -3,6 +3,8 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Color;
+use App\Models\SubColor;
 
 class ArtWithColorComponent extends Component
 {
@@ -17,7 +19,7 @@ class ArtWithColorComponent extends Component
         // Load products associated with the color
         $this->products = $this->color->products;
     }
-    
+
     public function render()
     {
         return view('livewire.art-with-color-component');
