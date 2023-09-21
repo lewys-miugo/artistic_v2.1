@@ -167,7 +167,7 @@
                     </div>
                     <!-- Pagination -->
                     <div>
-                        {{$products->links()}}
+                        {{-- $products->links() --}}
                     </div>
                 </div>
             </div>
