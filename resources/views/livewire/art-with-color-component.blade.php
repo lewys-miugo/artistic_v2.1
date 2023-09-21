@@ -1,6 +1,6 @@
 <!-- resources/views/livewire/art-color-page.blade.php -->
 
-<div>
+<!-- <div>
     <h1>{{ $color->name }}</h1>
     <ul>
         @foreach ($color->subColors as $subColor)
@@ -14,7 +14,7 @@
             <li>{{ $product->name }}</li>
         @endforeach
     </ul>
-</div>
+</div> -->
 
 <div>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
@@ -71,7 +71,7 @@
             <!-- Number of pieces -->
             <div class="flex justify-end my-4">
                 <div>
-                <p class=" text-[#46555f] text-sm"> We have found {{$products->total()}} pieces</p>
+                <p class=" text-[#46555f] text-sm"> We have found {{-- $products->total() --}} pieces</p>
                 </div>
             </div>
 
