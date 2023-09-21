@@ -17,19 +17,6 @@
 </div>
 
 <div>
-    <!-- <div class="category-scroll">
-        <ul class="overflow-x-auto gray-300 list-none flex flex-row  pl-4 mx-4 text-[#46555f]">
-            <li class=" grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]">
-                <a href="{{route('shop')}}">
-                    <p class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">All</p>
-                </a>
-            </li>
-            @foreach($categories as $category)
-                <li class="grow border-y-2 transition ease-in-out	delay-200 duration-100 hover:border-t-[#c45472]"><a href="{{route('product.category',['slug'=>$category->slug])}}" class="mx-2 my-2 uppercase text-sm font-bold hover:text-[#273137]">{{-- $category->name --}}</a></li>
-
-            @endforeach
-        </ul>
-    </div> -->
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     <div class="m-4 flex flex-col-12">
         <div class="m-2 ">
