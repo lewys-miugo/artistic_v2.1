@@ -37,7 +37,9 @@
                 @foreach($colors as $color)
                     <tr class="even:bg-gray-100 odd:bg-white">
                         <td class="py-2 px-4 whitespace-nowrap text-center">{{++$i}}</td>
-                        <td class="py-2 px-4  text-center">{{$color->name}}</td>
+                        <td class="py-2 px-4  text-center">
+                          <a href="{{ route('art.with.color', ['slug' => $color->slug]) }}">{{$color->name}}</a>
+                        </td>
                         <td class="py-2 px-4  text-center">{{$color->slug}}</td>
                         <td class="py-2 px-4  text-center">
                             <ul class="space-y-2">
