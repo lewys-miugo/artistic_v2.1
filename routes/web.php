@@ -16,6 +16,7 @@ use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\ArtWithColorComponent;
+use App\Http\Livewire\ArtWithSubcolorComponent;
 use App\Http\Livewire\ColorsComponent;
 use App\Http\Livewire\ArtByColorComponent;
 use App\Http\Livewire\ThemeComponent;
@@ -135,8 +136,11 @@ Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.c
 Route::get('/product-theme/{slug}',ThemeComponent::class)->name('product.theme');
 
 Route::get('/products-by-color',ColorsComponent::class)->name('colors.page');
+
 // new
 Route::get('/art-with-color/{slug}', ArtWithColorComponent::class)->name('art.with.color');
+Route::get('/art-with-subcolor/{slug}/{sub_slug}', ArtWithSubcolorComponent::class)->name('art.with.sub.color');
+
 
 
 Route::get('/art-by-color/{slug}/{scolor_slug?}',ArtByColorComponent::class)->name('art.color');
