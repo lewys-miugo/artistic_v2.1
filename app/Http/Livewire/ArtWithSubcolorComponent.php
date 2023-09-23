@@ -31,7 +31,7 @@ class ArtWithSubcolorComponent extends Component
         $this->products = $this->subcolor->products;
 
         // Load Color of the subcolor
-        $this->color = $this->color;
+        $this->color = $this->subcolor->color;
     }
 
     public function addToWishlist($product_id,$product_name,$product_price)
