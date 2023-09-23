@@ -139,7 +139,8 @@ Route::get('/products-by-color',ColorsComponent::class)->name('colors.page');
 
 // new
 Route::get('/art-with-color/{slug}', ArtWithColorComponent::class)->name('art.with.color');
-Route::get('/art-with-subcolor/{slug}/{sub_slug}', ArtWithSubcolorComponent::class)->name('art.with.sub.color');
+Route::get('/art-with-subcolor/{slug}', ArtWithSubcolorComponent::class)->name('art.with.sub.color');
+// Route::get('/art-with-subcolor/{slug}/{sub_slug}', ArtWithSubcolorComponent::class)->name('art.with.sub.color');
 
 
 
