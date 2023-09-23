@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Color;
 use App\Models\SubColor;
 use Livewire\WithPagination;
+use Cart;
 
 
 class ArtWithColorComponent extends Component
