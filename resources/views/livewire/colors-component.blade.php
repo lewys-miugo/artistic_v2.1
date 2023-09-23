@@ -99,7 +99,7 @@
                                 <div class="flex flex-col">
                                     @foreach ($color->subColors as $scolor)
                                         <!-- <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row m-2"> -->
-                                        <a href="{{route('art.with.sub.color',['slug'=>$color->slug,'sub_slug'=>$scolor->slug])}}" class="flex flex-row m-2">
+                                        <a href="{{route('art.with.sub.color',['slug'=>$scolor->slug])}}" class="flex flex-row m-2">
 
                                             <img src="{{asset('images/colors')}}/{{$scolor->image}}" class="h-4 w-8" loading="lazy" alt="">
                                             <!-- <img src="{{asset('images/colors')}}/{{$scolor->image}}.jpeg" class="h-4 w-8" loading="lazy" alt=""> -->
