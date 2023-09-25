@@ -34,7 +34,7 @@
                     @if (count($color->subColors)>0)
                         <ul class="flex flex-row">
                             @foreach ($color->subColors as $scolor)
-                                <a href="{{route('art.color',['slug'=>$color->slug,'scolor_slug'=>$scolor->slug])}}" class="flex flex-row">
+                                <a href="{{route('art.by.subcolors',['slug'=>$scolor->slug])}}" class="flex flex-row">
                                     <img src="{{asset('images/colors')}}/{{$scolor->image}}" loading="lazy" alt="Art by {{$scolor->name}} color" class="h-4 w-8">
                                     <li class="mx-2 font-bold uppercase text-sm ">
                                         {{$scolor->name}}
