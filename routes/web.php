@@ -19,6 +19,9 @@ use App\Http\Livewire\ArtWithColorComponent;
 use App\Http\Livewire\ArtWithSubcolorComponent;
 use App\Http\Livewire\ColorsComponent;
 use App\Http\Livewire\ArtByColorComponent;
+use App\Http\Livewire\ArtByColorsComponent;
+use App\Http\Livewire\ArtBySubcolorsComponent;
+use App\Http\Livewire\ArtByColor2Component;
 use App\Http\Livewire\ThemeComponent;
 use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\FaqComponent;
@@ -139,8 +142,12 @@ Route::get('/products-by-color',ColorsComponent::class)->name('colors.page');
 
 // new
 Route::get('/art-with-color/{slug}', ArtWithColorComponent::class)->name('art.with.color');
+Route::get('/art-by-color2/{slug}', ArtByColor2Component::class)->name('art.with.color2');
 Route::get('/art-with-subcolor/{slug}', ArtWithSubcolorComponent::class)->name('art.with.sub.color');
 // Route::get('/art-with-subcolor/{slug}/{sub_slug}', ArtWithSubcolorComponent::class)->name('art.with.sub.color');
+
+Route::get('/art-by-colors/{slug}',ArtByColorsComponent::class)->name('art.by.colors');
+Route::get('/art-by-subcolors/{slug}',ArtBySubcolorsComponent::class)->name('art.by.subcolors');
 
 
 
