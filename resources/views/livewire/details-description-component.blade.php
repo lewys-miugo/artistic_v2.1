@@ -9,6 +9,7 @@
                 <li>A2=42.0cm x  59.4cm <span><a href="{{route('A2.ar')}}" class="ml-2 inline-block px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-700">A2 AR view</a></span></li>
                 <li>A3=29.7cm x  42.0cm <span><a href="{{route('A3.ar')}}" class="ml-2 inline-block px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-700">A3 AR view</a></span></li>
                 <li>A4=21cm x 29.7cm <span><a href="{{route('A4.ar')}}" class="ml-4 inline-block px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-700">A4 AR view</a></span></li>
+                <li>Ar Trial <span><a href="{{route('Aa.ar')}}" class="ml-4 inline-block px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-700">AR Trial</a></span></li>
             </ul>
         </p>
     </ul>
