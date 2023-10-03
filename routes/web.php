@@ -36,6 +36,7 @@ use App\Http\Livewire\Ar\A1Component;
 use App\Http\Livewire\Ar\A2Component;
 use App\Http\Livewire\Ar\A3Component;
 use App\Http\Livewire\Ar\A4Component;
+use App\Http\Livewire\Ar\AaComponent;
 
 
 use App\Http\Livewire\FeaturedProductsComponent;
@@ -169,6 +170,7 @@ Route::get('/A1-augmented-reality-view',A1Component::class)->name('A1.ar');
 Route::get('/A2-augmented-reality-view',A2Component::class)->name('A2.ar');
 Route::get('/A3-augmented-reality-view',A3Component::class)->name('A3.ar');
 Route::get('/A4-augmented-reality-view',A4Component::class)->name('A4.ar');
+Route::get('/Aa-augmented-reality-view',AaComponent::class)->name('Aa.ar');
 
 // Route::get('/', function () {
 //     return view('welcome');
