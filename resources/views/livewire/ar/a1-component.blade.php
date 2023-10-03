@@ -1,7 +1,7 @@
 <div>
     {{-- The whole world belongs to you. --}}
 
-    <script loading="lazy" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.js" crossorigin="anonymous"></script>
 
     <script type="module">
         // To start an AR scene with webXR, we can use a handy button provided by three.js
