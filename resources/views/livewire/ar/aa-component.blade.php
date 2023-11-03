@@ -33,7 +33,7 @@
     <h1>Welcome to the AR Viewer</h1>
     <div id="viewer">
         <!-- Embed your AR model here -->
-        <model-viewer src="{{asset('ar/trial2.glb')}}" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="Description of your model"></model-viewer>
+        <model-viewer src="{{asset('ar/trial2.glb')}}" ios-src="{{asset('ar/trial2.glb')}}" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="Description of your model"></model-viewer>
     </div>
     <a href="#" class="btn" id="arButton">Launch AR Experience</a>
 
