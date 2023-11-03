@@ -69,9 +69,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
         <!-- AR -->
-        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script> -->
+
 
 
         <!-- Scripts -->
