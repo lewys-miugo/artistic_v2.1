@@ -12,8 +12,8 @@ class ArtGalleryController extends Controller
     public function render()
     {
         // Fetch the first 12 products as an example
-        $artimages1 = Product::orderBy('created_at', 'DESC')->get('image');
-        $artimages2 = Product::orderBy('created_at','ASC')->get('image');
+        $artimages1 = Product::orderBy('created_at', 'DESC')->take(50)->get('image');
+        $artimages2 = Product::orderBy('created_at','ASC')->take(50)->get('image');
 
         // Extract image 1 URLs from the fetched products
         $image1Urls = $artimages1->pluck('image')->toArray(); // Replace 'image_url' with your actual image URL field
