@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArtGalleryComponentController;
+use App\Http\Controllers\ArtGalleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthController;
 
@@ -38,6 +40,7 @@ use App\Http\Livewire\Ar\A3Component;
 use App\Http\Livewire\Ar\A4Component;
 use App\Http\Livewire\Ar\AaComponent;
 use App\Http\Livewire\Ar\SimpleRenderComponent;
+
 
 
 use App\Http\Livewire\FeaturedProductsComponent;
@@ -82,19 +85,12 @@ use App\Http\Livewire\Admin\AdminEditDeliveryComponent;
 use App\Http\Livewire\Admin\AdminEditReturnPolicyComponent;
 
 use App\Http\Livewire\Admin\EditAboutUsComponent;
-
-
-
-
-
-
+use App\Http\Livewire\ArtGalleryComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\User\UserOrderComponent;
 use App\Http\Livewire\User\UserOrderDetailComponent;
 
-
-    
-
+use function Termwind\render;
 
 /*
 |--------------------------------------------------------------------------
@@ -110,10 +106,10 @@ use App\Http\Livewire\User\UserOrderDetailComponent;
 // Route::get('/auth/redirect', function () {
 //     return Socialite::driver('github')->redirect();
 // });
- 
+
 // Route::get('/auth/callback', function () {
 //     $user = Socialite::driver('github')->user();
- 
+
 //     // $user->token
 // });
 
@@ -174,6 +170,14 @@ Route::get('/A4-augmented-reality-view',A4Component::class)->name('A4.ar');
 Route::get('/Aa-augmented-reality-view',AaComponent::class)->name('Aa.ar');
 Route::get('/simple-augmented-reality-view',SimpleRenderComponent::class)->name('simple.ar');
 
+
+// Art galley
+
+// Route::get('/art-gallery',ArtGalleryComponent::class)->name('art.gallery');
+Route::get('/art-gallery',[ArtGalleryController::class, 'render'])->name('art.gallery');
+// Route::get('/art-gallery-2',[ArtGalleryComponentController::class,'render'])->name('art.gallery2');
+// Route::get(('/art-gallery',ArtGalleryCon))
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -206,7 +210,7 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/products',AdminProductComponent::class)->name('admin.products');
     Route::get('/admin/product/add',AdminAddProductComponent::class)->name('admin.product.add');
     Route::get('/admin/product/edit/{product_id}',AdminEditProductComponent::class)->name('admin.product.edit');
-    
+
     Route::get('/admin/slider', AdminHomeSliderComponent::class)->name('admin.home.slider');
     Route::get('/admin/slider/add', AdminAddHomeSlideComponent::class)->name('admin.home.slide.add');
     Route::get('/admin/slider/edit/{slide_id}',AdminEditHomeSlideComponent::class)->name ('admin.home.slide.edit');
