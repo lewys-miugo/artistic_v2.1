@@ -232,6 +232,7 @@
 
         rotateLeftButton.addEventListener('mousedown', ()=> {
             rotateLeftPressed = true;
+            console.log("moving left");
         })
 
         rotateLeftButton.addEventListener('mouseup', ()=> {
@@ -240,6 +241,8 @@
 
         rotateRightButton.addEventListener('mousedown', ()=>{
             rotateRightPressed = true;
+            console.log("moving right");
+
         })
 
         rotateRightButton.addEventListener('mouseup', ()=> {
