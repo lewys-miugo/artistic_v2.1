@@ -12,7 +12,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        @livewireStyles 
+        @livewireStyles
         <!-- summernote -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
         <!-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet"> -->
-        
+
         <!-- Icons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -81,27 +81,27 @@
         <div class="min-h-screen bg-gray-100">
             <header id="lg-screen" class="z-50 h-24 sticky top-0">
                 <!-- <nav class="flex justify-between h-20 pl-12 py-10 items-center bg-white">
-                    <a href="{{-- '/' --}}"> 
-                         <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1> 
+                    <a href="{{-- '/' --}}">
+                         <h1 class="text-xl text-gray-800 font-bold">Artistic Excursions</h1>
                          <img src="{{-- asset('Logo.jpeg') --}}" alt="Artistc Excursion Logo" class="w-48">
                     </a>
-                    <div class="flex mr-8 items-center"> 
+                    <div class="flex mr-8 items-center">
                         <div class=" flex bg-gray-200 items-center">
-                        
+
                             <input class="mr-2 outline-none bg-transparent font-" type="text" name="search" id="search" placeholder="Search by subject,color,room" />
 
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pt-0.5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </div>
-                        
+
                         <ul class="flex items-center pl-8 space-x-6">
                             <li class="font-semibold text-gray-700">Return Policy</li>
                             <li class="font-semibold text-gray-700">
-                                
+
 
                             </li>
-                            
+
                         </ul>
                     </div>
                 </nav>  -->
@@ -132,11 +132,16 @@
                             <a href="{{route('return.policy')}}">Return Policy</a>
 
                         </li>
+                        <li class="mx-4 my-6 md:my-0 cursor-pointer font-semibold text-gray-700 hover:text-[#C2B4D6] duration-500">
+                            <!-- <a href="#" class="text-xl hover:text-cyan-500 duration-500">SERVICE</a> -->
+                            <a href="{{route('art.gallery')}}">Gallery</a>
+
+                        </li>
                         <li class="mx-4 my-6 md:my-0 ">
                             @auth
                                 <button id="myaccount-btn">{{ Auth::user()->name }}
                                     <div class="absolute hidden ml-8 md:-ml-28 lg:-ml-28 bg-white shadow-md mt-1 rounded" id="myaccountdropdown">
-                                        @if(Auth::user()->utype== 'ADM')    
+                                        @if(Auth::user()->utype== 'ADM')
                                             <ul class="text-center border rounded space-y-2">
                                                 <li class="px-4 py-1  m-4">{{ Auth::user()->name }}</li>
                                                 <li class="px-12 border-t "></li>
@@ -175,7 +180,7 @@
 
                                             </ul>
                                         @endif
-                                            
+
                                     </div>
                                 </button>
                             @endif
@@ -199,7 +204,7 @@
                                     </svg>
 
                                     <div class="absolute hidden ml-8 md:-ml-28 lg:-ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
-                                        
+
                                         <ul class="text-center border rounded" >
                                             <li class="px-4 py-1  m-4">{{Auth::user()->name}}</li>
                                             <li class="px-12 border-t "></li>
@@ -212,7 +217,7 @@
                                             <!-- <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li> -->
 
                                         </ul>
-                                        
+
                                     </div>
 
                                 </button>
@@ -225,7 +230,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                                     </svg>
                                     <div class="absolute hidden ml-8 md:-ml-28 lg:-ml-28 bg-white shadow-md mt-1 rounded" id="usrdropdown">
-                                        
+
                                         <ul class="text-center border rounded">
                                             <li class="px-4 py-1  m-4">Create your account to:</li>
                                             <li class="px-12 border-t "></li>
@@ -236,7 +241,7 @@
                                             <li class="px-4 py-1 hover:bg-gray-100 border-b text-sm">already have an account? <span><a href="{{route('login')}}" class="text-blue-400 underline underline-offset-2">login</a></span> </li>
 
                                         </ul>
-                                        
+
                                     </div>
 
                                 </button>
@@ -256,17 +261,17 @@
                         <!-- <h2 class=""></h2> -->
                     </ul>
                 </nav>
-                
+
             </header>
 
-            
+
 
             <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
-            
-            <footer class="p-6 relative z-100 top-0 mt-16 bg-[#556E7B] text-white">
+
+            <footer class="p-6 relative top-0 mt-16 bg-[#556E7B] text-white">
 
                 <!-- <div class="my-8">
                     <h3 class="text-4xl text-center uppercase">Enjoy 20% Welcome Gift</h3>
@@ -298,7 +303,7 @@
                     <div class="flex flex-col space-y-4">
                         <h2 class="font-medium ">CUSTOMER SERVICE</h2>
                         <div class="flex flex-col space-y-2 text-sm">
-                            
+
                             <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('delivery.policy')}}">Delivery</a>
                             <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('return.policy')}}">Return Policy</a>
                             <a class="hover:text-[#c45472] hover:underline-offset-4" href="{{route('faq')}}">FAQs</a>
@@ -366,7 +371,7 @@
                             <a rel="noopener noreferrer"class="hover:text-[#c45472] hover:underline-offset-4 truncate" href="https://www.facebook.com/artisticexcursions/">Facebook: Artistic Excursions</a>
                             <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4 truncate" href="https://www.instagram.com/Artistic_Excursions/">Instagram:@Artistic_Excursions</a>
                             <a rel="noopener noreferrer" class="hover:text-[#c45472] hover:underline-offset-4 truncate" href="mailto:artisticexcursions@gmail.com">Email: artisticexcursions@gmail.com</a>
-                            <a href="tel:+254716340285" class="hover:text-[#c45472] hover:underline-offset-4 ">Phone no: +254708016072</a>
+                            <a href="tel:+254708016072" class="hover:text-[#c45472] hover:underline-offset-4 ">Phone no: +254708016072</a>
                             <a href="tel:+254716340285" class="hover:text-[#c45472] hover:underline-offset-4">Phone no: +254716340285</a>
 
                             <!-- <a rel="noopener noreferrer" href="#">By Shape</a>
@@ -375,7 +380,7 @@
                             <a rel="noopener noreferrer" href="#">Photo Prints</a> -->
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="flex items-center justify-center px-6 pt-12 text-sm">
                     <span class="">© Copyright 2023, Artistic Excursions. All Rights Reserved.</span>
@@ -390,8 +395,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
         @livewireScripts
 
-        
-       
+
+
         <!-- MAKING MENU RESPONSIVE -->
         <script>
             function Menu(e){
@@ -401,9 +406,9 @@
         </script>
 
         <!-- Swiperjs -->
-        
 
-        
+
+
         <!-- Making drop down menu on user -->
         <script>
             window.addEventListener('DOMContentLoaded', ()=>{
