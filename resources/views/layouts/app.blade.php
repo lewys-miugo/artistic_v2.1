@@ -29,13 +29,7 @@
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-QEX7M925JR">
         </script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-QEX7M925JR');
-        </script>
 
         <!-- Icons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -420,7 +414,14 @@
 
         <!-- Swiperjs -->
 
+        <!-- GOOGLE ADS -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
+            gtag('config', 'G-QEX7M925JR');
+        </script>
 
         <!-- Making drop down menu on user -->
         <script>
